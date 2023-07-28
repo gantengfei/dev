@@ -1,0 +1,85 @@
+{
+  "DS": [
+    {
+      "menuname": "JavaScript开发",
+      "menupath": "MARKDOWN/JavaScript/",
+      "menulists": [
+        {
+          "name": "js数组求最大值和最小值",
+          "filename": "js数组求最大值和最小值.md"
+        },
+        {
+          "name": "JavaScript进行数值取整",
+          "filename": "JavaScript进行数值取整.md"
+        },
+        {
+          "name": "Layui.layDate",
+          "filename": "Layui.layDate.md"
+        }
+      ]
+    },
+    {
+      "menuname": "Mapbox开发",
+      "menupath": "MARKDOWN/Mapbox/",
+      "menulists": [
+        {
+          "name": "Typescript Mapbox GL框架",
+          "filename": "Typescript Mapbox GL框架.md"
+        },
+        {
+          "name": "Mapbox Style 规范",
+          "filename": "Mapbox Style 规范.md",
+          "isActive": true
+        },
+        {
+          "name": "Mapbox GL进阶之paint和filter",
+          "filename": "Mapbox GL进阶之paint和filter.md"
+        }
+      ]
+    },
+    {
+      "menuname": "Linux",
+      "menupath": "MARKDOWN/Linux/",
+      "menulists": [
+        {
+          "name": "Linux常用命令",
+          "filename": "Linux常用命令.md"
+        }
+      ]
+    },
+    {
+      "menuname": "SQL",
+      "menupath": "MARKDOWN/SQL/",
+      "menulists": [
+        {
+          "name": "PostgreSQL常用语句",
+          "filename": "PostgreSQL常用语句.md"
+        }
+      ]
+    },
+    {
+      "menuname": "开发笔记",
+      "menupath": "MARKDOWN/other/",
+      "menulists": [
+        {
+          "name": "常用特殊字符大全",
+          "filename": "常用特殊字符大全.md"
+        },
+        {
+          "name": "常用特殊字符大全v2",
+          "filename": "常用特殊字符大全v2.md"
+        }
+      ]
+    },
+    {
+      "menuname": "CentOS7",
+      "menupath": "MARKDOWN/CentOS7/",
+      "menulists": [
+        {
+          "name": "Windows中虚拟CentOS7",
+          "filename": "Windows中虚拟CentOS7.md"
+        }
+      ]
+    }
+  ]
+}
