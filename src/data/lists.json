@@ -15,6 +15,10 @@
         {
           "name": "Layui.layDate",
           "filename": "Layui.layDate.md"
+        },
+        {
+          "name": "rem实现自适应",
+          "filename": "rem实现自适应.md"
         }
       ]
     },
