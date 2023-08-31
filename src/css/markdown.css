@@ -433,7 +433,7 @@
   font-size: 13px;
   line-height: 19px;
   overflow: auto;
-  padding: 1em;
+  padding: 0.6em;
 }
 
 .markdown-body pre::-webkit-scrollbar {

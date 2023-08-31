@@ -8,19 +8,19 @@
 
 ## 1. version *
 `version`：版本号（`必填`，且值必须为 `8`）
-```
+``` Json
 "version": 8
 ```
 
 ## 2. name
 `name`：名称（`可选`，用于给 `style` 取名，方便阅读）
-``` 
+``` Json
 "name": "demo"
 ```
 
 ## 3. metadata
 `metadata`：元数据（`可选`，用于给 `style` 附加一些任意属性。为避免冲突，为避免冲突，建议添加前缀，如 `mapbox:`）
-```
+``` Json
 "metadata": {
     "mapbox:name":"demo"
 }
@@ -28,25 +28,25 @@
 
 ## 4. center
 `center`：地图的默认中心点（`可选`，由 `经度` 和 `纬度` 构成）
-```
+``` Json
 "center": [106.66339, 30.42628]
 ```
 
 ## 5. zoom
 `zoom`：地图的默认缩放层级（`可选`，值越大，越靠近地表。`mapbox` 采用的是无极缩放，范围一般为 `0 ~ 24`）
-```
+``` Json
 "zoom": 8
 ```
 
 ## 6. bearing
 `bearing`：地图的默认方位角（`可选`，表示 `地图视口正上方中心点` 在地图上 `北偏东` 的角度。默认值为 `0`）
-```
+``` Json
 "bearing": 0
 ```
 
 ## 7. pitch
 `pitch`：地图的默认倾斜角度（`可选`，默认值为 `0`，范围为 `0 ~ 60`）
-```
+``` Json
 "pitch": 0
 ```
 
@@ -57,17 +57,17 @@
 
 当有 `layer` 使用了 `background-pattern`、`fill-pattern`、`line-pattern`、`fill-extrusion-pattern`、`icon-image` 等属性时，`sprite` 必填。
 
-```
+``` Json
 "sprite": "mapbox://sprites/mapbox/bright-v8"
 ```
 
 当指定了 `sprite` 后，`mapbox` 会自动生成雪碧图的完整请求地址，分别如下：
-```
+``` Json
 `${sprite}.png`
 `${sprite}.json`
 ```
 如果浏览器进行了缩放，则会加上缩放 DPI 因子 `@2x`，如下：
-```
+``` Json
 `${sprite}@2x.png`
 `${sprite}@2x.json`
 ```
@@ -78,13 +78,13 @@
 URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 当有 layer 使用了 `text-field` 属性时，`glyphs` 必填。
-```
+``` Json
 "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf"
 ```
 
 ## 10. transition
 `transition`：全局的过渡动画属性（`可选`，用来作为所有过渡动画属性的默认值）
-```
+``` Json
 "transition": {
     "duration": 300, // 过渡的持续时间（可选，单位：毫秒，默认值为 300）
     "delay": 0 // 延迟多久开始过渡（可选，单位：毫秒，默认值为 0）
@@ -93,7 +93,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ## 11. light
 `light`：全局的光源（`可选`）
-```
+``` Json
 "light": {
     "anchor": "viewport", // 锚点，指定作用的目标（可选，可选值 map、viewport，默认值为 viewport）
     "position": [1.15,210,30], // 位置（可选，默认值为 [1.15,210,30]）
@@ -106,7 +106,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 `sources`：数据源集合（`必填`，用于包含一系列数据源 `source`，这些数据源提供了在地图上显示的数据）
 
 `sources` 是对象 `{}` 的形式，其属性名就是 `数据源的名称`（或者说 `数据源的 id`），这样可以根据 `数据源的名称`（或者说 `数据源的 id`）快速获取数据源的信息。
-```
+``` Json
 "sources": {}
 ```
 每个数据源 `source` 都有一个 `type` 属性，用于指定其具体的类型：
@@ -120,7 +120,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (1) vector
 `vector`：矢量切片数据源
-```
+``` Json
 "sources":{
     "vector-source": {
         "type": "vector", // 类型（必填）
@@ -140,7 +140,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (2) raster
 `raster`：栅格切片数据源（相比 `vector` 多了一个属性 `tileSize`）
-``` 
+``` Json
 "sources":{
     "raster-source": {
         "type": "raster", // 类型（必填）
@@ -161,7 +161,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (3) raster-dem
 `raster-dem`：栅格化的数字高程模型（相比 `raster` 多了一个属性 `encoding`）
-```
+``` Json
 "sources":{
     "raster-dem-source": {
         "type": "raster-dem", // 类型（必填）
@@ -183,7 +183,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (4) geojson
 `geojson`：[GeoJSON](https://geojson.org/) 数据源（数据必须通过 `data` 属性指定，`data` 属性值就是一个 `GeoJSON` 或者 `GeoJSON` 的请求地址）
-```
+``` Json
 "sources": {
     "geojson-source": {
         "type": "geojson", // 类型（必填）
@@ -214,7 +214,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (5) image
 `image`：图片数据源
-```
+``` Json
 "sources": {
     "image-source": {
         "type": "image", // 类型（必填）
@@ -231,14 +231,14 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (6) video
 `video`：视频数据源
-```
+``` Json
 "sources": {
     "video-source": {
         "type": "image", // 类型（必填）
         "urls": [ // 一个或多个视频的请求地址（必填，指定多个是为了支持多种视频格式，按优先顺序排序）
             "https://static-assets.mapbox.com/mapbox-gl-js/drone.mp4",
             "https://static-assets.mapbox.com/mapbox-gl-js/drone.webm"
-        ], 
+        ],
         "coordinates": [ // 坐标点集合（必填，指定要显示视频的坐标点）
             [-80.425, 46.437],
             [-71.516, 46.437],
@@ -251,7 +251,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ## 13. layers *
 `layers`：图层集合（`必填`，包含了一系列图层 `layer`，这些图层指定了如何渲染数据源提供的数据）
-```
+``` Json
 "layers": []
 ```
 每个图层 `layer` 都有 `id`（具有唯一性）和 `type` 属性，其中 type 属性指定了其具体的渲染类型：
@@ -268,7 +268,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (1) fill
 `fill`：填充（用于给多边形 `polygon` 进行填充和描边）
-```
+``` Json
 "layers": [
     {
         "id": "fill-id", // 唯一 id （必填）
@@ -276,7 +276,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
         "metadata": { // 元数据（可选，用于为 layer 附加任意的属性。为避免冲突，建议添加前缀，如 mapbox:）
             "mapbox:name": "test"
         },
-        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填） 
+        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填）
         "source-layer": "source-layer-name", // 数据源的图层（只有数据源 source 的 type 为 vector 时，才能设置 source-layer，其他类型的不可以设置）
         "minzoom": 0, // 最小层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 小于此 minzoom 时，layer 将被隐藏）
         "maxzoom": 24, // 最大层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 大于此 maxzoom 时，layer 将被隐藏）
@@ -299,7 +299,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (2) line
 `line`：线（用于绘制成一条条线）
-```
+``` Json
 "layers": [
     {
         "id": "line-id", // 唯一 id （必填）
@@ -307,7 +307,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
         "metadata": { // 元数据（可选，用于为 layer 附加任意的属性。为避免冲突，建议添加前缀，如 mapbox:）
             "mapbox:name": "test"
         },
-        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填） 
+        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填）
         "source-layer": "source-layer-name", // 数据源的图层（只有数据源 source 的 type 为 vector 时，才能设置 source-layer，其他类型的不可以设置）
         "minzoom": 0, // 最小层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 小于此 minzoom 时，layer 将被隐藏）
         "maxzoom": 24, // 最大层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 大于此 maxzoom 时，layer 将被隐藏）
@@ -344,7 +344,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (3) circle
 `circle`：圆点（用于绘制成一个个圆点）
-```
+``` Json
 "layers": [
     {
         "id": "circle-id", // 唯一 id （必填）
@@ -352,7 +352,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
         "metadata": { // 元数据（可选，用于为 layer 附加任意的属性。为避免冲突，建议添加前缀，如 mapbox:）
             "mapbox:name": "test"
         },
-        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填） 
+        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填）
         "source-layer": "source-layer-name", // 数据源的图层（只有数据源 source 的 type 为 vector 时，才能设置 source-layer，其他类型的不可以设置）
         "minzoom": 0, // 最小层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 小于此 minzoom 时，layer 将被隐藏）
         "maxzoom": 24, // 最大层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 大于此 maxzoom 时，layer 将被隐藏）
@@ -379,7 +379,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (4) symbol
 `symbol`：符号（用于绘制成一个个图标或者文本标签等）
-```
+``` Json
 "layers": [
     {
         "id": "symbol-id", // 唯一 id （必填）
@@ -387,7 +387,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
         "metadata": { // 元数据（可选，用于为 layer 附加任意的属性。为避免冲突，建议添加前缀，如 mapbox:）
             "mapbox:name": "test"
         },
-        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填） 
+        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填）
         "source-layer": "source-layer-name", // 数据源的图层（只有数据源 source 的 type 为 vector 时，才能设置 source-layer，其他类型的不可以设置）
         "minzoom": 0, // 最小层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 小于此 minzoom 时，layer 将被隐藏）
         "maxzoom": 24, // 最大层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 大于此 maxzoom 时，layer 将被隐藏）
@@ -400,9 +400,9 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
             // --- line-center：符号在几何形状的线的中心点上（几何形状只能为 LineString 或 Polygon）
             "symbol-spacing": 250, // 符号之间的距离（可选，值 >= 1，默认值为 250，单位：像素。只有 symbol-placement 为 line 时才有效）
             "symbol-avoid-edges": false, // 是否避免边缘冲突（可选，默认值为 false。当为 true 时，符号不会超过切片的边缘）
-            "symbol-sort-key": 1, // 排序的参考值（可选，无默认值。值越大，越在上方） 
+            "symbol-sort-key": 1, // 排序的参考值（可选，无默认值。值越大，越在上方）
             "symbol-z-order": "auto", // z 轴上的顺序控制（可选，可选值为 auto、viewport-y、source，默认值为 auto）
-            
+
             // 图标类属性（需要设置 icon-image）
             "icon-image": "", // 图标的图片（可选，这里填写在 sprite 雪碧图中图标名称）
             "icon-size": 1, // 图标的大小（可选，值 >= 0，默认值为 1。这里实际上是图标对应的原始图片的大小的缩放比例。值为 1 表示图标大小为原始图片的大小）
@@ -428,14 +428,14 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
             // --- map：图标的 x 轴与地图平面对齐
             // --- viewport：图标的 x 轴和视口的 x 轴对齐
             // --- auto：当 symbol-placement 为 point 时，和 viewport 一致；当 symbol-placement 为 line 时，和 map 一致
-            
+
             // 文本类属性（需要指定 text-field）
             "text-rotation-alignment": "auto", // 与 icon-rotation-alignment 类似
             "text-pitch-alignment": "auto", // 与 icon-pitch-alignment 类似
             "text-field": "", // 文本所对应的字段（可选，默认值为 ""）
             "text-font": ["Open Sans Regular","Arial Unicode MS Regular"], // 文本的字体集合（可选，默认值为 ["Open Sans Regular","Arial Unicode MS Regular"]）
             "text-size": 16, // 文本的大小（可选，默认值为 16，单位：像素）
-            "text-max-width": 10, // 文本的最大宽度，超过则折行（可选，默认值为 10，单位：ems） 
+            "text-max-width": 10, // 文本的最大宽度，超过则折行（可选，默认值为 10，单位：ems）
             "text-line-height": 1.2, // 文本的行高（可选，默认值为 1.2，单位：ems）
             "text-letter-spacing": 0, // 文本的字符间距（可选，默认值为 0，单位：ems）
             "text-justify": "center", // 文本的水平对齐方式（可选，可选值为 auto、left、center、right。默认值为 center）
@@ -451,10 +451,10 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
             "text-allow-overlap": false, // 是否允许文本重叠（可选，默认值为 false。当值为 true 时，文本即使和其他符号触碰也会显示）
             "text-ignore-placement": false, // 是否忽略文本位置（可选，默认值为 false。当值为 true 时，其他符号即使与此文本触碰也会显示）
             "text-optional": false // 文本是否可不显示（可选，默认值为 false。当值为 true 时，如果文本与图标碰撞，则显示图标）
-            
+
         },
         "paint": { // 绘制类属性
-            
+
             // 图标类属性（需要设置 icon-image）
             "icon-opacity": 1, // 图标的不透明度（可选，取值范围为 0 ~ 1，默认值为 1）
             "icon-color": "#000000", // 图标的颜色（可选，默认值为 #000000）
@@ -463,7 +463,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
             "icon-halo-blur": 0, // 图标的光晕模糊宽度（可选，值 >= 0，默认值为 0，单位：像素）
             "icon-translate": [0, 0], // 图标的平移（可选，通过平移 [x, y] 达到一定的偏移量。默认值为 [0, 0]，单位：像素。）
             "icon-translate-anchor": "map", // 图标的平移锚点，即相对的参考物（可选，可选值为 map、viewport，默认为 map）
-            
+
             // 文本类属性（需要设置 text-field）
             "text-opacity": 1, // 文本的不透明度（可选，取值范围为 0 ~ 1，默认值为 1）
             "text-color": "#000000", // 文本的颜色（可选，默认值为 #000000）
@@ -479,7 +479,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (5) background
 `background`：背景（用于绘制成整个地图的背景或者图案）
-```
+``` Json
 "layers": [
     {
         "id": "background-id", // 唯一 id （必填）
@@ -495,7 +495,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
         "paint": { // 绘制类属性
             "background-color": "#000000", // 背景颜色（可选，默认值为 #000000。如果设置了 background-pattern，则 background-color 将无效）
             "background-pattern": "", // 背景图案（可选，这里填写在 sprite 雪碧图中图标名称。为了背景图案能无缝填充，图标的高宽需要是 2 的倍数）
-            "background-opacity": 1 // 背景不透明度（可选，取值范围为 0 ~ 1，默认值为 1） 
+            "background-opacity": 1 // 背景不透明度（可选，取值范围为 0 ~ 1，默认值为 1）
         }
     }
 ]
@@ -503,7 +503,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (6) raster
 `raster`：栅格（用于绘制栅格地图，比如卫星影像）
-```
+``` Json
 "layers": [
     {
         "id": "raster-id", // 唯一 id （必填）
@@ -511,7 +511,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
         "metadata": { // 元数据（可选，用于为 layer 附加任意的属性。为避免冲突，建议添加前缀，如 mapbox:）
             "mapbox:name": "test"
         },
-        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填） 
+        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填）
         "source-layer": "source-layer-name", // 数据源的图层（只有数据源 source 的 type 为 vector 时，才能设置 source-layer，其他类型的不可以设置）
         "minzoom": 0, // 最小层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 小于此 minzoom 时，layer 将被隐藏）
         "maxzoom": 24, // 最大层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 大于此 maxzoom 时，layer 将被隐藏）
@@ -526,7 +526,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
             "raster-brightness-max": 1, // 图片的最大亮度（可选，取值范围为 0 ~ 1，默认值为 1）
             "raster-saturation": 0, // 图片的饱和度（可选，取值范围为 -1 ~ 1，默认值为 0）
             "raster-contrast": 0, // 图片的对比度（可选，取值范围为 -1 ~ 1，默认值为 0）
-            "raster-resampling": "linear", // 采样方式（可选，可选值为 linear、nearest，默认值为 linear） 
+            "raster-resampling": "linear", // 采样方式（可选，可选值为 linear、nearest，默认值为 linear）
             "raster-fade-duration": 300 // 切换瓦片时的渐隐时间（可选，默认值为 300，单位：毫秒）
         }
     }
@@ -535,7 +535,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (7) heatmap
 `heatmap`：热力图（用于绘制成热力图的效果）
-```
+``` Json
 "layers": [
     {
         "id": "heatmap-id", // 唯一 id （必填）
@@ -543,7 +543,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
         "metadata": { // 元数据（可选，用于为 layer 附加任意的属性。为避免冲突，建议添加前缀，如 mapbox:）
             "mapbox:name": "test"
         },
-        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填） 
+        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填）
         "source-layer": "source-layer-name", // 数据源的图层（只有数据源 source 的 type 为 vector 时，才能设置 source-layer，其他类型的不可以设置）
         "minzoom": 0, // 最小层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 小于此 minzoom 时，layer 将被隐藏）
         "maxzoom": 24, // 最大层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 大于此 maxzoom 时，layer 将被隐藏）
@@ -572,7 +572,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (8) hillshade
 `hillshade`：坡面阴影（基于 `DEM` 数字高程模型进行坡面阴影的可视化渲染）
-```
+``` Json
 "layers": [
     {
         "id": "hillshade-id", // 唯一 id （必填）
@@ -580,7 +580,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
         "metadata": { // 元数据（可选，用于为 layer 附加任意的属性。为避免冲突，建议添加前缀，如 mapbox:）
             "mapbox:name": "test"
         },
-        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填） 
+        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填）
         "source-layer": "source-layer-name", // 数据源的图层（只有数据源 source 的 type 为 vector 时，才能设置 source-layer，其他类型的不可以设置）
         "minzoom": 0, // 最小层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 小于此 minzoom 时，layer 将被隐藏）
         "maxzoom": 24, // 最大层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 大于此 maxzoom 时，layer 将被隐藏）
@@ -602,7 +602,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (9) fill-extrusion
 `fill-extrusion`：三维填充（用于给三维多边形进行填充和描边）
-```
+``` Json
 "layers": [
     {
         "id": "fill-extrusion-id", // 唯一 id （必填）
@@ -610,7 +610,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
         "metadata": { // 元数据（可选，用于为 layer 附加任意的属性。为避免冲突，建议添加前缀，如 mapbox:）
             "mapbox:name": "test"
         },
-        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填） 
+        "source": "source-name", // 数据源的名称（除了 layer 的 type 为 background 外，source 必填）
         "source-layer": "source-layer-name", // 数据源的图层（只有数据源 source 的 type 为 vector 时，才能设置 source-layer，其他类型的不可以设置）
         "minzoom": 0, // 最小层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 小于此 minzoom 时，layer 将被隐藏）
         "maxzoom": 24, // 最大层级（可选，取值范围为 0 ~ 24。当 style 的 zoom 大于此 maxzoom 时，layer 将被隐藏）
@@ -644,7 +644,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 * `Camera operators`：照相机操作符，用来访问当前地图视图的各个参数
 
 `Expressions` 是 `Expression` 的集合。而 `Expression` 是以 `JSON` 数组的形式来表示的，数组的第一个元素是 `Expression` 的操作符的名称，后续的元素表示操作的参数（也可以是一个 `Expression`）。
-```
+``` Json
 [expression_name, argument_0, argument_1, expression_1, ...]
 ```
 由以上 `5` 种操作符，相应地可以推出 `5` 种表达式集合 `Expressions`，并且相互之间可以组合使用：
@@ -668,7 +668,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 * `feature-state`
 
 通过 `data expression` 可以实现区分同一个图层中的不同要素，并以不同的形式呈现。比如设置颜色 circle-color：
-```
+``` Json
 {
     "circle-color": [
         "rgb", // rgb 操作符，用于表达颜色：rgb(red, green, blue)
@@ -685,7 +685,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 > 而且使用了 `feature-state` 操作符的 `data expression` 仅在 `paint` 绘制类属性中可用。
 
 以下是官网中记录的暂不支持数据表达式 `data expression` 的属性：
-```
+``` Json
 [
 "fill-antialias",
 "fill-translate",
@@ -755,7 +755,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 一个 `camera expression` 是使用了 `zoom` 操作符的任何表达式。
 
 通过 `camera expression` 可以实现图层 `layer` 根据地图的缩放层级 `zoom` 有不同的表现。 比如设置半径 `circle-radius`：
-```
+``` Json
 {
     "circle-radius": [
         "interpolate", ["linear"], ["zoom"], // 通过 interpolate 操作符，为 circle-radius 和 zoom 之间定义一种线性关系 linear
@@ -766,15 +766,15 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 }
 ```
 所有可以使用 `Expression` 的属性都支持 `camera expression`。不过当用于 `layout` 布局类属性和 `paint` 绘制类属性时，必须是以下几种格式：
-``` 
+``` Json
 [ "interpolate", interpolation, ["zoom"], ... ]
-``` 
+```
 或
-``` 
+``` Json
 [ "step", ["zoom"], ... ]
 ```
 或
-```
+``` Json
 [
     "let",
     ... variable bindings...,
@@ -782,7 +782,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 ]
 ```
 或
-```
+``` Json
 [
     "let",
     ... variable bindings...,
@@ -816,7 +816,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (1) Types
 `Types`：这类操作符用于 `断言` 和 `转换` 数据的类型，包含的操作符如下：
-```
+``` Json
 // (1) string  用于断言输入值是字符串。其对应的表达式有两种形式
 ["string", value]: string
 ["string", value, fallback: value, fallback: value, ...]: string
@@ -876,7 +876,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (2) Feature data
 `Feature data`：这类操作符用于操作要素的数据。
-```
+``` Json
 // (1) accumulated  获取一个群组的累计值。只限于 geojson 类型的数据源，并且设置了 cluster
 ["accumulated"]: value
 
@@ -898,7 +898,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (3) Lookup
 `Lookup`：这类操作符用于查找并获取值
-```
+``` Json
 // (1) at  根据指定的索引，获取数组中的元素
 ["at", number, array]: ItemType
 
@@ -916,7 +916,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (4) Decision
 `Decision`：这类操作符用于条件判断
-```
+``` Json
 // (1) !  取反
 ["!", boolean]: boolean
 
@@ -975,7 +975,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (5) Ramps, scales, curves
 `Ramps, scales, curves`：这类操作符用于渐变、缩放、曲线等特殊效果的设置。
-```
+``` Json
 // (1) interpolate  通过在输入值和输出值之间进行插值，来生成持续、平滑的数据。输入值必须是数字，并且各个断点的值按升序排序，输出值可能是数字、数组或者颜色
 ["interpolate",
     interpolation: ["linear"] | ["exponential", base] | ["cubic-bezier", x1, y1, x2, y2 ],
@@ -1011,7 +1011,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (6) Variable binding
 `Variable binding`：这类操作符用于变量绑定。
-```
+``` Json
 // (1) let  绑定表达式给指定的变量
 ["let",
     string (alphanumeric literal), any, string (alphanumeric literal), any, ...,
@@ -1024,7 +1024,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (7) String
 `String`：这类操作符用于操作字符串。
-```
+``` Json
 // (1) concat  用于连接各个输入的字符串，得到连接后的字符串
 ["concat", value, value, ...]: string
 
@@ -1043,7 +1043,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (8) Color
 `Color`：这类操作符用于操作颜色。
-```
+``` Json
 // (1) rgb  创建由 red、green、blue 组成的 rgb 颜色。每个值的取值范围为 0 ~ 255
 ["rgb", number, number, number]: color
 
@@ -1056,7 +1056,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (9) Math
 `Math`：这类操作符用于数学运算。
-```
+``` Json
 // (1) +  取输入值的总和
 ["+", number, number, ...]: number
 
@@ -1094,7 +1094,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 // (12) cos  取余弦值
 ["cos", number]: number
 
-// (13) e  取数学常数 e 
+// (13) e  取数学常数 e
 ["e"]: number
 
 // (14) floor  取小于等于输入值的最大整数
@@ -1136,13 +1136,13 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (10) Zoom
 `Zoom`：这类操作符只包含一个操作符 `zoom`，用于获取当前地图的缩放层级。
-```
+``` Json
 ["zoom"]: number
 ```
 
 ### (11) Heatmap
 `Heatmap`：这类操作符只包含一个操作符 `heatmap-density`，用于获取热力图的密度（特定像素内有多少个数据点），只能在 `heatmap-color` 中使用。
-```
+``` Json
 ["heatmap-density"]: number
 ```
 
@@ -1163,7 +1163,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (1) Zoom functions
 一个 `zoom function` 允许地图的呈现根据 地图的缩放层级 而改变。
-```
+``` Json
 {
      "circle-radius": {
          "stops": [ // 断点（除了 type 为 identity 外必填，由输入值和输出值为一组，作为数组的元素）
@@ -1184,7 +1184,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (2) Property functions
 一个 `property function` 允许地图的呈现根据 地图要素的属性 而改变。
-```
+``` Json
 {
      "circle-color": {
          "property": "temperature", // 属性名（填写后 stops 的输入值就是对应的属性值）
@@ -1206,7 +1206,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
 
 ### (3) Zoom-and-property functions
 一个 `zoom-property function` 允许地图的呈现根据 地图的缩放层级 和 地图要素的属性 而改变。
-```
+``` Json
 {
      "circle-radius": {
          "property": "rating",

@@ -11,7 +11,7 @@
 
 ## 1、==和!=
 `==`和`!=`可实现根据某个字段图层的过滤展示。如：只在地图上展示昌平区或者在地图上展示除昌平外的所有区域。
-```
+``` JavaScript
 // 只在地图上展示昌平区
 var filter = ['==', 'name', '昌平区'];
 
@@ -23,17 +23,17 @@ var filter = ['!=', 'name', '昌平区'];
 
 ## 2、>、>=、<、<=
 `>、>=、<、<=`是通过比较大小的方式，实现图层的过滤，所以此处需要的字段得是数字类型或者通过to-number将字段转换成数字类型。如：展示`count>=10`的区域。
-```
+``` JavaScript
 var filter = ['>=', 'count', 10];
 ```
 ![输入图片说明](https://foruda.gitee.com/images/1688622421296775175/891522c4_4993153.png "")
 
 ## 3、in和match
 `in`和`match`都可实现对图层根据某个字段进行多值过滤。如：在地图上展示昌平区和海淀区。
-```
-// in 
+``` JavaScript
+// in
 var filter = [
-  'in', 
+  'in',
   'name',
   '昌平区',
   '海淀区'
@@ -55,10 +55,10 @@ var filter = [
 ```
 ![输入图片说明](https://foruda.gitee.com/images/1688622488236609364/a85de230_4993153.png "")
 接着上面的例子，如果我们要实现在地图中展示除海淀和昌平区外的其他区域，我们可以直接用!in和将match的条件互换的方式来实现，如下：
-```
-// in 
+``` JavaScript
+// in
 var filter = [
-  '!in', 
+  '!in',
   'name',
   '昌平区',
   '海淀区'
@@ -82,7 +82,7 @@ var filter = [
 
 ## 4、多条件
 有时候，会存在多条件的过滤，例如：我们选择`type==1`并且`count>10`的区域，我们可以这么写：
-```
+``` JavaScript
 var filter = [
   'all',
   ['>=', 'count', 10],
@@ -91,7 +91,7 @@ var filter = [
 ```
 ![输入图片说明](https://foruda.gitee.com/images/1688622596749117953/183d8871_4993153.png "")
 当然，有时我们会存在根据几何类型来进行过滤，此时，我们可用：
-```
+``` JavaScript
 var filter = [
     "==",
     ["geometry-type"],
@@ -106,7 +106,7 @@ var filter = [
 
 ## 1、match
 `match`通常用于枚举型的字段渲染，如唯一值渲染。
-```
+``` JavaScript
 'circle-color': [
  'match',
  ['get', 'type'],
@@ -119,7 +119,7 @@ var filter = [
 
 ## 2、case
 `case`通常用于分段数值型的字段渲染，值域是前关后开，如分级渲染。
-```
+``` JavaScript
 'circle-color': [
   'case',
   ['<', ['get', 'speed'], 10.8], 'rgba(0,0,0,0)', //<10.8
@@ -139,7 +139,7 @@ var filter = [
 
 ## 3、step
 `step`和上面的`case`很类似，只是值域是前开后关的。
-```
+``` JavaScript
 // <=100, 100-500, >500
 "circle-color": [
   "step",
@@ -152,10 +152,10 @@ var filter = [
 'circle-color': [
   'step',
   ['to-number', ['get', 'CID']],
-  '#0098A3',  10, 
-  '#00CA8D', 20, 
-  '#37C508', 30, 
-  '#98F300',  40, 
+  '#0098A3',  10,
+  '#00CA8D', 20,
+  '#37C508', 30,
+  '#98F300',  40,
   '#EFFF85'
 ]
 ```
@@ -172,7 +172,7 @@ var filter = [
 
 
 完整测试代码如下：
-```
+``` JavaScript
 var rootPath = 'http://127.0.0.1:3000/mapbox/lib/';
 // var filter = ['match', ['get', 'name'],
 //   ['昌平区', '海淀区'], false, true
