@@ -390,7 +390,15 @@
   text-align: right;
 }
 
-.markdown-body code,
+.markdown-body code {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  /* border: 1px solid #eaeaea; */
+  /* background-color: #f8f8f8; */
+  /* font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; */
+}
+
 .markdown-body tt {
   margin: 0 2px;
   padding: 0 5px;
@@ -400,13 +408,15 @@
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
+
 .markdown-body pre code {
   margin: 0;
   padding: 0;
   white-space: pre;
   border: none;
-  background: transparent;
+  /* background: transparent; */
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  padding: 1em;
 }
 
 .markdown-body .highlight pre {
@@ -446,7 +456,7 @@
 
 .markdown-body pre code,
 .markdown-body pre tt {
-  background-color: transparent;
+  /* background-color: transparent; */
   border: none;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }

@@ -15,7 +15,7 @@ div {
 ```
 
 adjust.js
-```` js
+```` javascript
 /**
  * 单位：rem , 1px = 1/100 =0.01rem , 1rem = 1*100 = 100px;
  */
@@ -46,7 +46,7 @@ div {
 ```
 
 adjust.js
-```` js
+```` javascript
 /**
  * 单位：rem , 1px = 1/100 =0.01rem , 1rem = 1*100 = 100px;
  */

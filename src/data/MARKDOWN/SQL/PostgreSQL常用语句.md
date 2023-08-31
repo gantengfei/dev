@@ -18,7 +18,7 @@ su - root
 ```
 
 #### 普通表超表备份还原
-```
+``` sql
 # awing_tws 数据库名称
 # 切入postgres账户
 su - postgres
@@ -38,7 +38,7 @@ pg_dump -p 8433 -f t_aws.backup -t qxcp.t_aws_hour_info -t qxcp.t_aws  -s awing_
 
 # 同时备份表数据和结构
 pg_dump -p 8433 -f t_aws.backup -t qxcp.t_aws_hour_info -t qxcp.t_aws  --inserts awing_tws
-# 同时备份小数常规表数据和累计表数据 -a 
+# 同时备份小数常规表数据和累计表数据 -a
 pg_dump -p 8433 -f t_aws.backup -t qxcp.t_aws_hour_info -t qxcp.t_aws_hour_agg  --inserts -a hq_weather_gis
 
 # 还原普通关系表

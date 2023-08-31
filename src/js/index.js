@@ -95,6 +95,7 @@ function loadmd(filename, path) {
   axios({ url: _path }).then(res => {
     // console.log(res.data);
     $('#mdview').empty().html(marked(res.data));
-    // this.content = marked(res.data);
+
+    hljs.highlightAll();
   })
 }

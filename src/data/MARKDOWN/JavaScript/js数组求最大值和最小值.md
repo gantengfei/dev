@@ -1,5 +1,5 @@
 # 1、排序法 sort
-``` js
+``` javascript
 let ary = [12,23,24,46,13,59]
 ary.sort((a,b)=>{
     return a-b;
@@ -11,7 +11,7 @@ console.log(min,max)
 
 # 2、假设法
 假设当前数组第一个值是最大值，拿这个值和后面的值逐一进行比较，如果后面的某一个值比假设的要大，就说明我们假设错了，把假设值进行替换
-``` js
+``` javascript
 let ary = [12,23,24,46,13,59]
 let min = ary[0],max = ary[0];
 for(let i=1;i<=ary.length;i++){
@@ -22,7 +22,7 @@ console.log(min,max)
 ```
 
 # 3、Math
-``` js
+``` javascript
 let ary = [12,23,24,46,13,59];
 //这里Math.min不能直接传数组类型，需要进行转换
 let min = Math.min(ary) //NaN
@@ -40,7 +40,7 @@ let min= Math.min.apply(null,ary);
 ```
 
 # 4、借助ES6的扩展运算符
-``` js
+``` javascript
 let ary = [45,34,1,50,12]
 let max = Math.max(...ary)
 let min = Math.min(...ary)

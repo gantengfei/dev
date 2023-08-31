@@ -23,6 +23,16 @@
       ]
     },
     {
+      "menuname": "TypeScript开发",
+      "menupath": "MARKDOWN/TypeScript/",
+      "menulists": [
+        {
+          "name": "ES6使用Promise()封装Ajax",
+          "filename": "ES6使用Promise()封装Ajax.md"
+        }
+      ]
+    },
+    {
       "menuname": "Mapbox开发",
       "menupath": "MARKDOWN/Mapbox/",
       "menulists": [
@@ -62,7 +72,7 @@
       ]
     },
     {
-      "menuname": "开发笔记",
+      "menuname": "其它记录",
       "menupath": "MARKDOWN/other/",
       "menulists": [
         {

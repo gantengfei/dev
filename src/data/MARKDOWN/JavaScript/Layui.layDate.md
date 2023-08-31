@@ -9,7 +9,7 @@
 </div>
 ```
  **JavaScript**
-``` js
+``` javascript
 layui.use('laydate', () => {
     let laydate = layui.laydate;
      laydate.render({
@@ -37,7 +37,7 @@ layui.use('laydate', () => {
 </div>
 ```
  **JavaScript**
-``` js
+``` javascript
 layui.use('laydate', () => {
     let laydate = layui.laydate;
      laydate.render({
@@ -65,7 +65,7 @@ layui.use('laydate', () => {
 </div>
 ```
 **JavaScript**
-``` js
+``` javascript
 layui.use('laydate', () => {
     let laydate = layui.laydate;
      laydate.render({
@@ -92,7 +92,7 @@ layui.use('laydate', () => {
 </div>
 ```
 **JavaScript**
-``` js
+``` javascript
 layui.use('laydate', () => {
     let laydate = layui.laydate;
      laydate.render({
@@ -120,7 +120,7 @@ layui.use('laydate', () => {
 </div>
 ```
 **JavaScript**
-``` js
+``` javascript
 layui.use('laydate', () => {
     let laydate = layui.laydate;
      laydate.render({
@@ -174,7 +174,7 @@ layui.use('laydate', () => {
 </div>
 ```
 **JavaScript**
-``` js
+``` javascript
 layui.use('laydate', () => {
     let laydate = layui.laydate;
      laydate.render({
@@ -228,7 +228,7 @@ layui.use('laydate', () => {
 </div>
 ```
 **JavaScript**
-``` js
+``` javascript
 layui.use('laydate', () => {
     let laydate = layui.laydate;
      laydate.render({
@@ -325,7 +325,7 @@ layui.use('laydate', () => {
 </div>
 ```
 **JavaScript**
-``` js
+``` javascript
 layui.use('laydate', () => {
     let laydate = layui.laydate;
      laydate.render({
@@ -417,7 +417,7 @@ layui.use('laydate', () => {
 </div>
 ```
 **JavaScript**
-``` js
+``` javascript
 layui.use('laydate', () => {
     let laydate = layui.laydate;
      laydate.render({
