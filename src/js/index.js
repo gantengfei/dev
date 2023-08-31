@@ -45,11 +45,14 @@ $(function () {
       if (!$(elem).hasClass('open')) {
         $('.mdlists .sidebar-group').removeClass('open');
         $('.mdlists .sidebar-group').parent().removeClass('open');
+        $('.mdlists .sidebar-group').find('.arrow').addClass('right').removeClass('down');
         $(elem).addClass('open');
         $(elem).parent().addClass('open');
+        $(elem).find('.arrow').addClass('down').removeClass('right');
       } else {
         $(elem).removeClass('open');
         $(elem).parent().removeClass('open');
+        $(elem).find('.arrow').addClass('right').removeClass('down');
       }
     })
   })
