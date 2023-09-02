@@ -1,5 +1,5 @@
 #### Linux下查看与重启
-``` Shell
+``` bash
 # 查看命令
 ps aux | grep postgres
 
@@ -18,7 +18,7 @@ su - root
 ```
 
 #### 普通表超表备份还原
-``` sql
+``` bash
 # awing_tws 数据库名称
 # 切入postgres账户
 su - postgres

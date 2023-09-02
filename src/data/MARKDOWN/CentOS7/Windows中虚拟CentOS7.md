@@ -1,15 +1,15 @@
 1.启动进去CentOS7命令面板
-``` shell
+``` bash
 wsl
 ```
 
 2.退出CentOS7命令面板
-``` shell
+``` bash
 exit
 ```
 
 3.关闭CentOS7
-``` shell
+``` bash
 # 先退出
 exit
 # Windows命令中
