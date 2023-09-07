@@ -41,6 +41,10 @@
         {
           "name": "ES6使用Promise()封装Ajax",
           "filename": "ES6使用Promise()封装Ajax.md"
+        },
+        {
+          "name": "TypeScript的类型指令(单行注释)",
+          "filename": "TypeScript的类型指令(单行注释).md"
         }
       ]
     },
@@ -55,6 +59,28 @@
         {
           "name": "滚动条设置",
           "filename": "滚动条设置.md"
+        }
+      ]
+    },
+    {
+      "menuname": "VUE",
+      "menupath": "MARKDOWN/VUE/",
+      "menulists": [
+        {
+          "name": "VUE3",
+          "filename": "VUE3.md"
+        },
+        {
+          "name": "issue：Unsupported engine",
+          "filename": "issue：Unsupported engine.md"
+        },
+        {
+          "name": "issue：Module ‘“xx.vue“‘ has no default export.Vetur",
+          "filename": "issue：Module ‘“xx.vue“‘ has no default export.Vetur.md"
+        },
+        {
+          "name": "ts类写法",
+          "filename": "ts类写法.md"
         }
       ]
     },
@@ -94,6 +120,10 @@
         {
           "name": "cmd命令",
           "filename": "cmd命令.md"
+        },
+        {
+          "name": "npm命令",
+          "filename": "npm命令.md"
         }
       ]
     },

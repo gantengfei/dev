@@ -1921,7 +1921,8 @@
 
     _proto.heading = function heading(text, level, raw, slugger) {
       if (this.options.headerIds) {
-        return '<h' + level + ' id="' + this.options.headerPrefix + slugger.slug(raw) + '">' + text + '</h' + level + '>\n';
+        // return '<h' + level + ' class="headtitle" id="' + this.options.headerPrefix + slugger.slug(raw) + '" level="' + level + '">' + text + '</h' + level + '>\n';
+        return '<h' + level + ' class="headtitle" id="' + text + '" level="' + level + '">' + text + '</h' + level + '>\n';
       } // ignore IDs
 
 

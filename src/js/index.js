@@ -78,12 +78,24 @@ $(function () {
     let scrollTop = $(document).scrollTop();
     if (scrollTop > 200) {
       $('.back-top-btn').fadeIn();
+      let obj = $('.main-box').offset();
+      let width = $('.main-box').width();
+      $('.rightmenuwrap').css({ "left": `${obj.left + width}px` }).addClass('fixed');
     } else {
       $('.back-top-btn').fadeOut(function () {
         $(this).removeClass('toping')
       });
+      $('.rightmenuwrap').removeAttr('style').removeClass('fixed');
     }
   })
+
+  // $(window).resize(() => {
+  //   if ($('.rightmenuwrap').css('position') == 'fixed') {
+  //     let obj = $('.main-box').offset();
+  //     let width = $('.main-box').width();
+  //     $('.rightmenuwrap').css({ "left": `${obj.left + width}px` });
+  //   }
+  // })
 
   /** 返回顶部 */
   $('.back-top-btn').on('click', function () {
@@ -100,5 +112,19 @@ function loadmd(filename, path) {
     $('#mdview').empty().html(marked(res.data));
 
     hljs.highlightAll();
+
+    loadMarkedMenu();
+
   })
+}
+
+/** 加载当前md菜单 */
+function loadMarkedMenu() {
+  let Htm = ``;
+  $('#mdview .headtitle').each((index, elem) => {
+    let txt = $(elem).text();
+    Htm += `<li class="rightmenu${$(elem).attr('level')}"><a href="#${txt}">${txt}</a></li>`
+  })
+
+  $('.rightmenuwrap ul').empty().html(Htm);
 }
