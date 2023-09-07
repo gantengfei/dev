@@ -87,6 +87,13 @@ $(function () {
       });
       $('.rightmenuwrap').removeAttr('style').removeClass('fixed');
     }
+    if (scrollTop > 16) {
+      let obj = $('.main-box').offset();
+      let width = $('.main-box').width();
+      $('.rightmenuwrap').css({ "left": `${obj.left + width}px` }).addClass('fixed');
+    } else {
+      $('.rightmenuwrap').removeAttr('style').removeClass('fixed');
+    }
   })
 
   // $(window).resize(() => {
@@ -123,8 +130,16 @@ function loadMarkedMenu() {
   let Htm = ``;
   $('#mdview .headtitle').each((index, elem) => {
     let txt = $(elem).text();
-    Htm += `<li class="rightmenu${$(elem).attr('level')}"><a href="#${txt}">${txt}</a></li>`
+    Htm += `<li class="rightmenu${$(elem).attr('level')}" anchor="${txt}"><span>${txt}</span></li>`
   })
 
   $('.rightmenuwrap ul').empty().html(Htm);
+
+  $('.rightmenuwrap ul li').each((index, elem) => {
+    $(elem).click(() => {
+      let a = document.getElementById($(elem).attr('anchor'));
+      if (a) a.scrollIntoView(true);
+    })
+  })
+
 }
