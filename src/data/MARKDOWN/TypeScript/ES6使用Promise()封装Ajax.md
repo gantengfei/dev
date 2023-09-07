@@ -4,8 +4,8 @@ import { Request, UploadFile } from '../../basics/request/request';
 
 /** 普通POST请求接口调用.... */
 Request({
-  url: 'https://energy.xdqx.com.cn/energy/make/query',
-  data: { projectName: 'bh_90', qb: '00', day: '3' }
+  url: `${consts.dataServerHost}/sys/info`,
+  data: { name: '' }
 }).then(result => {
   console.log('%c success:返回', "color:#11BB36;font-weight:bold;");
 }).catch(error => {

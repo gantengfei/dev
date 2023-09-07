@@ -31,7 +31,7 @@ onMounted(() => {
 
 //
 const getData = () => {
-  let url = `http://218.94.159.100:30818/alphawind/terminal/grid/getGridImageData?region=default&productName=msprog&qbsj=20220725004800&ybsk=10&z=0&radarId=Z0000&prodctType=xjatmb`;
+  let url = `${consts.dataServerHost}/sys/info`;
   http.get(url).then((result: any) => {
     console.log('%c success:返回 => ', 'color:#11BB36;font-weight:bold;', result);
   }).catch(error => {
@@ -77,7 +77,7 @@ export default class HomeView extends Vue {
   }
 
   private updateData() {
-    let url = `http://218.94.159.100:30818/alphawind/terminal/grid/getGridImageData?region=default&productName=msprog&qbsj=20220725004800&ybsk=10&z=0&radarId=Z0000&prodctType=xjatmb`;
+    let url = `${consts.dataServerHost}/sys/info`;
     http.get(url).then((result: any) => {
       console.log('%c success:返回 => ', 'color:#11BB36;font-weight:bold;', result);
     }).catch(error => {
