@@ -127,6 +127,12 @@ function loadmd(filename, path) {
 
 /** 加载当前md菜单 */
 function loadMarkedMenu() {
+  if ($('#mdview .headtitle').length == 0) {
+    $('.rightmenuwrap').hide();
+    return;
+  }
+  $('.rightmenuwrap').fadeIn();
+
   let Htm = ``;
   $('#mdview .headtitle').each((index, elem) => {
     let txt = $(elem).text();

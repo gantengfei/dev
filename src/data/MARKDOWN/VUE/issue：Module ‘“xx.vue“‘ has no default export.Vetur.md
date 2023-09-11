@@ -1,7 +1,7 @@
 
 开发VUE3过程中使用VS code，`Vetur` 暂不支持ts语法，卸载 `Vetur` 插件，安装 `Volar`
 
-使用Vue3时有如下代码：
+【错误提示】
 ```
 <template>
   <MapContainer/>
@@ -18,6 +18,8 @@ import MapContainer from '../components/MapContainer.vue';
 ```
 Module '"e:/SVN/vue-test/src/components/MapContainer.vue"' has no default export.Vetur(1192)
 ```
+
+【错误原因】 \
 从错误提示可以看到关键字_Vetur_：
 > Vue tooling for VS Code.
 
@@ -25,6 +27,7 @@ Module '"e:/SVN/vue-test/src/components/MapContainer.vue"' has no default export
 
 官方推荐`_volar_`，`volar`是`vetur`的升级版本，提供了支持`vue3`功能并有更好的TS支持。
 
+【解决办法】 \
 在vscode插件中选择卸载`vetur`，安装`volar`插件即可;
 
 安装`volar` \

@@ -241,12 +241,13 @@
 
 .markdown-body blockquote {
   margin: 0 0 20px;
-  padding: 20px;
+  padding: 8px 16px;
   background-color: #f6f6f6;
   border-left: 6px solid #e6e6e6;
   font-style: normal;
   font-weight: 400;
   word-break: break-word;
+  border-radius: 4px;
 }
 
 .markdown-body blockquote> :first-child {
