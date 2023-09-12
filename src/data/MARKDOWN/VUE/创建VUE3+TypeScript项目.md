@@ -67,3 +67,4 @@ npm run dev
 ``` bash
 npm run build
 ```
+![输入图片说明](https://foruda.gitee.com/images/1694508995992746626/9db4156d_4993153.png "屏幕截图")
