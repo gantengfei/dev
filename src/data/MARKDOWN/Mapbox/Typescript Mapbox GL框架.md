@@ -15,10 +15,12 @@ tsc -v
 ### 2. SASS 环境安装
 1. 安装ruby [（RubyInstaller）](https://rubyinstaller.org/)
 2. 全局安装compass
+
 ``` bash
 gem install compass
 ```
-**注意**：*sass编译时中文目录报错，建议修改英文目录;*
+> ## WARNING
+> **注意**：*sass编译时中文目录报错，建议修改英文目录;*
 
 ---
 
@@ -26,6 +28,8 @@ gem install compass
 
 ### 1. 扩展安装
 #### 1.1. EditorConfig for VS Code
+
+> ## TIP
 > 统一编码风格 \
 > 框架中使用到 .editorconfig 配置
 ```
@@ -43,6 +47,8 @@ trim_trailing_whitespace = true
 ```
 
 #### 1.2. Better Comments
+
+> ## TIP
 > 修改注释颜色插件
 
 ![输入图片说明](https://foruda.gitee.com/images/1693623215823932625/1a1ab335_4993153.png "屏幕截图")
@@ -66,6 +72,8 @@ trim_trailing_whitespace = true
 ```
 
 ### 2. 配置settings.json
+
+> ## TIP
 > 设置 → 打开设置(json)
 
 #### 2.1 保存自动格式化

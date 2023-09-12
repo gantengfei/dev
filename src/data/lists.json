@@ -71,8 +71,24 @@
       "menupath": "MARKDOWN/VUE/",
       "menulists": [
         {
-          "name": "VUE3",
-          "filename": "VUE3.md"
+          "name": "创建VUE3+TypeScript项目",
+          "filename": "创建VUE3+TypeScript项目.md"
+        },
+        {
+          "name": "VUE3+Mapbox项目依赖",
+          "filename": "VUE3+Mapbox项目依赖.md"
+        },
+        {
+          "name": "VScode开发VUE3项目扩展",
+          "filename": "VScode开发VUE3项目扩展.md"
+        },
+        {
+          "name": "VUE3中TypeScript类写法",
+          "filename": "VUE3中TypeScript类写法.md"
+        },
+        {
+          "name": "Axios使用",
+          "filename": "Axios使用.md"
         },
         {
           "name": "issue：Unsupported engine",
@@ -81,10 +97,6 @@
         {
           "name": "issue：Module ‘“xx.vue“‘ has no default export.Vetur",
           "filename": "issue：Module ‘“xx.vue“‘ has no default export.Vetur.md"
-        },
-        {
-          "name": "ts类写法",
-          "filename": "ts类写法.md"
         }
       ]
     },

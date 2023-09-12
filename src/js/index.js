@@ -127,8 +127,15 @@ function loadmd(filename, path) {
 let isRmenu = false;
 /** 加载当前md菜单 */
 function loadMarkedMenu() {
-  console.log($('#mdview .headtitle').length);
-  if ($('#mdview .headtitle').length == 0) {
+  let indexNum = 0;
+  $('#mdview .headtitle').each((index, elem) => {
+    if ($(elem).parent('blockquote').length == 0) indexNum++
+    else {
+      $(elem).parent('blockquote').addClass($(elem).attr('id').toLowerCase());
+    }
+  })
+
+  if (indexNum == 0) {
     $('.rightmenuwrap').hide();
     isRmenu = false;
     return;
@@ -138,10 +145,11 @@ function loadMarkedMenu() {
 
   let Htm = ``;
   $('#mdview .headtitle').each((index, elem) => {
-    let txt = $(elem).text();
-    Htm += `<li class="rightmenu${$(elem).attr('level')}" anchor="${txt}"><span>${txt}</span></li>`
+    if ($(elem).parent('blockquote').length == 0) {
+      let txt = $(elem).text();
+      Htm += `<li class="rightmenu${$(elem).attr('level')}" anchor="${txt}"><span>${txt}</span></li>`;
+    }
   })
-
   $('.rightmenuwrap ul').empty().html(Htm);
 
   $('.rightmenuwrap ul li').each((index, elem) => {
