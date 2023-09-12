@@ -39,6 +39,10 @@
       "menupath": "MARKDOWN/TypeScript/",
       "menulists": [
         {
+          "name": "TypeScript",
+          "filename": "TypeScript.md"
+        },
+        {
           "name": "ES6使用Promise()封装Ajax",
           "filename": "ES6使用Promise()封装Ajax.md"
         },

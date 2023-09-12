@@ -78,21 +78,20 @@ $(function () {
     let scrollTop = $(document).scrollTop();
     if (scrollTop > 200) {
       $('.back-top-btn').fadeIn();
-      let obj = $('.main-box').offset();
-      let width = $('.main-box').width();
-      $('.rightmenuwrap').css({ "left": `${obj.left + width}px` }).addClass('fixed');
     } else {
       $('.back-top-btn').fadeOut(function () {
         $(this).removeClass('toping')
       });
-      $('.rightmenuwrap').removeAttr('style').removeClass('fixed');
     }
-    if (scrollTop > 16) {
-      let obj = $('.main-box').offset();
-      let width = $('.main-box').width();
-      $('.rightmenuwrap').css({ "left": `${obj.left + width}px` }).addClass('fixed');
-    } else {
-      $('.rightmenuwrap').removeAttr('style').removeClass('fixed');
+
+    if (isRmenu) {
+      if (scrollTop > 16) {
+        let obj = $('.main-box').offset();
+        let width = $('.main-box').width();
+        $('.rightmenuwrap').css({ "left": `${obj.left + width}px` }).addClass('fixed');
+      } else {
+        $('.rightmenuwrap').removeAttr('style').removeClass('fixed');
+      }
     }
   })
 
@@ -125,13 +124,17 @@ function loadmd(filename, path) {
   })
 }
 
+let isRmenu = false;
 /** 加载当前md菜单 */
 function loadMarkedMenu() {
+  console.log($('#mdview .headtitle').length);
   if ($('#mdview .headtitle').length == 0) {
     $('.rightmenuwrap').hide();
+    isRmenu = false;
     return;
   }
   $('.rightmenuwrap').fadeIn();
+  isRmenu = true;
 
   let Htm = ``;
   $('#mdview .headtitle').each((index, elem) => {

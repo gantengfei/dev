@@ -261,16 +261,24 @@
 .markdown-body table {
   padding: 0;
   width: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 .markdown-body table tr {
   border-top: 1px solid #dddddd;
-  background-color: white;
   margin: 0;
   padding: 0;
 }
 
-.markdown-body table tr:nth-child(odd) {
+.markdown-body table thead tr {
+  background-color: #f8f8f8;
+}
+
+.markdown-body table tbody tr {
+  background-color: white;
+}
+.markdown-body table tbody tr:nth-child(even) {
   background-color: #f8f8f8;
 }
 

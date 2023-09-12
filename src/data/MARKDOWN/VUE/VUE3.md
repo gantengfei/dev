@@ -77,7 +77,6 @@ npm i --S mapbox-gl@2.6.1
 npm i --S @mapbox/mapbox-gl-draw
 npm i --S @mapbox/mapbox-gl-language
 npm i --S echarts
-npm i --S layui
 npm i --S jszip@3.1.3
 npm i --S turf
 npm i --S jquery @types/jquery
