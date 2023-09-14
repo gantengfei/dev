@@ -71,12 +71,12 @@
       "menupath": "MARKDOWN/VUE/",
       "menulists": [
         {
-          "name": "创建VUE3+TypeScript项目",
-          "filename": "创建VUE3+TypeScript项目.md"
+          "name": "创建VUE3(TypeScript)项目",
+          "filename": "创建VUE3(TypeScript)项目.md"
         },
         {
-          "name": "VUE3+Mapbox项目依赖",
-          "filename": "VUE3+Mapbox项目依赖.md"
+          "name": "VUE3(Mapbox)项目依赖",
+          "filename": "VUE3(Mapbox)项目依赖.md"
         },
         {
           "name": "VScode开发VUE3项目扩展",
