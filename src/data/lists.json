@@ -67,6 +67,16 @@
       ]
     },
     {
+      "menuname": "微信小程序",
+      "menupath": "MARKDOWN/WeChat/",
+      "menulists": [
+        {
+          "name": "微信小程序开发",
+          "filename": "微信小程序开发.md"
+        }
+      ]
+    },
+    {
       "menuname": "VUE",
       "menupath": "MARKDOWN/VUE/",
       "menulists": [
@@ -75,8 +85,8 @@
           "filename": "创建VUE3(TypeScript)项目.md"
         },
         {
-          "name": "VUE3(Mapbox)项目依赖",
-          "filename": "VUE3(Mapbox)项目依赖.md"
+          "name": "VUE3(Mapbox GL)项目依赖",
+          "filename": "VUE3(Mapbox GL)项目依赖.md"
         },
         {
           "name": "VScode开发VUE3项目扩展",
@@ -101,12 +111,12 @@
       ]
     },
     {
-      "menuname": "Mapbox开发",
-      "menupath": "MARKDOWN/Mapbox/",
+      "menuname": "Mapbox GL开发",
+      "menupath": "MARKDOWN/Mapbox GL/",
       "menulists": [
         {
-          "name": "Typescript Mapbox GL框架",
-          "filename": "Typescript Mapbox GL框架.md"
+          "name": "Typescript(Mapbox GL)框架",
+          "filename": "Typescript(Mapbox GL)框架.md"
         },
         {
           "name": "Mapbox Style 规范",
@@ -116,6 +126,10 @@
         {
           "name": "Mapbox GL进阶之paint和filter",
           "filename": "Mapbox GL进阶之paint和filter.md"
+        },
+        {
+          "name": "Mapbox GL中fitBounds()平移缩放到可见区域",
+          "filename": "Mapbox GL中fitBounds()平移缩放到可见区域.md"
         }
       ]
     },
@@ -136,6 +150,10 @@
         {
           "name": "cmd命令",
           "filename": "cmd命令.md"
+        },
+        {
+          "name": "node命令",
+          "filename": "node命令.md"
         },
         {
           "name": "npm命令",
