@@ -1994,7 +1994,7 @@
         return text;
       }
 
-      var out = '<a href="' + escape$1(href) + '"';
+      var out = '<a href="' + escape$1(href) + '" target="_blank"';
 
       if (title) {
         out += ' title="' + title + '"';

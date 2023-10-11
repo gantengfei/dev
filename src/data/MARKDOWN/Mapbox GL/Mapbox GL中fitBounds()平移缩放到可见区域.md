@@ -1,5 +1,11 @@
 
-`geojson`多边形`"type":"Polygon"`
+> ## TIP
+> Mapbox GL Js > Example \
+> [Fit to the bounds of a LineString](https://docs.mapbox.com/mapbox-gl-js/example/zoomto-linestring/) \
+> 官方案例：适合LineString的边界
+
+
+1、一个多边形平移和缩放到地图可见区域范围内，`geojson`是多边形`"type":"Polygon"`类型。
 ``` TypeScript
 const geojson = {
   'type': 'FeatureCollection',
@@ -16,7 +22,7 @@ const geojson = {
 };
 
 // LineString的地理坐标
-const coordinates = data_100.features[0].geometry.coordinates[0];
+const coordinates = geojson.features[0].geometry.coordinates[0];
 // 创建一个'LngLatBounds'，两个角在第一个坐标。
 const bounds = new mapboxgl.LngLatBounds(
   coordinates[0],
@@ -34,8 +40,7 @@ this.map.fitBounds(bounds, {
 });
 ```
 
-
-`geojson`线段`"type":"LineString"`
+2、一段线段平移和缩放到地图可见区域范围内，`geojson`是线段`"type":"LineString"`类型。
 ``` TypeScript
 const geojson = {
   'type': 'FeatureCollection',
@@ -52,7 +57,7 @@ const geojson = {
 };
 
 // LineString的地理坐标
-const coordinates = data_100.features[0].geometry.coordinates[0];
+const coordinates = geojson.features[0].geometry.coordinates[0];
 // 创建一个'LngLatBounds'，两个角在第一个坐标。
 const bounds = new mapboxgl.LngLatBounds(
   coordinates[0],

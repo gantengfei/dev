@@ -295,5 +295,5 @@ map = new mapboxgl.Map({
 });
 ```
 
-
-[原文](https://blog.csdn.net/GISShiXiSheng/article/details/105157145)
+> ## TIP
+> 来源CSDN [《进阶mapbox GL之paint和filter》](https://blog.csdn.net/GISShiXiSheng/article/details/105157145)

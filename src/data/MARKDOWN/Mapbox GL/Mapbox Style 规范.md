@@ -1,8 +1,8 @@
 # Mapbox Style 规范
 
-[Mapbox （ 中文官网 ）](http://www.mapbox.cn/)致力于打造全球最漂亮的个性化地图。
+[Mapbox](https://www.mapbox.com/)致力于打造全球最漂亮的个性化地图。
 
-这里记录下其 Web 端 API [Mapbox GL JS](http://www.mapbox.cn/mapbox-gl-js/api/) 的地图样式规范 [Style](http://www.mapbox.cn/mapbox-gl-js/style-spec/) 的各个配置项：
+这里记录下其 Web 端 API [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/) 的地图样式规范 [Mapbox Style Spec](https://docs.mapbox.com/style-spec/reference/) 的各个配置项：
 
 > 必填项会加上 * ，方便根据目录进行查看
 
@@ -1227,19 +1227,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
      }
 }
 ```
-（完）
-
-[原文](https://my.oschina.net/u/3185947/blog/4819218)
 
 
-
-
-
-
-
-
-
-
-
-
-
+> ## TIP
+> 来源OSCHINA [《Mapbox Style 规范》](https://my.oschina.net/u/3185947/blog/4819218)
