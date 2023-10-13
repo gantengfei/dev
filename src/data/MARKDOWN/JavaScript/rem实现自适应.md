@@ -1,10 +1,10 @@
 # rem 单位
-rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。看到rem大家一定会想起em单位，em（font size of the element）是指相对于父元素的字体大小的单位。它们之间其实很相似，只不过一个计算的规则是依赖根元素一个是依赖父元素计算。
+`rem`（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。看到rem大家一定会想起em单位，em（font size of the element）是指相对于父元素的字体大小的单位。它们之间其实很相似，只不过一个计算的规则是依赖根元素一个是依赖父元素计算。
 
 
 
 # 移动端
-以宽750px设计稿开发为例：
+以宽`750px`设计稿开发为例：
 
 ``` css
 /* 宽200px , 字号12px */
@@ -14,8 +14,8 @@ div {
 }
 ```
 
-adjust.js
-```` javascript
+引用 `adjust.js` 实现自适应
+```` JavaScript
 /**
  * 单位：rem , 1px = 1/100 =0.01rem , 1rem = 1*100 = 100px;
  */
@@ -35,7 +35,7 @@ function adjust() {
 
 
 # PC端
-以宽1920px设计稿开发为例：
+以宽`1920px`设计稿开发为例：
 
 ``` css
 /* 宽200px , 字号12px */
@@ -45,8 +45,8 @@ div {
 }
 ```
 
-adjust.js
-```` javascript
+引用 `adjust.js` 实现自适应
+```` JavaScript
 /**
  * 单位：rem , 1px = 1/100 =0.01rem , 1rem = 1*100 = 100px;
  */
