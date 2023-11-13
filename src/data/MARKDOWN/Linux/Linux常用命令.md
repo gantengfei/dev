@@ -1,11 +1,11 @@
 # ➤ 常用命令
 
-**当前目录文件大小：**
+**当前目录文件大小**
 ``` bash
 [root@localhost ~]$ du -sh
 ```
 
-**当前目录路径：**
+**当前目录路径**
 ``` bash
 [root@localhost ~]$ pwd
 ```
@@ -31,23 +31,41 @@
 # ➤ 文件
 ## ◆ 压缩解压
 ### .zip
-**压缩:**
+**压缩**
 ``` bash
 [root@localhost ~]$ zip -r filename.zip filename
 ```
-**解压:**
+**解压**
 ``` bash
 [root@localhost ~]$ unzip -o filename.zip
 ```
 
 ### .tar.gz
-**压缩：**
+**压缩**
 ``` bash
 [root@localhost ~]$ tar -zcvf filename.tar.gz filename
 ```
-**解压：**
+**解压**
 ``` bash
 [root@localhost ~]$ tar -zxvf filename.tar.gz
+```
+**压缩时去掉/排除某个文件夹：增加参数`--exclude`**
+
+打包xmname，需要去掉node_modules目录：
+``` bash
+[root@localhost ~]$ tar -zcvf xmname_bak.tar.gz --exclude=xmname/node_modules xmname
+```
+排除多个目录，增加 `--exclude` 即可，如下命令排除node_modules和oldlib两个目录及文件node_modules.zip：
+``` bash
+[root@localhost ~]$ tar -zcvf xmname_bak.tar.gz --exclude=xmname/node_modules --exclude=xmname/oldlib --exclude=xmname/node_modules.zip xmname
+```
+> ## WARNING
+> 使用`tar`的`–exclude`命令排除打包的时候，不能加“`/`”，否则还是会把node_modules目录以及其下的文件打包进去
+``` bash
+# 错误写法 ×
+[root@localhost ~]$ tar -zcvf xmname_bak.tar.gz --exclude=xmname/node_modules/ xmname
+# 正确写法 √
+[root@localhost ~]$ tar -zcvf xmname_bak.tar.gz --exclude=xmname/node_modules xmname
 ```
 
 ## ◆ 创建文件夹
@@ -62,14 +80,14 @@
 > 以创建 `/home/test/demo` 为例，在默认情况下，需要一层一层的创建各个目录，而使用 `-p` 选项，则系统会自动帮创建 `/home`、`/home/test` 以及 `/home/test/demo`
 
 ## ◆ 删除文件/文件夹
-**删除文件：**
+**删除文件**
 ``` bash
 [root@localhost ~]$ rm -f filename.zip
 ```
 ``` bash
 [root@localhost ~]$ rm -f /x/xx/xxx/filename.zip
 ```
-**删除文件夹：**
+**删除文件夹**
 ``` bash
 [root@localhost ~]$ rm -rf filename
 ```
@@ -114,15 +132,15 @@
 > `-f` 强制覆盖现有文件 \
 > `-v` 显示详细的处理信息
 
-**文件夹重命名:**
+**文件夹重命名**
 ``` bash
 [root@localhost ~]$ mv filename/ newfilename
 ```
-**文件重命名:**
+**文件重命名**
 ``` bash
 [root@localhost ~]$ mv filename.txt newfilename.txt
 ```
-**文件移动到指定目录：**
+**文件移动到指定目录**
 ``` bash
 [root@localhost ~]$ mv filename.txt /home/test
 ```
@@ -136,31 +154,31 @@
 
 
 # ➤ 防火墙
-**查看防火墙状态：**
+**查看防火墙状态**
 ``` bash
 [root@localhost ~]$ firewall-cmd --state
 ```
-**启动防火墙：**
+**启动防火墙**
 ``` bash
 [root@localhost ~]$ systemctl start firewalld
 ```
-**查看现有的规则：**
+**查看现有的规则**
 ``` bash
 [root@localhost ~]$ iptables -nL
 ```
-**查询8080端口是否开放：**
+**查询8080端口是否开放**
 ``` bash
 [root@localhost ~]$ firewall-cmd --query-port=8080/tcp
 ```
-**开放8080端口：**
+**开放8080端口**
 ``` bash
 [root@localhost ~]$ firewall-cmd --permanent --add-port=8080/tcp
 ```
-**移除8080端口：**
+**移除8080端口**
 ``` bash
 [root@localhost ~]$ firewall-cmd --permanent --remove-port=8080/tcp
 ```
-**重启防火墙：** ⭐
+**重启防火墙** ⭐
 ``` bash
 [root@localhost ~]$ firewall-cmd --reload
 ```
@@ -191,7 +209,7 @@
 [root@localhost ~]$ last -x shutdown
 ```
 
-**通过管道来查看最后一次关机时间：**
+**通过管道来查看最后一次关机时间**
 ``` bash
 [root@localhost ~]$ last -x shutdown | head -1
 ```
@@ -214,24 +232,24 @@
 ``` bash
 [root@localhost ~]$ cd /usr/local/nginx/
 ```
-**启动Ngin命令：**
+**启动Ngin命令**
 ``` bash
 [root@localhost ~]$ cd sbin/
 [root@localhost ~]$ ./nginx
 ```
-**停止Nginx命令：**
+**停止Nginx命令**
 ``` bash
 [root@localhost ~]$ ./nginx -s stop
 ```
-**重启Nginx命令：**
+**重启Nginx命令**
 ``` bash
 [root@localhost ~]$ ./nginx -s reload
 ```
-**查看Nginx状态：**
+**查看Nginx状态**
 ``` bash
 [root@localhost ~]$ ps -ef|grep nginx
 ```
-**关闭Nginx命令：**
+**关闭Nginx命令**
 ``` bash
 [root@localhost ~]$ kill -9 主进程号
 ```
