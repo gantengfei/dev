@@ -123,6 +123,10 @@
         {
           "name": "issue：Module ‘“xx.vue“‘ has no default export.Vetur",
           "filename": "issue：Module ‘“xx.vue“‘ has no default export.Vetur.md"
+        },
+        {
+          "name": "VUE简单路由的使用",
+          "filename": "VUE简单路由的使用.md"
         }
       ]
     },
@@ -174,6 +178,10 @@
         {
           "name": "npm命令",
           "filename": "npm命令.md"
+        },
+        {
+          "name": "NodeJS多版本管理",
+          "filename": "NodeJS多版本管理.md"
         }
       ]
     },
@@ -208,6 +216,10 @@
         {
           "name": "常用特殊字符大全v2",
           "filename": "常用特殊字符大全v2.md"
+        },
+        {
+          "name": "常用链接",
+          "filename": "常用链接.md"
         }
       ]
     }
