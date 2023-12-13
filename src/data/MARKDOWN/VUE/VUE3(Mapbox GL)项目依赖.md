@@ -26,6 +26,9 @@ npm i --S vue-class-component@next
 > VueUI组件库
 ``` bash
 npm i --S element-plus
+
+# 版本升级
+npm install element-plus@latest
 ```
 
 
