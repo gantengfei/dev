@@ -25,8 +25,8 @@
           "filename": "Layui.layDate.md"
         },
         {
-          "name": "rem实现自适应",
-          "filename": "rem实现自适应.md"
+          "name": "rem实现页面自适应",
+          "filename": "rem实现页面自适应.md"
         },
         {
           "name": "页面声音播放问题",
@@ -73,12 +73,12 @@
       ]
     },
     {
-      "menuname": "CSS/Sass/Less",
-      "menupath": "MARKDOWN/CSS_Sass_Less/",
+      "menuname": "Css Sass Less",
+      "menupath": "MARKDOWN/CssSassLess/",
       "menulists": [
         {
-          "name": "CSS、Sass、Less笔记",
-          "filename": "CSS、Sass、Less笔记.md"
+          "name": "Css、Sass、Less笔记",
+          "filename": "Css、Sass、Less笔记.md"
         },
         {
           "name": "滚动条设置",

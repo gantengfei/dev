@@ -1,4 +1,4 @@
-# 1.table Dom Html 转 Excel
+# 1.Table Html 转 Excel
 ``` JavaScript
 let tableBox = $('.tablecontent').html();
 
@@ -8,33 +8,32 @@ PublicEvent.UittableDownload(tableBox, "filename")
 ``` JavaScript
 /** Htm表格生成excel下载 */
 export function UittableDownload(tableTheadTbody: any, fileName: any) {
-    let str = tableTheadTbody;
-    //下载的表格模板数据
-    let excelFile = `<html xmlns:o="urn:schemas-microsoft-com:office:office"
+  let str = tableTheadTbody;
+  //下载的表格模板数据
+  let excelFile = `<html xmlns:o="urn:schemas-microsoft-com:office:office"
     xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
     <head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>
     <x:Name>${fileName}</x:Name>
     <x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet>
     </x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->
     </head><body><table>${str}</table></body></html>`;
-    //下载模板
-    // let uri = 'data:application/vnd.ms-excel;charset=utf-8,' + encodeURIComponent(excelFile);
-    // let uri = 'data:text/csv;charset=utf-8,\uFEFF' + encodeURIComponent(excelFile);
-    let blob = new Blob([excelFile], { type: "text/csv;charset=utf-8" });
-    blob = new Blob([String.fromCharCode(0xFEFF), blob], { type: blob.type });
-    let uri = window.URL.createObjectURL(blob);
-    let link = document.createElement("a");
-    link.href = uri;
-    link.download = fileName + '.xls';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  //下载模板
+  // let uri = 'data:application/vnd.ms-excel;charset=utf-8,' + encodeURIComponent(excelFile);
+  // let uri = 'data:text/csv;charset=utf-8,\uFEFF' + encodeURIComponent(excelFile);
+  let blob = new Blob([excelFile], { type: "text/csv;charset=utf-8" });
+  blob = new Blob([String.fromCharCode(0xFEFF), blob], { type: blob.type });
+  let uri = window.URL.createObjectURL(blob);
+  let link = document.createElement("a");
+  link.href = uri;
+  link.download = fileName + '.xls';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 ```
 
-# 2.json Data 转 Excel
+# 2.Json Data 转 Excel
 ``` JavaScript
-
 let datas = {
   "title":[{"value":"时间/日期"},{"value":"00"},{"value":"01"},{"value":"02"},{"value":"03"},{"value":"04"},{"value":"05"},{"value":"06"},{"value":"07"},{"value":"08"},{"value":"09"},{"value":"10"},{"value":"11"},{"value":"12"},{"value":"13"},{"value":"14"},{"value":"15"},{"value":"16"},{"value":"17"},{"value":"18"},{"value":"19"},{"value":"20"},{"value":"21"},{"value":"22"},{"value":"23"}],
   "data":[
@@ -43,7 +42,8 @@ let datas = {
     [{"value":"2024-01-05"},{"value":"8.7"},{"value":"7.6"},{"value":"7.0"},{"value":"7.7"},{"value":"7.4"},{"value":"7.9"},{"value":"8.2"},{"value":"7.6"},{"value":"6.6"},{"value":"6.5"},{"value":"5.7"},{"value":"4.9"},{"value":"4.2"},{"value":"3.9"},{"value":"3.8"},{"value":"3.7"},{"value":"3.6"},{"value":"3.5"},{"value":"3.2"},{"value":"2.9"},{"value":"2.7"},{"value":"2.8"},{"value":"2.4"},{"value":"2.4"}],
     [{"value":"2024-01-06"},{"value":"2.3"},{"value":"1.7"},{"value":"1.2"},{"value":"0.7"},{"value":"0.4"},{"value":"0.5"},{"value":"0.9"},{"value":"1.8"},{"value":"3.0"},{"value":"4.2"},{"value":"5.7"},{"value":"7.1"},{"value":"8.3"},{"value":"9.1"},{"value":"10.2"},{"value":"11.6"},{"value":"12.7"},{"value":"12.3"},{"value":"12.4"},{"value":"12.6"},{"value":"12.1"},{"value":"12.2"},{"value":"11.1"},{"value":"10.8"}],
     [{"value":"2024-01-07"},{"value":"10.5"},{"value":"10.1"},{"value":"9.7"},{"value":"9.3"},{"value":"8.9"},{"value":"8.6"},{"value":"8.1"},{"value":"7.6"},{"value":"7.1"},{"value":"6.3"},{"value":"5.4"},{"value":"4.8"},{"value":"4.5"},{"value":"4.2"},{"value":"3.7"},{"value":"3.0"},{"value":"2.4"},{"value":"2.0"},{"value":"1.5"},{"value":"0.9"},{"value":"1.0"},{"value":"1.7"},{"value":"2.4"},{"value":"3.1"}],
-    [{"value":"2024-01-08"},{"value":"3.5"},{"value":"4.0"},{"value":"4.5"},{"value":"5.2"},{"value":"5.4"},{"value":"6.1"},{"value":"6.5"},{"value":"6.7"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"}]]
+    [{"value":"2024-01-08"},{"value":"3.5"},{"value":"4.0"},{"value":"4.5"},{"value":"5.2"},{"value":"5.4"},{"value":"6.1"},{"value":"6.5"},{"value":"6.7"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"},{"value":"-"}]
+  ]
 }
 
 JSONToExcelConvertor(datas.title, datas.data, 'fliename')
@@ -82,32 +82,14 @@ export function JSONToExcelConvertor(ShowLabel, JSONData, FileName) {
 
   excel += "</table>";
 
-  let excelFile = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:x='urn:schemas-microsoft-com:office:excel' xmlns='http://www.w3.org/TR/REC-html40'>";
-  excelFile += '<meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">';
-  excelFile += '<meta http-equiv="content-type" content="application/vnd.ms-excel';
-  excelFile += '; charset=UTF-8">';
-  excelFile += "<head>";
-  excelFile += "<!--[if gte mso 9]>";
-  excelFile += "<xml>";
-  excelFile += "<x:ExcelWorkbook>";
-  excelFile += "<x:ExcelWorksheets>";
-  excelFile += "<x:ExcelWorksheet>";
-  excelFile += "<x:Name>";
-  excelFile += "{worksheet}";
-  excelFile += "</x:Name>";
-  excelFile += "<x:WorksheetOptions>";
-  excelFile += "<x:DisplayGridlines/>";
-  excelFile += "</x:WorksheetOptions>";
-  excelFile += "</x:ExcelWorksheet>";
-  excelFile += "</x:ExcelWorksheets>";
-  excelFile += "</x:ExcelWorkbook>";
-  excelFile += "</xml>";
-  excelFile += "<![endif]-->";
-  excelFile += "</head>";
-  excelFile += "<body>";
-  excelFile += excel;
-  excelFile += "</body>";
-  excelFile += "</html>";
+let excelFile =`<html xmlns:o='urn:schemas-microsoft-com:office:office'
+  xmlns:x='urn:schemas-microsoft-com:office:excel' xmlns='http://www.w3.org/TR/REC-html40'>
+  <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">
+  <head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>
+  <x:Name>${FileName}</x:Name>
+  <x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet>
+  </x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->
+  </head><body>${excel}</body></html>`;
 
   let uri = 'data:application/vnd.ms-excel;charset=utf-8,' + encodeURIComponent(excelFile);
 
