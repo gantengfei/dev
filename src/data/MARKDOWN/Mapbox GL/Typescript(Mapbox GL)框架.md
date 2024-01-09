@@ -6,7 +6,7 @@
 ``` bash
 # 删除typescript
 npm uninstall -g typescript
-# 安装2.5.2版本
+# 安装2.7.2版本
 npm install -g typescript@2.7.2
 # 查看版本
 tsc -v
