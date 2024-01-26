@@ -131,6 +131,10 @@
         {
           "name": "VUE简单路由的使用",
           "filename": "VUE简单路由的使用.md"
+        },
+        {
+          "name": "VUE路由缓存",
+          "filename": "VUE路由缓存.md"
         }
       ]
     },
@@ -206,6 +210,16 @@
         {
           "name": "Windows中虚拟CentOS7",
           "filename": "Windows中虚拟CentOS7.md"
+        }
+      ]
+    },
+    {
+      "menuname": "VScode",
+      "menupath": "MARKDOWN/VScode/",
+      "menulists": [
+        {
+          "name": "实现代码片段快捷输入设置",
+          "filename": "实现代码片段快捷输入设置.md"
         }
       ]
     },

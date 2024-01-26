@@ -211,7 +211,8 @@ const router = createRouter({
     {
       /* path:'*' 必须要放最后 */
       /* path:'*' 表示上面的路由没有匹配到，则进入下面的页面 */
-      path: '*',
+      /* vue2使用* vue3使用:pathMatch('*') 或者 :pathMatch('*')* 或者 :catchAll(.*) */
+      path: '/:pathMatch(.*)*',
       name: 'notfound',
       /* 懒加载功能：一开始不加载，当切换路由的时候再加载 */
       component: () => import('@/components/NotFound.vue'),
