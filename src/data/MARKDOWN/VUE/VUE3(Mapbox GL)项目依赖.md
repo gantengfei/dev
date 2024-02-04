@@ -4,31 +4,32 @@
 > -S：--save的简写(开发和运行都依赖时) \
 > -D：--save-dev的简写(开发时依赖)
 ``` bash
-# Mapbox GL（2.6.1版本）
+# Mapbox GL（2.6.1版本）[^2.6.1]
 npm i --S mapbox-gl@2.6.1
-# Mapbox组件mapbox-gl-draw（绘制图形）
+# Mapbox组件mapbox-gl-draw（绘制图形）[^1.4.2]
 npm i --S @mapbox/mapbox-gl-draw
-# Mapbox组件mapbox-gl-language（语言包）
+# Mapbox组件mapbox-gl-language（语言包）[^1.0.1]
 npm i --S @mapbox/mapbox-gl-language
-# Echarts
+# Echarts [^5.4.3]
 npm i --S echarts
 # 读取和打包zip文件
 npm i --S jszip@3.1.3
-# 处理各种地图算法
-npm i --S turf
-# jquery
+# jquery [^3.7.1]
 npm i --S jquery @types/jquery
-# 网络请求库
+# 网络请求库 [^1.5.0]
 npm i --S axios
 ```
 
+# vue-class-component
 > ## TIP
 > 安装[vue-class-component](https://www.npmjs.com/package/vue-class-component)
 > 使用@Component注解，将类转化为 vue 的组件
 ``` bash
 npm i --S vue-class-component@next
+# [^8.0.0-rc.1]
 ```
 
+# element-plus
 > ## TIP
 > 安装[Element Plus](https://element-plus.org/zh-CN/)
 > VueUI组件库
@@ -37,6 +38,39 @@ npm i --S element-plus
 
 # 版本升级
 npm install element-plus@latest
+# [^2.4.3]
+```
+在 `main.ts` 文件中配置使用：
+``` TypeScript
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+//@ts-ignore
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+
+app.use(ElementPlus, { locale: zhCn })
+
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component)
+}
 ```
 
+# @turf/turf
+> ## TIP
+> 安装 [turf.js](https://turfjs.org/)
+> 处理各种地图算法
+``` bash
+# 安装版本太低
+# npm i --S turf
+# [^3.0.14]
 
+# 安装 Turf 库
+npm i --S @turf/turf
+# [^6.5.0]
+```
+在 `main.ts` 文件中配置使用：
+``` TypeScript
+//@ts-ignore
+import * as turf from '@turf/turf';
+(window as any).turf = turf;
+```

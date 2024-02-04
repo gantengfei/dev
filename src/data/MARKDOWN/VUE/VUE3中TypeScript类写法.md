@@ -8,9 +8,9 @@
 
 <script setup lang="ts">
 import { onBeforeMount, onMounted } from 'vue'
-import MapContainer from '../components/MapContainer.vue';
-import { evt } from '../utils'
-import http from '../utils/request/request'
+import MapContainer from '@/components/MapContainer.vue';
+import { evt } from '@/utils'
+import http from '@/utils/request/request'
 
 let map;
 
@@ -51,10 +51,10 @@ TS类写法
 </template>
 
 <script lang="ts">
-import MapContainer from '../components/MapContainer.vue';
 import { Options, Vue } from 'vue-class-component'
-import { evt } from '../utils'
-import http from '../utils/request/request'
+import { evt } from '@/utils'
+import http from '@/utils/request/request'
+import MapContainer from '@/components/MapContainer.vue';
 
 //@ts-ignore
 @Options({

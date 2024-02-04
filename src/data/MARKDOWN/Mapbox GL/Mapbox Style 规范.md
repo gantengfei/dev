@@ -409,7 +409,7 @@ URL 模板必须带有占位符 `{fontstack}` 和 `{range}`。
             "icon-padding": 2, // 图标的外边距（可选，值 >= 0，默认值为 2。可用于碰撞检测）
             "icon-offset": [0, 0], // 图标的偏移量（可选，默认值为 [0, 0]）
             "icon-anchor": "center", // 图标与锚点的位置关系（可选，可选值为 center、left、right、top、bottom、top-left、top-right、bottom-left、bottom-right，默认值为 center）
-            "icon-rotation": 0, // 图标的顺时针旋转角度（可选，默认值为 0，单位：角度）
+            "icon-rotate": 0, // 图标的顺时针旋转角度（可选，默认值为 0，单位：角度）
             "icon-allow-overlap": false, // 是否允许图标重叠（可选，默认值为 false。当值为 true 时，图标即使和其他符号触碰也会显示）
             "icon-ignore-placement": false, // 是否忽略图标位置（可选，默认值为 false。当值为 true 时，其他符号即使与此图标触碰也会显示）
             "icon-optional": false, // 图标是否可不显示（可选，默认值为 false。当值为 true 时，如果图标与文本标签碰撞，则显示文本标签）

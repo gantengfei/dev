@@ -121,6 +121,10 @@
           "filename": "Axios使用.md"
         },
         {
+          "name": "Axios使用api-manage",
+          "filename": "Axios使用api-manage.md"
+        },
+        {
           "name": "issue：Unsupported engine",
           "filename": "issue：Unsupported engine.md"
         },
@@ -135,6 +139,10 @@
         {
           "name": "VUE路由缓存",
           "filename": "VUE路由缓存.md"
+        },
+        {
+          "name": "VUE3自定义指令",
+          "filename": "VUE3自定义指令.md"
         }
       ]
     },

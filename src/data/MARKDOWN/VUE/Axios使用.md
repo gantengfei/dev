@@ -71,12 +71,20 @@ const service = axios.create({
   timeout: 1000 * 30
 })
 
+// request interceptors 请求拦截
 service.interceptors.request.use((config) => {
   return config;
 }, (error) => {
   // 请求错误处理
   console.error('Request Error:', error)
   return Promise.reject(error);
+})
+
+// response interceptors 响应拦截
+service.interceptors.response.use((response) => {
+  return response;
+}, (error) => {
+  return Promise.reject(error)
 })
 
 export default service
