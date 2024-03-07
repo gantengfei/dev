@@ -143,6 +143,14 @@
         {
           "name": "VUE3自定义指令",
           "filename": "VUE3自定义指令.md"
+        },
+        {
+          "name": "Vue3+Vite4+Ts多环境配置",
+          "filename": "Vue3+Vite4+Ts多环境配置.md"
+        },
+        {
+          "name": "issue：VUE对含有私有变量的类报误",
+          "filename": "issue：VUE对含有私有变量的类报误.md"
         }
       ]
     },
@@ -225,6 +233,10 @@
       "menuname": "VScode",
       "menupath": "MARKDOWN/VScode/",
       "menulists": [
+        {
+          "name": "VScode插件",
+          "filename": "VScode插件.md"
+        },
         {
           "name": "实现代码片段快捷输入设置",
           "filename": "实现代码片段快捷输入设置.md"
