@@ -51,6 +51,10 @@
         {
           "name": "Excel和图片下载",
           "filename": "Excel和图片下载.md"
+        },
+        {
+          "name": "localStorage跨域存储",
+          "filename": "localStorage跨域存储.md"
         }
       ]
     },
@@ -151,6 +155,10 @@
         {
           "name": "issue：VUE对含有私有变量的类报误",
           "filename": "issue：VUE对含有私有变量的类报误.md"
+        },
+        {
+          "name": "Vue3+Vite引入图片",
+          "filename": "Vue3+Vite引入图片.md"
         }
       ]
     },

@@ -28,6 +28,25 @@
 
 
 
+
+# ➤ 查看系统内存使用信息
+
+`free`命令显示内存的使用信息。默认按照k（b）的计数单位统计。
+
+`free -g`:以G为单位来显示内存的信息
+``` bash
+[root@localhost ~]$ free -g
+```
+![输入图片说明](https://foruda.gitee.com/images/1712538429808521109/941a6396_4993153.png "屏幕截图")
+
+> total：表示 总计物理内存的大小。 \
+> used：表示 已使用多少。 \
+> free：表示 可用内存多少。 \
+> Shared：表示多个进程共享的内存总额。 \
+> Buffers/cached：表示 磁盘缓存的大小。
+
+
+
 # ➤ 文件
 ## ◆ 压缩解压
 ### .zip
@@ -48,24 +67,6 @@
 **解压**
 ``` bash
 [root@localhost ~]$ tar -zxvf filename.tar.gz
-```
-**压缩时去掉/排除某个文件夹：增加参数`--exclude`**
-
-打包xmname，需要去掉node_modules目录：
-``` bash
-[root@localhost ~]$ tar -zcvf xmname_bak.tar.gz --exclude=xmname/node_modules xmname
-```
-排除多个目录，增加 `--exclude` 即可，如下命令排除node_modules和oldlib两个目录及文件node_modules.zip：
-``` bash
-[root@localhost ~]$ tar -zcvf xmname_bak.tar.gz --exclude=xmname/node_modules --exclude=xmname/oldlib --exclude=xmname/node_modules.zip xmname
-```
-> ## WARNING
-> 使用`tar`的`–exclude`命令排除打包的时候，不能加“`/`”，否则还是会把node_modules目录以及其下的文件打包进去
-``` bash
-# 错误写法 ×
-[root@localhost ~]$ tar -zcvf xmname_bak.tar.gz --exclude=xmname/node_modules/ xmname
-# 正确写法 √
-[root@localhost ~]$ tar -zcvf xmname_bak.tar.gz --exclude=xmname/node_modules xmname
 ```
 
 ## ◆ 创建文件夹
