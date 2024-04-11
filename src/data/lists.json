@@ -150,7 +150,7 @@
         },
         {
           "name": "Vue3+Vite4+Ts多环境配置",
-          "filename": "Vue3+Vite4+Ts多环境配置.md"
+          "filename": "Vue3_Vite4_Ts多环境配置.md"
         },
         {
           "name": "issue：VUE对含有私有变量的类报误",
@@ -158,7 +158,7 @@
         },
         {
           "name": "Vue3+Vite引入图片",
-          "filename": "Vue3+Vite引入图片.md"
+          "filename": "Vue3_Vite引入图片.md"
         }
       ]
     },
