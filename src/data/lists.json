@@ -149,7 +149,7 @@
           "filename": "VUE3自定义指令.md"
         },
         {
-          "name": "Vue3+Vite4+Ts多环境配置",
+          "name": "Vue3_Vite4_Ts多环境配置",
           "filename": "Vue3_Vite4_Ts多环境配置.md"
         },
         {
@@ -157,8 +157,12 @@
           "filename": "issue：VUE对含有私有变量的类报误.md"
         },
         {
-          "name": "Vue3+Vite引入图片",
+          "name": "Vue3_Vite引入图片",
           "filename": "Vue3_Vite引入图片.md"
+        },
+        {
+          "name": "Vue3_Vite4_Ts打包基本配置",
+          "filename": "Vue3_Vite4_Ts打包基本配置.md"
         }
       ]
     },
@@ -182,6 +186,10 @@
         {
           "name": "Mapbox GL中fitBounds()平移缩放到可见区域",
           "filename": "Mapbox GL中fitBounds()平移缩放到可见区域.md"
+        },
+        {
+          "name": "Google地图各级比例尺及空间分辨率",
+          "filename": "Google地图各级比例尺及空间分辨率.md"
         }
       ]
     },

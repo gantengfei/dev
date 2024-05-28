@@ -19,3 +19,8 @@ code .\dist\
 ``` bash
 rm .\dist\
 ```
+\
+**删除文件** `rm`
+``` bash
+rm .\dist.zip
+```
