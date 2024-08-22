@@ -12,6 +12,12 @@ let Barr = [4,5,6];
 arr = [...Aarr,...Barr]; // [1,2,3,4,5,6]
 ```
 
+**取数组前三个元素**
+``` JavaScript
+var arr = [1, 2, 3, 4, 5, 6];
+var result = arr.slice(0, 3); // [1, 2, 3]
+```
+
 **`filter()` 过滤**
 ``` JavaScript
 const arr = [25,16,3,7];
@@ -25,6 +31,27 @@ let heightArray = [];
 heightArray = Array.from(new Set(heightArray));
 heightArray.sort((a, b) => { return b - a });
 ```
+
+**字符串填充`padStart()` `padEnd()`**
+``` JavaScript
+let num = 789
+// padStart() 从当前字符串的开头开始填充
+let str = String(num).padStart(2) // '789'
+let str = String(num).padStart(4) // ' 789'
+let str = String(num).padStart(4, '63') // '6789'
+let str = String(num).padStart(5, '63') // '63789'
+let str = String(num).padStart(8, '63') // '63636789'
+// 常用在补全长度
+let str = String(num).padStart(6, '0') // '000789'
+// padEnd() 从当前字符串的末尾开始填充
+let str = String(num).padEnd(2) // '789'
+let str = String(num).padEnd(4) // '789 '
+let str = String(num).padEnd(4, '0') // '7890'
+let str = String(num).padEnd(4, '63') // '7896'
+let str = String(num).padEnd(5, '63') // '78963'
+let str = String(num).padEnd(8, '63') // '78963636'
+```
+
 
 **标签切换改变选中状态**
 ``` JavaScript

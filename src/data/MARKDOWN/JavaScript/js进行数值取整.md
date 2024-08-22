@@ -29,7 +29,7 @@ Math.round(value)
 
 ## 3、示例
 ``` javascript
-console.log(Math. round((2.01));       // 2
+console.log(Math.round((2.01));       // 2
 console.log(Math.round(2.9));          // 3
 console.log(Math.round('0.22'));       // 0
 console.log(Math.round(-1.22));        // -1
@@ -49,7 +49,7 @@ Math.ceil(value)
 
 3、示例
 ``` javascript
-console.log(Math.cei1(2.01));         // 3
+console.log(Math.ceil(2.01));         // 3
 console.log(Math.ceil(2.9));          // 3
 console.log(Math.ceil('0.22'));       // 1
 console.log(Math.ceil( -1.22));       // -1

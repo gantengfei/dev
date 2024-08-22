@@ -163,6 +163,10 @@
         {
           "name": "Vue3_Vite4_Ts打包基本配置",
           "filename": "Vue3_Vite4_Ts打包基本配置.md"
+        },
+        {
+          "name": "issue：用ref获取不到DOM元素",
+          "filename": "issue：用ref获取不到DOM元素.md"
         }
       ]
     },
