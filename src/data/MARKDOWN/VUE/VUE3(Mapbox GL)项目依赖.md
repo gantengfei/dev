@@ -20,6 +20,11 @@ npm i --S jquery @types/jquery
 npm i --S axios
 ```
 
+模块中使用`echarts`：
+``` TypeScript
+import * as echarts from 'echarts'
+```
+
 # vue-class-component
 > ## TIP
 > 安装[vue-class-component](https://www.npmjs.com/package/vue-class-component)
@@ -73,4 +78,30 @@ npm i --S @turf/turf
 //@ts-ignore
 import * as turf from '@turf/turf';
 (window as any).turf = turf;
+```
+
+# plotly.js-dist
+> ## TIP
+> 安装[plotly.js](https://plotly.com/javascript/reference/)
+> 图表库
+``` bash
+npm i plotly.js-dist
+```
+在`typings/index.ts`中配置：
+``` TypeScript
+declare module 'plotly.js-dist';
+```
+在模块中使用：
+``` TypeScript
+import Plotly from 'plotly.js-dist';
+```
+
+# three
+``` bash
+npm i three@0.115.0
+```
+
+# gif.js
+```
+npm i gif.js@0.2.0
 ```
