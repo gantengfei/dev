@@ -105,6 +105,10 @@
       "menupath": "MARKDOWN/VUE/",
       "menulists": [
         {
+          "name": "VUE3(TypeScript)开发环境",
+          "filename": "VUE3(TypeScript)开发环境.md"
+        },
+        {
           "name": "创建VUE3(TypeScript)项目",
           "filename": "创建VUE3(TypeScript)项目.md"
         },
