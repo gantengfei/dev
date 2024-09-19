@@ -171,6 +171,10 @@
         {
           "name": "issue：用ref获取不到DOM元素",
           "filename": "issue：用ref获取不到DOM元素.md"
+        },
+        {
+          "name": "VUE中双击复制文字",
+          "filename": "VUE中双击复制文字.md"
         }
       ]
     },
