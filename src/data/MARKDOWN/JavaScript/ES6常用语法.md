@@ -9,19 +9,19 @@ let MinArrp = Math.min(...Arrp)
 ``` JavaScript
 let Aarr = [1,2,3];
 let Barr = [4,5,6];
-arr = [...Aarr,...Barr]; // [1,2,3,4,5,6]
+arr = [...Aarr,...Barr]; // 输出：[1,2,3,4,5,6]
 ```
 
 **取数组前三个元素**
 ``` JavaScript
 var arr = [1, 2, 3, 4, 5, 6];
-var result = arr.slice(0, 3); // [1, 2, 3]
+var result = arr.slice(0, 3); // 输出：[1,2,3]
 ```
 
 **`filter()` 过滤**
 ``` JavaScript
 const arr = [25,16,3,7];
-arr.filter(v=>v>10); //[25, 16]
+arr.filter(v=>v>10); // 输出：[25,16]
 ```
 
 **数组去重，数组排序正(到)序**
@@ -36,20 +36,20 @@ heightArray.sort((a, b) => { return b - a });
 ``` JavaScript
 let num = 789
 // padStart() 从当前字符串的开头开始填充
-let str = String(num).padStart(2) // '789'
-let str = String(num).padStart(4) // ' 789'
-let str = String(num).padStart(4, '63') // '6789'
-let str = String(num).padStart(5, '63') // '63789'
-let str = String(num).padStart(8, '63') // '63636789'
+let str = String(num).padStart(2) // 输出：'789'
+let str = String(num).padStart(4) // 输出：' 789'
+let str = String(num).padStart(4, '63') // 输出：'6789'
+let str = String(num).padStart(5, '63') // 输出：'63789'
+let str = String(num).padStart(8, '63') // 输出：'63636789'
 // 常用在补全长度
-let str = String(num).padStart(6, '0') // '000789'
+let str = String(num).padStart(6, '0') // 输出：'000789'
 // padEnd() 从当前字符串的末尾开始填充
-let str = String(num).padEnd(2) // '789'
-let str = String(num).padEnd(4) // '789 '
-let str = String(num).padEnd(4, '0') // '7890'
-let str = String(num).padEnd(4, '63') // '7896'
-let str = String(num).padEnd(5, '63') // '78963'
-let str = String(num).padEnd(8, '63') // '78963636'
+let str = String(num).padEnd(2) // 输出：'789'
+let str = String(num).padEnd(4) // 输出：'789 '
+let str = String(num).padEnd(4, '0') // 输出：'7890'
+let str = String(num).padEnd(4, '63') // 输出：'7896'
+let str = String(num).padEnd(5, '63') // 输出：'78963'
+let str = String(num).padEnd(8, '63') // 输出：'78963636'
 ```
 
 
@@ -69,13 +69,13 @@ tabs.forEach((v,i)=>i===index?v.isActive=true:v.isActive=false);
 let array = ['1458', '329', '602', '988', '241', '149', '430', '48', '1951'];
 
 array.sort();
-// ['1458', '149', '1951', '241', '329', '430', '48', '602', '988']
+// 输出：['1458', '149', '1951', '241', '329', '430', '48', '602', '988']
 
 array.sort((a, b) => a - b);
-// 正序(a-b) ['48', '149', '241', '329', '430', '602', '988', '1458', '1951']
+// 正序(a-b)输出：['48', '149', '241', '329', '430', '602', '988', '1458', '1951']
 
 array.sort((a, b) => b - a);
-// 倒序(b-a) ['1951', '1458', '988', '602', '430', '329', '241', '149', '48']
+// 倒序(b-a)输出：['1951', '1458', '988', '602', '430', '329', '241', '149', '48']
 ```
 
 > ## WARNING

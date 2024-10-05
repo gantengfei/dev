@@ -55,3 +55,7 @@
 ## JavaScript and TypeScript Nightly
 ![输入图片说明](https://foruda.gitee.com/images/1709876851162446142/d2f1a65b_4993153.png "屏幕截图")
 > 功能是启用TypeScript Nightly主题，作为VS Code的内置TypeScript版本，同时支持JavaScript和TypeScript IntelliSense。
+
+## VS Code Counter
+![输入图片说明](https://foruda.gitee.com/images/1727224764098035478/174ea9bd_4993153.png "屏幕截图")
+> 统计代码行数以及代码量等信息

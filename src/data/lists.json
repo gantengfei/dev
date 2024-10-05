@@ -202,6 +202,10 @@
         {
           "name": "Google地图各级比例尺及空间分辨率",
           "filename": "Google地图各级比例尺及空间分辨率.md"
+        },
+        {
+          "name": "用ArcMap合并裁剪区域",
+          "filename": "用ArcMap合并裁剪区域.md"
         }
       ]
     },

@@ -1,6 +1,6 @@
 **1.** 前面带数字,后面非数字,可以直接用parseFloat()函数
 ``` JavaScript
-const num = parseFloat("24℃"); //num: 24
+const num = parseFloat("24℃"); // 输出：24
 ```
 
 > ## TIP
@@ -15,18 +15,18 @@ const num = parseFloat("24℃"); //num: 24
 **2.** 字符串中只含有一个整型数值的字符串,直接使用正则表达式将数字的字符删除掉就行
 ``` JavaScript
 const str1 = "今天温度24℃";
-const num = str1.replace(/[^\d]/g, ""); //num: 24
+const num = str1.replace(/[^\d]/g, ""); // 输出：24
 ```
 
 **3.** 对于字符串中含有多数值,使用字符串的match方法,通过正则表达式提取字符串的所有数字(包含整数和小数)
 ``` JavaScript
 const str1 = '温度:24℃,降水量:0.1mm';
-const num1 = str.match(/\d+(.\d+)?/g); // num1: ["2.75","3.65"]
+const num1 = str.match(/\d+(.\d+)?/g); // 输出：['24', '0.1']
 
 const str2 = "89.5+7*5-9/3.0+8.5";
 const num2 = str2.match(/\d+(\.\d+)?/g);
-console.log(num2); // num2: ["89.5", "7", "5", "9", "3.0", "8.5"]
+console.log(num2); // 输出：['89.5', '7', '5', '9', '3.0', '8.5']
 
 const num3 = str2.match(/[^\d\.]/g);
-console.log(num3); // num3: ["+", "*", "-", "/", "+"]
+console.log(num3); // 输出：['+', '*', '-', '/', '+']
 ```
