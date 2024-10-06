@@ -1,4 +1,6 @@
 
+# 一、常规用法
+
 > ## TIP
 > Mapbox GL Js > Example \
 > [Fit to the bounds of a LineString](https://docs.mapbox.com/mapbox-gl-js/example/zoomto-linestring/) \
@@ -73,4 +75,78 @@ this.map.fitBounds(bounds, {
   // padding: { top: 80, bottom: 80, left: 80, right: 80 },
   maxZoom: 13
 });
+```
+
+
+# 二、多类型判断
+将地图视图尽可能大地设定在给定的地理边界内
+``` TypeScript
+const init = async () => {
+  let GeoJson = (await fileAction('./data/xxGeoJson.json')).data
+
+  let coordinates: any = [];
+  // const { geometry } = GeoJson.features[0]
+  let geometry: any = {}
+  if (GeoJson.type == 'FeatureCollection') {
+    geometry = GeoJson.features[0].geometry
+  } else if (GeoJson.type == 'Feature') {
+    geometry = GeoJson.geometry
+  }
+
+  if (geometry.type == 'Polygon') {
+    coordinates = geometry.coordinates[0]
+  } else if (geometry.type == 'MultiPolygon') {
+    geometry.coordinates.forEach((cooItem: any) => {
+      coordinates = [...coordinates, ...cooItem[0]]
+    })
+  }
+
+  const bounds = new mapboxgl.LngLatBounds(
+    coordinates[0], coordinates[0]
+  )
+
+  for (const coord of coordinates) {
+    bounds.extend(coord);
+  }
+
+  map.fitBounds(bounds, {
+    // padding: { top: 16, bottom: 16, left: 16, right: 16 },
+    padding: 16,
+    maxZoom: 7
+  })
+
+}
+```
+
+# 三、区域掩膜图层
+``` TypeScript
+async setMaskArea(area: string, map: any = this.myMap) {
+  const areaData = (await fileAction(`./data/${area}.json`)).data;
+
+  const mask = turf.polygon([[[55.152, 20.585], [55.152, 56.111], [119.238, 56.111], [119.238, 20.585], [55.152, 20.585]]]);
+
+  const masked = turf.mask(areaData, mask);
+
+  const source = map.getSource('maskarea_source');
+  if (source) {
+    source.setData(masked);
+  } else {
+    map.addSource('maskarea_source', {
+      "type": "geojson",
+      "data": masked
+    })
+
+    const maskareaLayer = {
+      "id": "maskarea",
+      "type": "fill",
+      "source": "maskarea_source",
+      "layout": {},
+      "paint": {
+        "fill-color": "#FFF",
+        "fill-opacity": 1
+      }
+    }
+    map.addLayer(maskareaLayer, 'borderBoldLayer');
+  }
+}
 ```

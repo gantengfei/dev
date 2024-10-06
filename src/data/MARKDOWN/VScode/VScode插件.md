@@ -59,3 +59,7 @@
 ## VS Code Counter
 ![输入图片说明](https://foruda.gitee.com/images/1727224764098035478/174ea9bd_4993153.png "屏幕截图")
 > 统计代码行数以及代码量等信息
+
+## Easy LESS
+![输入图片说明](https://foruda.gitee.com/images/1728116427205775154/fc2e09ab_4993153.png "屏幕截图")
+> 将 LESS 编译成 CSS 的简单工具
