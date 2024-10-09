@@ -2,6 +2,7 @@
 import request from '@/utils/request/request'
 
 /** POST请求 request.post(url:string,params:{})
+ * * JSON数据类型
  * @param url
  * @param params 参数
  * @param option 其它参数
@@ -10,7 +11,7 @@ export function postAction(url: string, params?: any, option?: any) {
   return request({
     url: url,
     method: 'post',
-    params: params,
+    data: params,
     ...option
   })
 }
@@ -38,7 +39,7 @@ export function putAction(url: string, params?: any, option?: any) {
   return request({
     url: url,
     method: 'put',
-    params: params,
+    data: params,
     ...option
   })
 }
@@ -52,7 +53,7 @@ export function deleteAction(url: string, params?: any, option?: any) {
   return request({
     url: url,
     method: 'delete',
-    params: params,
+    data: params,
     ...option
   })
 }
@@ -66,6 +67,57 @@ export function fileAction(url: string) {
     method: 'get'
   })
 }
+
+/** POST请求 request.post(url:string,params:{})
+ * * (表单)字符串类型
+ * @param url
+ * @param params 参数
+ * @param option 其它参数
+ */
+export function postFormAction(url: string, params?: any, option?: any) {
+  return request({
+    url: url,
+    method: 'post',
+    data: params,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+    },
+    ...option
+  })
+}
+
+/** POST请求 request.post(url:string,params:{})
+ * * (导出)字符串类型
+ * @param url
+ * @param params 参数
+ * @param option 其它参数
+ */
+export function postExportAction(url: string, params?: any, option?: any) {
+  return request({
+    url: url,
+    method: 'post',
+    data: params,
+    contentType: 'application/json;charset=UTF-8',
+    responseType: 'blob',
+    ...option
+  })
+}
+
+/** 上传文件请求
+ * @param url
+ * @param FormData FormData对象
+ */
+export function UploadFileAction(url: string, FormData: any) {
+  return request({
+    url: url,
+    method: 'post',
+    data: FormData,
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  })
+}
+
 
 ```
 

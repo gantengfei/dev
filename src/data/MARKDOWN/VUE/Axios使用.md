@@ -68,11 +68,31 @@ const BASE_URL = "";
 
 const service = axios.create({
   baseURL: BASE_URL,
-  timeout: 1000 * 30
+  // timeout: 1000 * 30
 })
+
+// const respCodeObj = {
+//   "1511": "当前会话未登录",
+//   "1512": "未能从请求中读取到token",
+//   "1513": "已读取到token，但是token无效",
+//   "1514": "已读取到token，但是token已经过期",
+//   "1515": "已读取到token，但是token已被顶下线",
+//   "1516": "已读取到token，但是token已被踢下线",
+
+//   "1521": "权限认证失败",
+// }
 
 // request interceptors 请求拦截
 service.interceptors.request.use((config) => {
+
+  // if (!config.isNotoken) {
+  //   const xxUser: any = sessionStorage.getItem('xxUser');
+  //   const UserInfo = JSON.parse(xxUser);
+  //   if (UserInfo && UserInfo.token) {
+  //     config.headers.token = `${UserInfo.token}`;
+  //   }
+  // }
+
   return config;
 }, (error) => {
   // 请求错误处理
@@ -82,8 +102,16 @@ service.interceptors.request.use((config) => {
 
 // response interceptors 响应拦截
 service.interceptors.response.use((response) => {
+
+  // if (Object.keys(respCodeObj).includes(response.returnCode)) {
+  //   // 清除 token 信息并跳转到登录页面
+  //   sessionStorage.removeItem('xxUser');
+  //   window.location.href = consts.loginUrl;
+  // }
+
   return response;
 }, (error) => {
+  console.error('Request Error:', error)
   return Promise.reject(error)
 })
 
