@@ -16,6 +16,7 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
     plugins: [vue()],
     server: {
       host: '0.0.0.0', // 指定服务器监听IP地址
+      // port: 5173, // 指定开发服务器端口
       open: true, // 启动时自动在浏览器中打开应用程序
       proxy: {
         // 后台数据
