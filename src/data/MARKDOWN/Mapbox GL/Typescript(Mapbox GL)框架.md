@@ -1,7 +1,11 @@
 # Typescript+Mapbox GL框架 开发环境
 
 ## 一、环境安装
-### 1. Typescript安装@2.7.2
+### 1. Node.js安装
+> 已安装 `16.0` 或更高版本的 `Node.js` \
+> 可通过 *`nvm`* / *`fnm`* 命令管理多个`node`版本 `^10.0.0` `^16.0.0` `^20.0.0`
+
+### 2. Typescript安装@2.7.2
 
 ``` bash
 # 删除typescript
@@ -12,7 +16,7 @@ npm install -g typescript@2.7.2
 tsc -v
 ```
 
-### 2. SASS 环境安装
+### 3. SASS 环境安装
 1. 安装ruby [（RubyInstaller）](https://rubyinstaller.org/)
 2. 全局安装compass
 
