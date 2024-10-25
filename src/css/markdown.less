@@ -494,3 +494,19 @@
   border: none;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
+
+span {
+  &.warn {
+    display: block;
+    padding: 4px 8px 4px 30px;
+    color: #e86e30;
+    background: #fef6d5 url(./assets/warn.png) no-repeat 8px center
+  }
+
+  &.error {
+    display: block;
+    padding: 4px 8px 4px 30px;
+    color: #ff0000;
+    background: #fcebeb url(./assets/error.png) no-repeat 8px center;
+  }
+}

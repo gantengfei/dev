@@ -15,9 +15,7 @@ import MapContainer from '../components/MapContainer.vue';
 ![输入图片说明](https://foruda.gitee.com/images/1693985997214337160/32e532e7_4993153.png "屏幕截图")
 
 具体的错误信息如下：
-```
-Module '"e:/SVN/vue-test/src/components/MapContainer.vue"' has no default export.Vetur(1192)
-```
+<span class="error">Module '"e:/SVN/vue-test/src/components/MapContainer.vue"' has no default export.Vetur(1192)</span>
 
 【错误原因】 \
 从错误提示可以看到关键字_Vetur_：

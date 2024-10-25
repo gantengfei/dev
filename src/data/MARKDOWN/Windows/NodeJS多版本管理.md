@@ -28,7 +28,9 @@ nvm list available
 ```
 ![输入图片说明](https://foruda.gitee.com/images/1701048644090825897/22f61adf_4993153.png "屏幕截图")
 
-**安装指定版本**
+---
+
+**安装指定版本** `nvm install <version>`
 ``` bash
 nvm install 10.24.1
 
@@ -36,13 +38,28 @@ nvm install 16.20.2
 ```
 ![输入图片说明](https://foruda.gitee.com/images/1701048695837320952/82266047_4993153.png "屏幕截图")
 
+---
+
+**卸载指定版本** `nvm uninstall <version>`
+``` bash
+nvm uninstall 20.10.0
+```
+
+---
+
 **查看已安装的版本**
 ``` bash
 nvm list
+
+# 或
+
+nvm ls
 ```
 ![输入图片说明](https://foruda.gitee.com/images/1701048716503595099/0afdf848_4993153.png "屏幕截图")
 
-**切换版本**
+---
+
+**切换版本** `nvm use <version>`
 ``` bash
 nvm use 10.24.1
 
@@ -50,12 +67,23 @@ nvm use 16.20.2
 ```
 ![输入图片说明](https://foruda.gitee.com/images/1701048749342413460/84878009_4993153.png "屏幕截图")
 
+---
+
+**查看node版本**
+``` bash
+node -v
+```
+
+---
+
 **查看npm版本**
 ``` bash
 npm -v
 ```
+
 版本没有切换时会出现
-> 'npm' 不是内部或外部命令，也不是可运行的程序或批处理文件。
+> ## WARNING
+> <span style="color:#f56c6c">'npm' 不是内部或外部命令，也不是可运行的程序或批处理文件。</span>
 
 ![输入图片说明](https://foruda.gitee.com/images/1701048774937266401/1cc40872_4993153.png "屏幕截图")
 

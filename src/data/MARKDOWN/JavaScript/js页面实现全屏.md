@@ -39,7 +39,7 @@ let exitFullScreen = function () {
 > ## WARNING
 > 使用`if (document.exitFullscreen){}`判断退出全屏时，如果异常报错 \
 > **报错如下：** \
-> *Uncaught (in promise) TypeError: Failed to execute ‘exitFullscreen’ on ‘Document’: Document not active* \
+> <span class="error">Uncaught (in promise) TypeError: Failed to execute ‘exitFullscreen’ on ‘Document’: Document not active</span>
 > **报错原因：** 在未全屏的情况下触发exitFullscreen
 
 **解决方案：**
