@@ -73,6 +73,10 @@
         {
           "name": "TypeScript的类型指令(单行注释)",
           "filename": "TypeScript的类型指令(单行注释).md"
+        },
+        {
+          "name": "计算两个RGBA颜色之间的渐变值",
+          "filename": "计算两个RGBA颜色之间的渐变值.md"
         }
       ]
     },

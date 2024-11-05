@@ -12,7 +12,7 @@ import MapContainer from '../components/MapContainer.vue';
 </script>
 ```
 虽然不影响正常运行：
-![输入图片说明](https://foruda.gitee.com/images/1693985997214337160/32e532e7_4993153.png "屏幕截图")
+![输入图片说明](https://foruda.gitee.com/images/1693985997214337160/32e532e7_4993153.png "")
 
 具体的错误信息如下：
 <span class="error">Module '"e:/SVN/vue-test/src/components/MapContainer.vue"' has no default export.Vetur(1192)</span>
@@ -29,7 +29,7 @@ import MapContainer from '../components/MapContainer.vue';
 在vscode插件中选择卸载`vetur`，安装`volar`插件即可;
 
 安装`volar` \
-![输入图片说明](https://foruda.gitee.com/images/1693986535932519537/476cc727_4993153.png "屏幕截图")
+![输入图片说明](https://foruda.gitee.com/images/1693986535932519537/476cc727_4993153.png "")
 
 卸载`vetur` \
-![输入图片说明](https://foruda.gitee.com/images/1693986566868894015/2b140459_4993153.png "屏幕截图")
+![输入图片说明](https://foruda.gitee.com/images/1693986566868894015/2b140459_4993153.png "")

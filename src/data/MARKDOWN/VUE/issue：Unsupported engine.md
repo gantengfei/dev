@@ -13,4 +13,4 @@ npm WARN EBADENGINE }
 【解决办法】
 
 ➣ 查看[nodejs & npm 版本对照](https://nodejs.org/en/download/releases)，两者是否匹配
-![输入图片说明](https://foruda.gitee.com/images/1693896642397303697/3a9495ad_4993153.png "屏幕截图")
+![输入图片说明](https://foruda.gitee.com/images/1693896642397303697/3a9495ad_4993153.png "")

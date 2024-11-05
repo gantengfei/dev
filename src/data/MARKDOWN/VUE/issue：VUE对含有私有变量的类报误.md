@@ -1,7 +1,7 @@
 **【错误提示】**
 > <span style="color:#dc362e;">Uncaught (in promise) TypeError: Cannot write private member to an object whose class did not declare it</span>
 
-![输入图片说明](https://foruda.gitee.com/images/1709779295165731743/13b41258_4993153.png "屏幕截图")
+![输入图片说明](https://foruda.gitee.com/images/1709779295165731743/13b41258_4993153.png "")
 
 当vue使用`ref/reactive`声明一个响应式的对象时，若该对象的某个成员变量（也是个对象）会操作它自己的私有变量
 
