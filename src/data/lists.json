@@ -55,6 +55,10 @@
         {
           "name": "localStorage跨域存储",
           "filename": "localStorage跨域存储.md"
+        },
+        {
+          "name": "前端页面清除缓存",
+          "filename": "前端页面清除缓存.md"
         }
       ]
     },
