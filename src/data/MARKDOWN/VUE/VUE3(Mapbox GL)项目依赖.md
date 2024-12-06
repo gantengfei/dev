@@ -105,3 +105,10 @@ npm i three@0.115.0
 ```
 npm i gif.js@0.2.0
 ```
+
+# terser
+> 生产环境时移除console.log调试代码
+> 生产环境时移除debugge
+```
+npm install terser --save-dev
+```

@@ -59,6 +59,10 @@
         {
           "name": "前端页面清除缓存",
           "filename": "前端页面清除缓存.md"
+        },
+        {
+          "name": "drawImage详解",
+          "filename": "drawImage详解.md"
         }
       ]
     },
@@ -177,12 +181,20 @@
           "filename": "Vue3_Vite4_Ts打包基本配置.md"
         },
         {
-          "name": "issue：用ref获取不到DOM元素",
-          "filename": "issue：用ref获取不到DOM元素.md"
+          "name": "VUE中用ref获取DOM元素",
+          "filename": "VUE中用ref获取DOM元素.md"
         },
         {
           "name": "VUE中双击复制文字",
           "filename": "VUE中双击复制文字.md"
+        },
+        {
+          "name": "issue：VUE中Mapbox加载数据问题",
+          "filename": "issue：VUE中Mapbox加载数据问题.md"
+        },
+        {
+          "name": "Vue3_Ts中使用worker",
+          "filename": "Vue3_Ts中使用worker.md"
         }
       ]
     },

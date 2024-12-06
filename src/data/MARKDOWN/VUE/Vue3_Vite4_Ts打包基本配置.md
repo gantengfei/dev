@@ -36,8 +36,15 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
       }
     },
     build: {
-      outDir: env.VITE_APP_OUTDir // 指定输出路径,默认值：dist
+      outDir: env.VITE_APP_OUTDir, // 指定输出路径,默认值：dist
       // assetsDir: 'assets', // 指定生成静态文件目录,默认值：assets
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true, // 生产环境时移除console
+          drop_debugger: true, // 生产环境时去除debugger
+        },
+      },
     }
   })
 }
