@@ -1,6 +1,6 @@
 
 **类型错误**
-```
+``` html
 <script lang="ts">
   import { Options, Vue } from 'vue-class-component'
 
@@ -43,7 +43,7 @@
 ![输入图片说明](https://foruda.gitee.com/images/1731637465218695013/3678a195_4993153.png "")
 
 【解决办法】
-```
+``` TypeScript
 import { shallowReactive } from 'vue'
 
 private maps: any = shallowReactive({})

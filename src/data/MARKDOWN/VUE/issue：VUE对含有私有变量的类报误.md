@@ -23,7 +23,7 @@ ref代理后导致其地址改变，在私有变量看来不再是私有变量�
 
 `shallowRef`是一个函数，用于创建一个基本类型的响应式引用。与`ref`不同，`shallowRef`只会对其传入的值进行浅层次的响应式处理。也就是说，如果传入的是对象，则不会对对象内部的属性进行响应式处理。
 
-```
+``` TypeScript
 import { shallowRef } from 'vue'
 
 const count = shallowRef(0)
@@ -44,7 +44,7 @@ console.log(count.value) // 输出：1
 
 `shallowReactive`是一个函数，用于创建一个浅层次的响应式对象。与`reactive`不同，`shallowReactive`只会对对象的第一层属性进行响应式处理，不会递归地将对象内部的属性都变成响应式。
 
-```
+``` TypeScript
 import { shallowReactive } from 'vue'
 
 const user = shallowReactive({

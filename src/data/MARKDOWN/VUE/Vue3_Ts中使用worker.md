@@ -13,7 +13,7 @@ addEventListener("message", (event) => {
 })
 ```
 2.在`Vue`中使用`worker`
-``` xml
+``` html
 <template>
 </template>
 

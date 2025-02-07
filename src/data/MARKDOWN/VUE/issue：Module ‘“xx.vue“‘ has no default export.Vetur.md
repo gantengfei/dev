@@ -2,7 +2,7 @@
 开发VUE3过程中使用VS code，`Vetur` 暂不支持ts语法，卸载 `Vetur` 插件，安装 `Volar`
 
 【错误提示】
-```
+``` html
 <template>
   <MapContainer/>
 </template>

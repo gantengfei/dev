@@ -103,6 +103,16 @@
       ]
     },
     {
+      "menuname": "Html",
+      "menupath": "MARKDOWN/Html/",
+      "menulists": [
+        {
+          "name": "开发笔记",
+          "filename": "开发笔记.md"
+        }
+      ]
+    },
+    {
       "menuname": "微信小程序",
       "menupath": "MARKDOWN/WeChat/",
       "menulists": [
@@ -195,6 +205,14 @@
         {
           "name": "Vue3_Ts中使用worker",
           "filename": "Vue3_Ts中使用worker.md"
+        },
+        {
+          "name": "VUE侦听器(watch)",
+          "filename": "VUE侦听器(watch).md"
+        },
+        {
+          "name": "VUE中this.$常见的用法",
+          "filename": "VUE中this.$常见的用法.md"
         }
       ]
     },

@@ -112,3 +112,9 @@ npm i gif.js@0.2.0
 ```
 npm install terser --save-dev
 ```
+
+# clipboard
+> 复制内容到剪贴板
+```
+npm install clipboard --save
+```

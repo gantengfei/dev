@@ -67,7 +67,7 @@ created(el, binding, vnode, prevNode) {}
 ## 4.1、局部自定义指令
 4.1.1、在`<script setup>`定义组件内的指令，任何以v开头的驼峰式命名的变量都可以被用作一个自定义指令
 
-``` xml
+``` html
 <template>
   <input v-focus />
 </template>
@@ -83,7 +83,7 @@ created(el, binding, vnode, prevNode) {}
 
 4.1.2、options api 自定义指令需要在directives选项中注册
 
-``` xml
+``` html
 <template>
   <input v-focus />
 </template>

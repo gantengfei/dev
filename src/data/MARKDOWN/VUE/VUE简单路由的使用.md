@@ -107,7 +107,7 @@ export default router
 ```
 
 `components/HeadMenuContainer.vue` 导航菜单组件
-``` xml
+``` html
 <template>
   <div class="headwrap">
     <div class="headmenu">
@@ -225,7 +225,7 @@ export default router
 ```
 
 `components/HeadMenuContainer.vue` 导航菜单组件
-``` xml
+``` html
 <template>
   <div class="headwrap">
     <div class="headmenu">

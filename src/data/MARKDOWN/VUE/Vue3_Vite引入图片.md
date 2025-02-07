@@ -1,6 +1,6 @@
 # 一、单个引入
 通过`import XXX from '/路径'`的这种方式去一张张引入
-``` xml
+``` html
 <template>
   <img src="@/assets/image/wind_shaft_level/5.png" />
 </template>

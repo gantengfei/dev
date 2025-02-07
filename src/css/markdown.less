@@ -1,9 +1,13 @@
+:root {
+  --vt-font-family-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 .markdown-body {
   font-size: 14px;
   line-height: 1.6;
   padding: 30px;
   color: #333;
-  // font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  // font-family: var(--vt-font-family-mono);
 
   *:first-child {
     margin-top: 0 !important;
@@ -85,8 +89,205 @@
     color: #c7254e;
     border: 1px solid #eaeaea;
     background-color: #f2f2f2;
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-family: var(--vt-font-family-mono);
   }
+
+
+  h1 {
+    font-size: 22px;
+    color: black;
+
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+
+      &+h2 {
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    border-bottom: 1px solid #cccccc;
+    color: black;
+
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  h6 {
+    color: #777777;
+    font-size: 14px;
+  }
+
+  hr {
+    background: transparent url(./assets/md-hr.png) repeat-x 0 0;
+    border: 0 none;
+    color: #cccccc;
+    height: 4px;
+    padding: 0;
+  }
+
+  tt {
+    margin: 0 2px;
+    padding: 0 5px;
+    white-space: nowrap;
+    border: 1px solid #eaeaea;
+    background-color: #f8f8f8;
+    font-family: var(--vt-font-family-mono);
+  }
+
+  dl {
+    padding: 0;
+
+    dt {
+      font-size: 14px;
+      font-weight: bold;
+      font-style: italic;
+      padding: 0;
+      margin: 15px 0 5px;
+
+      &:first-child {
+        padding: 0;
+      }
+
+      &> :first-child {
+        margin-top: 0;
+      }
+
+      &> :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    dd {
+      margin: 0 0 15px;
+      padding: 0 15px;
+
+      &> :first-child {
+        margin-top: 0;
+      }
+
+      &> :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  table {
+    padding: 0;
+    width: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    tr {
+      border-top: 1px solid #dddddd;
+      margin: 0;
+      padding: 0;
+
+      th {
+        font-weight: bold;
+        border: 1px solid #dddddd;
+        text-align: left;
+        margin: 0;
+        padding: 6px 13px;
+      }
+
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        margin: 0;
+        padding: 6px 13px;
+      }
+    }
+
+    thead {
+      tr {
+        background-color: #f8f8f8;
+      }
+    }
+
+    tbody {
+      tr {
+        background-color: white;
+
+        &:nth-child(even) {
+          background-color: #f8f8f8;
+        }
+      }
+    }
+  }
+
+  pre {
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 0.2em;
+    background-color: #00000020;
+    // border-radius: 4px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      cursor: pointer;
+      border-radius: 4px;
+      background: rgba(153, 153, 153, .75);
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 4px;
+      background: rgba(0, 0, 0, .1);
+    }
+
+    code {
+      margin: 0;
+      padding: 0;
+      white-space: pre;
+      border: none;
+      /* background: transparent; */
+      font-family: var(--vt-font-family-mono);
+      padding: 1em;
+
+      &.hljs {
+        &::-webkit-scrollbar {
+          height: 8px;
+          background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          height: 8px;
+          background-color: rgba(255, 255, 255, 0.3);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
 }
 
 .markdown-body h1,
@@ -154,34 +355,6 @@
   font-size: inherit;
 }
 
-.markdown-body h1 {
-  font-size: 30px;
-  color: black;
-}
-
-.markdown-body h2 {
-  font-size: 24px;
-  border-bottom: 1px solid #cccccc;
-  color: black;
-}
-
-.markdown-body h3 {
-  font-size: 18px;
-}
-
-.markdown-body h4 {
-  font-size: 16px;
-}
-
-.markdown-body h5 {
-  font-size: 14px;
-}
-
-.markdown-body h6 {
-  color: #777777;
-  font-size: 14px;
-}
-
 .markdown-body p,
 .markdown-body blockquote,
 .markdown-body ul,
@@ -191,29 +364,6 @@
 .markdown-body table,
 .markdown-body pre {
   margin: 15px 0;
-}
-
-.markdown-body hr {
-  background: transparent url(./assets/md-hr.png) repeat-x 0 0;
-  border: 0 none;
-  color: #cccccc;
-  height: 4px;
-  padding: 0;
-}
-
-.markdown-body h2:first-child {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.markdown-body h1:first-child {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.markdown-body h1:first-child+h2 {
-  margin-top: 0;
-  padding-top: 0;
 }
 
 .markdown-body h3:first-child,
@@ -255,83 +405,6 @@
 .markdown-body ul :last-child,
 .markdown-body ol :last-child {
   margin-bottom: 0;
-}
-
-.markdown-body dl {
-  padding: 0;
-}
-
-.markdown-body dl dt {
-  font-size: 14px;
-  font-weight: bold;
-  font-style: italic;
-  padding: 0;
-  margin: 15px 0 5px;
-}
-
-.markdown-body dl dt:first-child {
-  padding: 0;
-}
-
-.markdown-body dl dt> :first-child {
-  margin-top: 0;
-}
-
-.markdown-body dl dt> :last-child {
-  margin-bottom: 0;
-}
-
-.markdown-body dl dd {
-  margin: 0 0 15px;
-  padding: 0 15px;
-}
-
-.markdown-body dl dd> :first-child {
-  margin-top: 0;
-}
-
-.markdown-body dl dd> :last-child {
-  margin-bottom: 0;
-}
-
-.markdown-body table {
-  padding: 0;
-  width: auto;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-.markdown-body table tr {
-  border-top: 1px solid #dddddd;
-  margin: 0;
-  padding: 0;
-}
-
-.markdown-body table thead tr {
-  background-color: #f8f8f8;
-}
-
-.markdown-body table tbody tr {
-  background-color: white;
-}
-
-.markdown-body table tbody tr:nth-child(even) {
-  background-color: #f8f8f8;
-}
-
-.markdown-body table tr th {
-  font-weight: bold;
-  border: 1px solid #dddddd;
-  text-align: left;
-  margin: 0;
-  padding: 6px 13px;
-}
-
-.markdown-body table tr td {
-  border: 1px solid #dddddd;
-  text-align: left;
-  margin: 0;
-  padding: 6px 13px;
 }
 
 .markdown-body table tr th :first-child,
@@ -432,26 +505,6 @@
   text-align: right;
 }
 
-.markdown-body tt {
-  margin: 0 2px;
-  padding: 0 5px;
-  white-space: nowrap;
-  border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-}
-
-
-.markdown-body pre code {
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-  border: none;
-  /* background: transparent; */
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  padding: 1em;
-}
-
 .markdown-body .highlight pre {
   background-color: #f8f8f8;
   border: 1px solid #cccccc;
@@ -461,38 +514,11 @@
   padding: 6px 10px;
 }
 
-.markdown-body pre {
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 0.4em;
-  background-color: #00000050;
-  border-radius: 4px;
-}
-
-.markdown-body pre::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.markdown-body pre::-webkit-scrollbar-thumb {
-  cursor: pointer;
-  border-radius: 4px;
-  background: rgba(153, 153, 153, .75);
-}
-
-.markdown-body pre::-webkit-scrollbar-track {
-  border-radius: 4px;
-  background: rgba(0, 0, 0, .1);
-}
-
 .markdown-body pre code,
 .markdown-body pre tt {
   /* background-color: transparent; */
   border: none;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: var(--vt-font-family-mono);
 }
 
 span {
