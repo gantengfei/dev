@@ -10,7 +10,7 @@
 >
 > 此外，由于 `navigator.clipboard.writeText()` 是异步的，因此需要使用 Promise 来处理其结果。如果复制成功，Promise 会被解析；如果复制失败（例如，由于用户拒绝了权限或由于其他错误），Promise 会被拒绝，并传递一个错误对象。<i style="color:red;">大部分浏览器支持该方法，但并非所有浏览器支持，使用前最好检查下兼容问题。</i>
 
-```
+``` html
 <template>
  <span @dblclick="copyText" style="user-select:text;">{{ textDetailsInfo }}</span>
 </template>
@@ -75,7 +75,7 @@ export default class TestView extends Vue {
 npm install clipboard --save
 ```
 使用
-```
+``` html
 <template>
  <span @click="copyText" style="user-select:text;">{{ textDetailsInfo }}</span>
 </template>

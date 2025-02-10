@@ -44,7 +44,6 @@ const getData = () => {
 
 TS类写法
 ``` html
-
 <template>
   <MapContainer />
   <div class="headwrap"></div>

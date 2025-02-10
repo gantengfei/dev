@@ -143,6 +143,10 @@
           "filename": "VScode开发VUE3项目扩展.md"
         },
         {
+          "name": "VUE开发场景中架构使用规范",
+          "filename": "VUE开发场景中架构使用规范.md"
+        },
+        {
           "name": "VUE3中TypeScript类写法",
           "filename": "VUE3中TypeScript类写法.md"
         },
@@ -213,6 +217,10 @@
         {
           "name": "VUE中this.$常见的用法",
           "filename": "VUE中this.$常见的用法.md"
+        },
+        {
+          "name": "VUE中使用Pinia存储库",
+          "filename": "VUE中使用Pinia存储库.md"
         }
       ]
     },

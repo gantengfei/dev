@@ -124,7 +124,7 @@ export function UploadFileAction(url: string, FormData: any) {
 **使用-1**
 
 父级组件中使用`Suspense` 异步加载
-``` xml
+``` html
 <template>
   <Suspense>
     <CaselibraryMenu />
@@ -139,7 +139,7 @@ const menuConfig = (await fileAction(consts.menuConfig)).data;
 ```
 
 **使用-2**
-``` xml
+``` html
 <script lang="ts" setup>
 import { fileAction } from '@/api/manage';
 import { ref } from 'vue'
@@ -154,7 +154,7 @@ const initMenuConfig = async ()=>{
 ```
 
 **使用-3**
-``` xml
+``` html
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import { fileAction } from '@/api/manage';

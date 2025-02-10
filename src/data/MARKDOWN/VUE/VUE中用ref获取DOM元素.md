@@ -3,7 +3,7 @@
 1.在需要获取的元素标签上添加ref属性 \
 2.创建ref对象，存储ref属性标记的内容 \
 3.通过ref上的value属性即可获取当前dom元素
-```
+``` html
 <template>
   <div class="chartwrap" ref="chartRef"></div>
 </template>
@@ -31,7 +31,7 @@ onMounted(() => {
 1.在需要获取的元素标签上添加ref属性 \
 2.通过getCurrentInstance解构出proxy \
 3.通过proxy.$refs.xxx即可获取当前dom元素
-```
+``` html
 <template>
   <div class="chartwrap" v-for="(item, index) in pollutant" :key="index" :ref="`chart_${item}`"></div>
 </template>
@@ -59,7 +59,7 @@ onMounted(() => {
 
 # 三、this.$refs：访问该 DOM 元素‌
 使用`this.$refs.xxxxxRef`调用，它会在DOM更新完成后执行回调函数，确保你可以获取到最新的DOM元素。
-```
+``` html
 <template>
   <div class="chartwrap" v-for="(item, index) in pollutant" :key="index" :ref="`chart_${item}`"></div>
 </template>
