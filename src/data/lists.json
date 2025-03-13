@@ -67,6 +67,10 @@
         {
           "name": "js判断是否是时间",
           "filename": "js判断是否是时间.md"
+        },
+        {
+          "name": "js鼠标操作事件",
+          "filename": "js鼠标操作事件.md"
         }
       ]
     },
