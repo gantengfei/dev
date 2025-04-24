@@ -17,8 +17,8 @@ root: D:\Program Files\nvm
 path: D:\Program Files\nodejs
 
 # 增加国内镜像地址配置
-node_mirror: https://npm.taobao.org/mirrors/node/
-npm_mirror: https://npm.taobao.org/mirrors/npm/
+node_mirror: https://npmmirror.com/mirrors/node/
+npm_mirror: https://npmmirror.com/mirrors/npm/
 ```
 
 # 使用说明

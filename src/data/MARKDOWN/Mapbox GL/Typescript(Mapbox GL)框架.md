@@ -5,6 +5,11 @@
 > 已安装 `16.0` 或更高版本的 `Node.js` \
 > 可通过 *`nvm`* / *`fnm`* 命令管理多个`node`版本 `^10.0.0` `^16.0.0` `^20.0.0`
 
+``` bash
+# 检查是否已安装 Node.js
+node -v
+```
+
 ### 2. Typescript安装@2.7.2
 
 ``` bash
@@ -21,6 +26,13 @@ tsc -v
 2. 全局安装compass
 
 ``` bash
+# 检查安装的Ruby
+ruby -v
+
+# RubyGems 是 Ruby 的包管理工具。检查是否已安装。
+gem -v
+
+# 安装 Compass 和其它依赖
 gem install compass
 ```
 > ## WARNING
@@ -36,7 +48,7 @@ gem install compass
 > ## TIP
 > 统一编码风格 \
 > 框架中使用到 .editorconfig 配置
-```
+``` ini
 # https://editorconfig.org
 
 root = true
@@ -56,7 +68,7 @@ trim_trailing_whitespace = true
 > 修改注释颜色插件
 
 ![输入图片说明](https://foruda.gitee.com/images/1693623215823932625/1a1ab335_4993153.png "")
-``` JavaScript
+``` TypeScript
 /**
  * 多行注释
  * * 浅绿色注释
@@ -89,25 +101,43 @@ trim_trailing_whitespace = true
   "update.enableWindowsBackgroundUpdates": false,
 
   // ↓↓↓ background 的相关配置 START ↘↘↘↘↘↘↘↘↘↘
-  "background.customImages": [
-    "file:///D:/Program Files/visualbgimg/01.png",
-    "file:///D:/Program Files/visualbgimg/02.png"
-  ],
-  "background.style": {
-    "content": "''",
-    "pointer-events": "none",
-    "position": "absolute",
-    "z-index": "99999",
-    "width": "100%",
-    "height": "100%",
-    "background-position": "right bottom",
-    "background-repeat": "no-repeat",
-    "background-attachment": "fixed",
-    "background-size": "700px 852px",
-    "opacity": 0.1
-  },
-  "background.useFront": true,
   "background.enabled": true,
+  "background.editor": {
+    "useFront": true,
+    "style": {
+      "background-position": "center bottom",
+      "background-size": "auto",
+      "opacity": 0.1
+    },
+    "styles": [
+      {},
+      {
+        "background-position": "right -80px bottom",
+        "background-size": "400px auto",
+        "opacity": 0.1
+      },
+      {
+        "background-position": "right -80px bottom",
+        "background-size": "400px auto",
+        "opacity": 0.1
+      }
+    ],
+    "images": [
+      "file:///D:/Program Files/visualbgimg/03.png",
+      "file:///D:/Program Files/visualbgimg/01.png",
+      "file:///D:/Program Files/visualbgimg/02.png"
+    ],
+    "interval": 0,
+    "random": false
+  },
+  "background.panel": {
+    "images": ["file:///D:/Program Files/visualbgimg/05.jpg"],
+    "opacity": 0.1,
+    "size": "cover",
+    "position": "center",
+    "interval": 0,
+    "random": false
+  },
   // background 的相关配置 END ↖↖↖↖↖↖↖↖↖↖
 
   "workbench.startupEditor": "none",
@@ -205,5 +235,10 @@ trim_trailing_whitespace = true
 
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.unicodeHighlight.ambiguousCharacters": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "wulingshan.biqugeConfig": "H:\\txt\\biquge.config.json",
+  "z-reader.fileDir": "H:\\TXT",
+  "chat.commandCenter.enabled": false,
+  "deepseek.lang": "cn",
 }
 ```
