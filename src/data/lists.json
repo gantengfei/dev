@@ -302,6 +302,10 @@
         {
           "name": "Linux常用命令",
           "filename": "Linux常用命令.md"
+        },
+        {
+          "name": "使用echo命令美化Shell输出",
+          "filename": "使用echo命令美化Shell输出.md"
         }
       ]
     },
