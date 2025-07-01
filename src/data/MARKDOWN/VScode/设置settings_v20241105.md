@@ -3,7 +3,7 @@
 > 设置 → 打开设置(settings.json)
 > background v2.0.0 版本配置
 
-**设置-配置JSON** `settings_v20241030`
+**设置-配置JSON** `settings_v20241105`
 ``` JSON
 {
   "workbench.colorTheme": "Monokai", // 颜色主题

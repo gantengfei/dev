@@ -306,6 +306,14 @@
         {
           "name": "使用echo命令美化Shell输出",
           "filename": "使用echo命令美化Shell输出.md"
+        },
+        {
+          "name": "前端vue项目使用sh部署",
+          "filename": "前端vue项目使用sh部署.md"
+        },
+        {
+          "name": "前端项目测试版部署正式版",
+          "filename": "前端项目测试版部署正式版.md"
         }
       ]
     },
@@ -332,8 +340,16 @@
           "filename": "实现代码片段快捷输入设置.md"
         },
         {
+          "name": "项目开发插件推荐和插件配置",
+          "filename": "项目开发插件推荐和插件配置.md"
+        },
+        {
           "name": "设置settings_v20241030",
           "filename": "设置settings_v20241030.md"
+        },
+        {
+          "name": "设置settings_v20241105",
+          "filename": "设置settings_v20241105.md"
         }
       ]
     },
