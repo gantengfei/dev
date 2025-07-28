@@ -3,7 +3,7 @@ $(function () {
   let nowdate = new Date();
   let year = nowdate.getFullYear();
   let month = nowdate.getMonth() + 1;
-  $('.footer-wrap').empty().html(`G · ©2022~${year}.${month < 10 ? `0${month}` : month}`);
+  $('.footer-wrap').empty().html(`G · ©2022.05~${year}.${String(month).padStart(2, '0')}`);
 
   const data = $.ajax({ async: false, url: '../src/data/lists.json' }).responseJSON;
 

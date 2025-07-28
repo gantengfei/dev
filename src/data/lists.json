@@ -1,6 +1,17 @@
 {
   "DS": [
     {
+      "menuname": "开发日常",
+      "menupath": "MARKDOWN/common/",
+      "menulists": [
+        {
+          "name": "常用链接",
+          "filename": "常用链接.md",
+          "isActive": true
+        }
+      ]
+    },
+    {
       "menuname": "JavaScript开发",
       "menupath": "MARKDOWN/JavaScript/",
       "menulists": [
@@ -242,8 +253,7 @@
         },
         {
           "name": "Mapbox Style 规范",
-          "filename": "Mapbox Style 规范.md",
-          "isActive": true
+          "filename": "Mapbox Style 规范.md"
         },
         {
           "name": "Mapbox GL进阶之paint和filter",
@@ -364,10 +374,6 @@
         {
           "name": "常用特殊字符大全v2",
           "filename": "常用特殊字符大全v2.md"
-        },
-        {
-          "name": "常用链接",
-          "filename": "常用链接.md"
         }
       ]
     }

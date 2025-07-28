@@ -1,5 +1,5 @@
 * {
-  font-size: 14px;
+  // font-size: 14px;
   border: 0;
   margin: 0;
   padding: 0;
@@ -314,6 +314,143 @@ body {
 
     &>img {
       border: 5px solid #fff;
+    }
+  }
+}
+
+.webpagewrap {
+  padding: -16px;
+
+  h1 {
+    padding: 0 16px;
+    font-size: 18px;
+    color: #000;
+  }
+
+  h2 {
+    padding: 0 16px;
+    font-size: 14px;
+    color: #999;
+    border: none;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: 16px;
+      right: 0;
+      bottom: 0;
+      content: "";
+      border-bottom: 1px dashed #999;
+    }
+  }
+
+  .weblistwrap {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 12px;
+    margin-top: 8px;
+
+    li {
+      float: left;
+      width: calc(100% / 3);
+      height: 52px;
+      margin: 4px 0 !important;
+      box-sizing: border-box;
+      padding: 0 2px;
+      position: relative;
+
+      &.tag {
+        &::before {
+          content: "★";
+          position: absolute;
+          left: 0;
+          top: -2px;
+          color: #ff6000;
+          font-size: 12px;
+          opacity: 0.6;
+        }
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 4px 8px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        border: 1px solid #e4e7ed;
+        position: relative;
+
+        &>span {
+          color: #606266;
+
+          &.icon {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            background-repeat: no-repeat;
+            background-position: right 4px top 4px;
+            background-size: auto 20px;
+            opacity: 0.3;
+          }
+        }
+
+        &>i {
+          display: block;
+          color: #5a5a5a;
+          font-size: 12px;
+          font-weight: normal;
+        }
+
+        &:hover {
+          background-color: #42b88320;
+
+          &>span {
+            color: #ff6000;
+          }
+        }
+      }
+
+      .icon_element {
+        background-image: url(../img/webicon/element-plus-logo.svg);
+      }
+
+      .icon_huatools {
+        background-image: url(../img/webicon/huatools.png);
+      }
+
+      .icon_gitee {
+        background-image: url(../img/webicon/gitee.svg);
+      }
+
+      .icon_figma {
+        background-image: url(../img/webicon/figma.png);
+      }
+
+      .icon_deepseek {
+        background-image: url(../img/webicon/deepseek-logo.png);
+      }
+
+      .icon_echart {
+        background-image: url(../img/webicon/echart-logo.png);
+      }
+
+      .icon_highcharts {
+        background-image: url(../img/webicon/highcharts-logo.svg);
+      }
+
+      .icon_iconfont {
+        background-image: url(../img/webicon/iconfont-logo.svg);
+      }
+
+      .icon_mapbox {
+        background-image: url(../img/webicon/mapbox-logo.svg);
+      }
     }
   }
 }
