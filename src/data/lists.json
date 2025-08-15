@@ -82,6 +82,10 @@
         {
           "name": "js鼠标操作事件",
           "filename": "js鼠标操作事件.md"
+        },
+        {
+          "name": "js图片路径转Base64编码",
+          "filename": "js图片路径转Base64编码.md"
         }
       ]
     },
@@ -128,6 +132,10 @@
         {
           "name": "开发笔记",
           "filename": "开发笔记.md"
+        },
+        {
+          "name": "svg中添加gif图",
+          "filename": "svg中添加gif图.md"
         }
       ]
     },
@@ -240,6 +248,10 @@
         {
           "name": "VUE中使用Pinia存储库",
           "filename": "VUE中使用Pinia存储库.md"
+        },
+        {
+          "name": "组件ElLoading自定义svg图",
+          "filename": "组件ElLoading自定义svg图.md"
         }
       ]
     },
@@ -302,6 +314,10 @@
         {
           "name": "NodeJS多版本管理",
           "filename": "NodeJS多版本管理.md"
+        },
+        {
+          "name": "Ruby安装compass问题整理",
+          "filename": "Ruby安装compass问题整理.md"
         }
       ]
     },

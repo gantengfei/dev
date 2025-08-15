@@ -19,21 +19,36 @@ npm uninstall -g typescript
 npm install -g typescript@2.7.2
 # 查看版本
 tsc -v
+# Version 2.7.2
 ```
 
 ### 3. SASS 环境安装
-1. 安装ruby [（RubyInstaller）](https://rubyinstaller.org/)
+1. 安装ruby [（RubyInstaller）](https://rubyinstaller.org/) `rubyinstaller-2.6.3-1-x64.exe`
 2. 全局安装compass
 
 ``` bash
 # 检查安装的Ruby
 ruby -v
+# ruby 2.6.3p62 (2019-04-16 revision 67580) [x64-mingw32]
 
 # RubyGems 是 Ruby 的包管理工具。检查是否已安装。
 gem -v
+# 3.0.3
 
 # 安装 Compass 和其它依赖
 gem install compass
+
+# 检查安装的compass
+compass -v
+# Compass 1.0.3 (Polaris)
+# Copyright (c) 2008-2025 Chris Eppstein
+# Released under the MIT License.
+# Compass is charityware.
+# Please make a tax deductable donation for a worthy cause: http://umdf.org/compass
+
+# 检查安装的sass
+sass -v
+# Sass 3.4.25 (Selective Steve)
 ```
 > ## WARNING
 > **注意**：*sass编译时中文目录报错，建议修改英文目录;*
