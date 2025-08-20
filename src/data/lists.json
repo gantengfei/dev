@@ -8,6 +8,10 @@
           "name": "常用链接",
           "filename": "常用链接.md",
           "isActive": true
+        },
+        {
+          "name": "开发版本号规范",
+          "filename": "开发版本号规范.md"
         }
       ]
     },

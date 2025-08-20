@@ -45,6 +45,15 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
           drop_debugger: true, // 生产环境时去除debugger
         },
       },
+      rollupOptions: {
+        output: {
+          // 默认生成的文件名通常包含哈希值（如app.123456.js），但不包含版本号
+          // 使用哈希值([hash])和版本号同时作为文件名后缀
+          entryFileNames: `assets/[name].${env.VITE_APP_VERSION}.[hash].js`,
+          chunkFileNames: `assets/[name].${env.VITE_APP_VERSION}.[hash].js`,
+          assetFileNames: `assets/[name].${env.VITE_APP_VERSION}.[hash].[ext]`
+        }
+      }
     }
   })
 }
@@ -58,6 +67,9 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
 VITE_ENV = 'development'
 
 VITE_APP_TITLE = '开发环境配置'
+
+# 输出文件版本
+VITE_APP_VERSION = '0.0.0-dev'
 
 # 指定输出路径
 VITE_APP_OUTDir = 'dist'
@@ -80,6 +92,9 @@ VITE_DATA_REAR = '/DATAS'
 VITE_ENV = 'production'
 
 VITE_APP_TITLE = '生产环境配置'
+
+# 输出文件版本 递增规则：重大变更.功能新增.Bug修复+构建元数据
+VITE_APP_VERSION = '1.0.0+20250819'
 
 # 指定输出路径
 VITE_APP_OUTDir = 'qh'
