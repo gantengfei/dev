@@ -28,6 +28,10 @@
           "filename": "ES6常用语法.md"
         },
         {
+          "name": "jQuery",
+          "filename": "jQuery.md"
+        },
+        {
           "name": "js数组求最大值和最小值",
           "filename": "js数组求最大值和最小值.md"
         },
@@ -90,6 +94,10 @@
         {
           "name": "js图片路径转Base64编码",
           "filename": "js图片路径转Base64编码.md"
+        },
+        {
+          "name": "js获取css样式translate()位置",
+          "filename": "js获取css样式translate()位置.md"
         }
       ]
     },

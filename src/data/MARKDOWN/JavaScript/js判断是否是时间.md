@@ -1,6 +1,6 @@
 
 **方法一**：使用正则表达式判断时间格式是否正确
-``` js
+``` JavaScript
 // 时间类型 HH:MM
 function isTime(time) {
   // 时间格式正则表达式
@@ -11,7 +11,7 @@ function isTime(time) {
 ```
 
 判断时间类型，如果不是时间类型返回null
-```js
+```JavaScript
 // 时间类型 00:00:00
 time.match(/^(\d{1,2})(:)?(\d{1,2})\2(\d{1,2})$/);
 
@@ -26,7 +26,7 @@ time.match(/^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2})$/);
 ---
 
 **方法二**：使用Date对象判断时间是否合法
-``` js
+``` JavaScript
 function isTime(time) {
   // 尝试将输入转换为Date对象
   const date = new Date(time);
