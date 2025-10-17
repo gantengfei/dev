@@ -352,22 +352,25 @@ body {
 
     li {
       float: left;
-      width: calc(100% / 3);
+      width: calc(100% / 3 - 4px);
       height: 52px;
-      margin: 4px 0 !important;
+      margin: 4px 2px !important;
       box-sizing: border-box;
-      padding: 0 2px;
       position: relative;
 
       &.tag {
-        &::before {
-          content: "★";
-          position: absolute;
-          left: 0;
-          top: -2px;
-          color: #ff6000;
-          font-size: 12px;
-          opacity: 0.6;
+
+        // &::before {
+        //   content: "★";
+        //   position: absolute;
+        //   left: 0;
+        //   top: -2px;
+        //   color: #ff6000;
+        //   font-size: 12px;
+        //   opacity: 0.6;
+        // }
+        a {
+          background: linear-gradient(15deg, #fff 30%,#42b88310 60%,  #42b88330 100%);
         }
       }
 
@@ -381,6 +384,7 @@ body {
         box-sizing: border-box;
         border: 1px solid #e4e7ed;
         position: relative;
+        background: linear-gradient(15deg, #fff 30%,#cccccc50 60%,  #cccccc 100%);
 
         &>span {
           color: #606266;
@@ -396,7 +400,7 @@ body {
             background-repeat: no-repeat;
             background-position: right 4px top 4px;
             background-size: auto 20px;
-            opacity: 0.3;
+            opacity: 0.8;
           }
         }
 
@@ -441,7 +445,7 @@ body {
       }
 
       .icon_highcharts {
-        background-image: url(../img/webicon/highcharts-logo.svg);
+        background-image: url(../img/webicon/highcharts-logo.png);
       }
 
       .icon_iconfont {
@@ -454,6 +458,18 @@ body {
 
       .icon_ngzorro {
         background-image: url(../img/webicon/ng-zorro-logo.svg);
+      }
+
+      .icon_layui {
+        background-image: url(../img/webicon/Layui-logo.png);
+      }
+
+      .icon_naiveui {
+        background-image: url(../img/webicon/naiveui-logo.svg);
+      }
+
+      .icon_github {
+        background-image: url(../img/webicon/github-logo.png);
       }
     }
   }

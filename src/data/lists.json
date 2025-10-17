@@ -20,8 +20,8 @@
       "menupath": "MARKDOWN/JavaScript/",
       "menulists": [
         {
-          "name": "开发笔记",
-          "filename": "开发笔记.md"
+          "name": "JS开发笔记",
+          "filename": "JS开发笔记.md"
         },
         {
           "name": "ES6常用语法",
@@ -98,6 +98,10 @@
         {
           "name": "js获取css样式translate()位置",
           "filename": "js获取css样式translate()位置.md"
+        },
+        {
+          "name": "js深度拷贝的几种方法",
+          "filename": "js深度拷贝的几种方法.md"
         }
       ]
     },
@@ -142,8 +146,8 @@
       "menupath": "MARKDOWN/Html/",
       "menulists": [
         {
-          "name": "开发笔记",
-          "filename": "开发笔记.md"
+          "name": "HTML开发笔记",
+          "filename": "HTML开发笔记.md"
         },
         {
           "name": "svg中添加gif图",
@@ -176,6 +180,10 @@
         {
           "name": "VUE3(Mapbox GL)项目依赖",
           "filename": "VUE3(Mapbox GL)项目依赖.md"
+        },
+        {
+          "name": "npm安装依赖问题汇总",
+          "filename": "npm安装依赖问题汇总.md"
         },
         {
           "name": "VScode开发VUE3项目扩展",
@@ -330,6 +338,10 @@
         {
           "name": "Ruby安装compass问题整理",
           "filename": "Ruby安装compass问题整理.md"
+        },
+        {
+          "name": "微信双开(N开)",
+          "filename": "微信双开(N开).md"
         }
       ]
     },
@@ -388,6 +400,10 @@
         {
           "name": "设置settings_v20241105",
           "filename": "设置settings_v20241105.md"
+        },
+        {
+          "name": "微软GitHub Copilot代码建议",
+          "filename": "微软GitHub Copilot代码建议.md"
         }
       ]
     },
