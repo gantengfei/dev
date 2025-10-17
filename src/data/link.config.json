@@ -1,0 +1,405 @@
+{
+  "links": [
+    {
+      "title": "📍 AI平台",
+      "lists": [
+        {
+          "title": "DeepSeek",
+          "href": "https://www.deepseek.com/",
+          "logoIcon": "icon_deepseek",
+          "brief": "DeepSeek | 深度求索"
+        }
+      ]
+    },
+    {
+      "title": "📍 导航类网站",
+      "lists": [
+        {
+          "title": "优设导航",
+          "href": "https://hao.uisdc.com/",
+          "logoIcon": "",
+          "brief": "设计导航"
+        },
+        {
+          "title": "CXY521",
+          "href": "http://cxy521.com/",
+          "logoIcon": "",
+          "brief": "程序员导航"
+        }
+      ]
+    },
+    {
+      "title": "📍 开发类网站",
+      "children": [
+        {
+          "title": "代码管理",
+          "lists": [
+            {
+              "title": "Gitee",
+              "href": "https://gitee.com/",
+              "logoIcon": "icon_gitee",
+              "brief": "基于Git的代码托管和研发协作平台",
+              "isMark": true
+            },
+            {
+              "title": "GitHub",
+              "href": "https://github.com/",
+              "logoIcon": "icon_github",
+              "brief": "为软件开发和Git版本控制提供Internet托管",
+              "isMark": true
+            }
+          ]
+        },
+        {
+          "title": "开发工具",
+          "lists": [
+            {
+              "title": "Unicode编码转换",
+              "href": "https://tool.chinaz.com/Tools/Unicode.aspx",
+              "logoIcon": "",
+              "brief": ""
+            },
+            {
+              "title": "Base64图片在线转换",
+              "href": "https://tool.chinaz.com/tools/imgtobase/",
+              "logoIcon": "",
+              "brief": ""
+            },
+            {
+              "title": "代码对比/归并",
+              "href": "https://tool.oschina.net/diff/",
+              "logoIcon": "",
+              "brief": "OSCHINA.NET在线工具"
+            },
+            {
+              "title": "Hoppscotch",
+              "href": "https://hoppscotch.io/",
+              "logoIcon": "",
+              "brief": "类似在线POSTMAN"
+            }
+          ]
+        },
+        {
+          "title": "JSON在线工具",
+          "lists": [
+            {
+              "title": "JSON格式化",
+              "href": "https://www.huatools.com/",
+              "logoIcon": "icon_huatools",
+              "brief": "huatools.com",
+              "isMark": true
+            },
+            {
+              "title": "SO JSON在线解析",
+              "href": "https://www.sojson.com/",
+              "logoIcon": "",
+              "brief": "www.sojson.com"
+            },
+            {
+              "title": "JSON解析及格式化验证",
+              "href": "https://www.json.cn/",
+              "logoIcon": "",
+              "brief": "json.cn"
+            },
+            {
+              "title": "JSON压缩转义工具",
+              "href": "https://www.bejson.com/zhuanyi/",
+              "logoIcon": "",
+              "brief": "bejson.com"
+            }
+          ]
+        },
+        {
+          "title": "GeoJson在线工具",
+          "lists": [
+            {
+              "title": "geojson.io",
+              "href": "https://geojson.io/#map=2/20.0/0.0",
+              "logoIcon": "",
+              "brief": "在线校验GeoJson数据",
+              "isMark": true
+            },
+            {
+              "title": "mapshaper",
+              "href": "https://mapshaper.org",
+              "logoIcon": "",
+              "brief": "GeoJson转.shp文件",
+              "isMark": true
+            },
+            {
+              "title": "echartsMap",
+              "href": "https://hxkj.vip/demo/echartsMap/",
+              "logoIcon": "",
+              "brief": "下载MapGeoJson数据"
+            },
+            {
+              "title": "阿里云 DataV.GeoAtlas",
+              "href": "https://datav.aliyun.com/portal/school/atlas/area_selector",
+              "logoIcon": "",
+              "brief": "地理GeoJson下载",
+              "isMark": true
+            },
+            {
+              "title": "PS拉框助手",
+              "href": "https://www.pslkzs.com/ps/index.php",
+              "logoIcon": "",
+              "brief": "PS插件"
+            }
+          ]
+        },
+        {
+          "title": "开发组件",
+          "lists": [
+            {
+              "title": "ECharts",
+              "href": "https://echarts.apache.org/zh/index.html",
+              "logoIcon": "icon_echart",
+              "brief": "Apache ECharts可视化图表库",
+              "isMark": true
+            },
+            {
+              "title": "Highcharts",
+              "href": "https://highcharts.com.cn/",
+              "logoIcon": "icon_highcharts",
+              "brief": ""
+            },
+            {
+              "title": "Plotly Examples",
+              "href": "https://plotly.com/javascript/",
+              "logoIcon": "",
+              "brief": "Plotly | JavaScript | Examples",
+              "isMark": true
+            },
+            {
+              "title": "Plotly API",
+              "href": "https://plotly.com/javascript/reference/",
+              "logoIcon": "",
+              "brief": "Plotly | JavaScript | API",
+              "isMark": true
+            },
+            {
+              "title": "Qunee Graph Editor",
+              "href": "http://demo.qunee.com/editor/",
+              "logoIcon": "",
+              "brief": ""
+            },
+            {
+              "title": "Layui",
+              "href": "https://layui.dev/",
+              "logoIcon": "icon_layui",
+              "brief": "原生态 Web UI 组件库"
+            },
+            {
+              "title": "Mapbox GL JS",
+              "href": "https://docs.mapbox.com/mapbox-gl-js/api/",
+              "logoIcon": "icon_mapbox",
+              "brief": "API Reference",
+              "isMark": true
+            },
+            {
+              "title": "Vue.js",
+              "href": "https://cn.vuejs.org/",
+              "logoIcon": "",
+              "brief": "渐进式JavaScript框架",
+              "isMark": true
+            },
+            {
+              "title": "Element+",
+              "href": "https://element-plus.org/zh-CN/",
+              "logoIcon": "icon_element",
+              "brief": "基于 Vue 3，面向设计师和开发者的组件库",
+              "isMark": true
+            },
+            {
+              "title": "Naive UI",
+              "href": "https://www.naiveui.com/zh-CN/os-theme",
+              "logoIcon": "icon_naiveui",
+              "brief": "一个 Vue 3 组件库 使用 TypeScript"
+            },
+            {
+              "title": "NG-ZORRO",
+              "href": "https://ng.ant.design/docs/introduce/zh",
+              "logoIcon": "icon_ngzorro",
+              "brief": "遵循 Ant Design 规范的 Angular UI 组件库"
+            },
+            {
+              "title": "Turf.js",
+              "href": "https://turfjs.org/",
+              "logoIcon": "",
+              "brief": "地理空间分析"
+            }
+          ]
+        },
+        {
+          "title": "日常地图",
+          "lists": [
+            {
+              "title": "拾取坐标系统",
+              "href": "http://api.map.baidu.com/lbsapi/getpoint/",
+              "logoIcon": "",
+              "brief": "百度地图"
+            },
+            {
+              "title": "百度地图API",
+              "href": "http://lbsyun.baidu.com/index.php?title=%E9%A6%96%E9%A1%B5",
+              "logoIcon": "",
+              "brief": "百度地图API SDK | 地图开发"
+            },
+            {
+              "title": "坐标拾取器",
+              "href": "https://lbs.qq.com/tool/getpoint/index.html",
+              "logoIcon": "",
+              "brief": "腾讯地图"
+            },
+            {
+              "title": "WebService API",
+              "href": "https://lbs.qq.com/service/webService/webServiceGuide/webServiceOverview",
+              "logoIcon": "",
+              "brief": "WebService API | 腾讯位置服务"
+            },
+            {
+              "title": "JavaScript API GL",
+              "href": "https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocIndex",
+              "logoIcon": "",
+              "brief": "JavaScript API | 腾讯位置服务"
+            },
+            {
+              "title": "我的应用",
+              "href": "https://lbs.qq.com/dev/console/application/mine",
+              "logoIcon": "",
+              "brief": "我的应用 | 腾讯位置服务"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📍 设计类网站",
+      "children": [
+        {
+          "title": "在线UI设计工具",
+          "lists": [
+            {
+              "title": "蓝湖",
+              "href": "https://lanhuapp.com/",
+              "logoIcon": "",
+              "brief": ""
+            },
+            {
+              "title": "figma",
+              "href": "https://www.figma.com/",
+              "logoIcon": "icon_figma",
+              "brief": "在线设计",
+              "isMark": true
+            },
+            {
+              "title": "慕客",
+              "href": "https://www.mockplus.cn/",
+              "logoIcon": "",
+              "brief": ""
+            }
+          ]
+        },
+        {
+          "title": "Icon库",
+          "lists": [
+            {
+              "title": "iconfont",
+              "href": "https://www.iconfont.cn/",
+              "logoIcon": "icon_iconfont",
+              "brief": "阿里巴巴矢量图标库",
+              "isMark": true
+            },
+            {
+              "title": "flaticon",
+              "href": "https://www.flaticon.com/",
+              "logoIcon": "",
+              "brief": ""
+            }
+          ]
+        },
+        {
+          "title": "图处理工具",
+          "lists": [
+            {
+              "title": "TinyPNG",
+              "href": "https://tinypng.com/",
+              "logoIcon": "",
+              "brief": "PNG压缩工具",
+              "isMark": true
+            },
+            {
+              "title": "removebg",
+              "href": "https://www.remove.bg/",
+              "logoIcon": "",
+              "brief": "在线抠图软件_图片去除背景"
+            }
+          ]
+        },
+        {
+          "title": "Color颜色",
+          "lists": [
+            {
+              "title": "Color Hex Color Codes",
+              "href": "https://www.colorcodehex.com/",
+              "logoIcon": "",
+              "brief": "",
+              "isMark": true
+            },
+            {
+              "title": "RGB网页颜色在线取色器",
+              "href": "https://link.fobshanghai.com/rgbcolor.htm",
+              "logoIcon": "",
+              "brief": ""
+            },
+            {
+              "title": "RGB颜色对照表",
+              "href": "https://tool.oschina.net/commons?type=3",
+              "logoIcon": "",
+              "brief": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📍 其它网站",
+      "children": [
+        {
+          "title": "系统软件",
+          "lists": [
+            {
+              "title": "MSDN工具站",
+              "href": "https://msdn.itellyou.cn/",
+              "logoIcon": "",
+              "brief": ""
+            },
+            {
+              "title": "Xclient MAC应用",
+              "href": "https://xclient.info/",
+              "logoIcon": "",
+              "brief": ""
+            }
+          ]
+        },
+        {
+          "title": "工具集",
+          "lists": [
+            {
+              "title": "纸由我 PaperMe",
+              "href": "https://paperme.toolooz.com/",
+              "logoIcon": "",
+              "brief": "自定义打印纸生成器"
+            },
+            {
+              "title": "Kiddo Worksheets",
+              "href": "https://www.kiddoworksheets.com/",
+              "logoIcon": "",
+              "brief": "免费打印的儿童工作表"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
