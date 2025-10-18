@@ -161,27 +161,27 @@
               "title": "Highcharts",
               "href": "https://highcharts.com.cn/",
               "logoIcon": "icon_highcharts",
-              "brief": ""
+              "brief": "为网站和移动平台创建图表和仪表盘"
             },
             {
               "title": "Plotly Examples",
               "href": "https://plotly.com/javascript/",
-              "logoIcon": "",
+              "logoIcon": "icon_plotly",
               "brief": "Plotly | JavaScript | Examples",
               "isMark": true
             },
             {
               "title": "Plotly API",
               "href": "https://plotly.com/javascript/reference/",
-              "logoIcon": "",
+              "logoIcon": "icon_plotly",
               "brief": "Plotly | JavaScript | API",
               "isMark": true
             },
             {
               "title": "Qunee Graph Editor",
               "href": "http://demo.qunee.com/editor/",
-              "logoIcon": "",
-              "brief": ""
+              "logoIcon": "icon_Qunee",
+              "brief": "轻量高效的拓扑图组件"
             },
             {
               "title": "Layui",
@@ -199,7 +199,7 @@
             {
               "title": "Vue.js",
               "href": "https://cn.vuejs.org/",
-              "logoIcon": "",
+              "logoIcon": "icon_vuejs",
               "brief": "渐进式JavaScript框架",
               "isMark": true
             },

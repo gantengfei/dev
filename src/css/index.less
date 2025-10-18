@@ -399,7 +399,7 @@ body {
             z-index: 1;
             background-repeat: no-repeat;
             background-position: right 4px top 4px;
-            background-size: auto 20px;
+            background-size: auto 18px;
             opacity: 0.8;
           }
         }
@@ -412,10 +412,11 @@ body {
         }
 
         &:hover {
-          background-color: #42b88320;
+          border-color: #42b883;
+          background: linear-gradient(15deg, #fff 30%,#42b88350 60%,  #42b883 100%);
 
           &>span {
-            color: #ff6000;
+            color: #42b883;
           }
         }
       }
@@ -470,6 +471,19 @@ body {
 
       .icon_github {
         background-image: url(../img/webicon/github-logo.png);
+      }
+
+      .icon_vuejs {
+        background-image: url(../img/webicon/vuejs-logo.svg);
+      }
+
+      .icon_plotly {
+        background-image: url(../img/webicon/plotly-logo.png);
+      }
+
+      .icon_Qunee {
+        background-image: url(../img/webicon/Qunee-logo.png);
+        background-size: auto !important;
       }
     }
   }
