@@ -20,13 +20,11 @@
 ``` bash
 [root@localhost ~]$ df -h
 ```
-| 文件系统       | 容量   | 已用   | 可用    | 已用%  | 挂载点        |
-|------------|------|------|-------|------|------------|
-| Filesystem | Size | Used | Avail | Use% | Mounted on |
-| devtmpfs   | 16G  | 0    | 16G   | 0%   | /dev       |
-| tmpfs      | 16G  | 672K | 16G   | 1%   | /dev/shm   |
-
-
+| 文件系统   | 容量 | 已用 | 可用  | 已用% | 挂载点     |
+| :--------- | :--- | :--- | :---- | :---- | :--------- |
+| Filesystem | Size | Used | Avail | Use%  | Mounted on |
+| devtmpfs   | 16G  | 0    | 16G   | 0%    | /dev       |
+| tmpfs      | 16G  | 672K | 16G   | 1%    | /dev/shm   |
 
 
 # ➤ 查看系统内存使用信息
@@ -45,6 +43,14 @@
 > Shared：表示多个进程共享的内存总额。 \
 > Buffers/cached：表示 磁盘缓存的大小。
 
+## 查看当前文件夹下所有文件和子文件夹大小命令
+``` bash
+du -h --max-depth=1
+```
+`du` (disk usage) 是一个计算文件和文件夹大小的命令。 \
+`-h` (human-readable) 选项使输出更具可读性，以 KB、MB、GB 等单位显示大小。 \
+`--max-depth=1` 选项限制了显示的子目录层次深度，仅显示当前目录下的文件和子目录的大小。 \
+查看所有子目录的大小而不限制深度，可以使用：`du -h `
 
 
 # ➤ 文件
@@ -247,9 +253,17 @@
 [root@localhost ~]$ ./nginx -s reload
 ```
 **查看Nginx状态**
+
+`ps -ef`‌ 采用标准格式输出 `UID`、`PID`、`PPID`、`C` 等列，信息更详细但可读性稍差。
 ``` bash
 [root@localhost ~]$ ps -ef|grep nginx
 ```
+
+`‌ps aux`‌ 采用 `BSD` 风格输出，包含 `USER`、`%CPU`、`%MEM`、`VSZ`、`RSS` 等列，适合快速查看进程资源占用情况。
+``` bash
+[root@localhost ~]$ ps aux|grep nginx
+```
+
 **关闭Nginx命令**
 ``` bash
 [root@localhost ~]$ kill -9 主进程号
