@@ -31,6 +31,12 @@ view{
     $menuHeight: 32px;
     height: calc(100% - #{$menuHeight});
 }
+
+
+input{
+  --el-input-height: 60px;
+  --el-input-inner-height: calc(var(--el-input-height, 32px) - 6px);
+}
 ```
 
 

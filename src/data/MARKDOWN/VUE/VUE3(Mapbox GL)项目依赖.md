@@ -6,16 +6,26 @@
 ``` bash
 # Mapbox GL（2.6.1版本）[^2.6.1]
 npm i --S mapbox-gl@2.6.1
+# 删除mapbox-gl
+npm uninstall mapbox-gl
+# 安装3.14.0版本
+npm i --S mapbox-gl@3.14.0
+
 # Mapbox组件mapbox-gl-draw（绘制图形）[^1.4.2]
 npm i --S @mapbox/mapbox-gl-draw
+
 # Mapbox组件mapbox-gl-language（语言包）[^1.0.1]
 npm i --S @mapbox/mapbox-gl-language
+
 # Echarts [^5.4.3]
 npm i --S echarts
+
 # 读取和打包zip文件
 npm i --S jszip@3.1.3
+
 # jquery [^3.7.1]
 npm i --S jquery @types/jquery
+
 # 网络请求库 [^1.5.0]
 npm i --S axios
 ```
