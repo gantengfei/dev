@@ -102,6 +102,10 @@
         {
           "name": "js深度拷贝的几种方法",
           "filename": "js深度拷贝的几种方法.md"
+        },
+        {
+          "name": "‌try...throw...catch异常处理机制",
+          "filename": "‌try...throw...catch异常处理机制.md"
         }
       ]
     },
@@ -109,6 +113,10 @@
       "menuname": "TypeScript开发",
       "menupath": "MARKDOWN/TypeScript/",
       "menulists": [
+        {
+          "name": "Typescript(Mapbox GL)框架",
+          "filename": "Typescript(Mapbox GL)框架.md"
+        },
         {
           "name": "TypeScript修饰符",
           "filename": "TypeScript修饰符.md"
@@ -278,8 +286,12 @@
           "filename": "VUE中使用Pinia存储库.md"
         },
         {
-          "name": "组件ElLoading自定义svg图",
-          "filename": "组件ElLoading自定义svg图.md"
+          "name": "Element组件ElLoading自定义svg图",
+          "filename": "Element组件ElLoading自定义svg图.md"
+        },
+        {
+          "name": "VUE3自动检测线上环境版本热更新",
+          "filename": "VUE3自动检测线上环境版本热更新.md"
         }
       ]
     },
@@ -287,10 +299,6 @@
       "menuname": "Mapbox GL开发",
       "menupath": "MARKDOWN/Mapbox GL/",
       "menulists": [
-        {
-          "name": "Typescript(Mapbox GL)框架",
-          "filename": "Typescript(Mapbox GL)框架.md"
-        },
         {
           "name": "Mapbox Style 规范",
           "filename": "Mapbox Style 规范.md"
@@ -408,6 +416,10 @@
         {
           "name": "设置settings_v20241105",
           "filename": "设置settings_v20241105.md"
+        },
+        {
+          "name": "设置settings_v20251205",
+          "filename": "设置settings_v20251205.md"
         },
         {
           "name": "微软GitHub Copilot代码建议",

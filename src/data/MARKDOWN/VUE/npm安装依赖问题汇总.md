@@ -36,3 +36,45 @@ xdqx-vuemapbox-project@0.0.0 E:\GIT\mapbox+vue
 ```
 
 依赖树中`core-js`已不存在了，`jszip`当前版本不在关联`core-js`
+
+
+
+# 告警二：node版本
+``` log
+(node:19252) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+```
+
+这个警告表示您使用的 `util._extend` API 已经被 `Node.js` 弃用，需要替换为标准的 `Object.assign()` 方法。
+
+使用的`node --trace-deprecation your-script.js`命令查看信息
+``` log
+node:internal/modules/cjs/loader:1386
+  throw err;
+  ^
+
+Error: Cannot find module 'E:\SVN\qinghai_vue\your-script.js'
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v22.19.0
+```
+‌**主要作用‌：**
+- 当代码中使用已弃用的 API 时，会显示完整的堆栈跟踪
+- 明确指出哪个文件、哪行代码触发了弃用警告
+- 便于开发者快速找到需要更新的代码位置
+**‌其他相关命令‌：**
+- `node --no-deprecation` - 完全禁用弃用警告
+- `node --throw-deprecation` - 遇到弃用 API 时抛出错误
+- `node --trace-warnings` - 显示所有警告的堆栈跟踪
+**‌实际应用场景‌：**
+- 当你看到类似 `(Use 'node --trace-deprecation ...' to show where the warning was created)` 的提示时，使用此命令就能看到完整的调用路径。

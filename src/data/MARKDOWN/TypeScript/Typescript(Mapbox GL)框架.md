@@ -82,8 +82,7 @@ trim_trailing_whitespace = true
 > ## TIP
 > 修改注释颜色插件
 
-![输入图片说明](https://foruda.gitee.com/images/1693623215823932625/1a1ab335_4993153.png "")
-``` TypeScript
+``` log
 /**
  * 多行注释
  * * 浅绿色注释
@@ -101,6 +100,8 @@ trim_trailing_whitespace = true
 // TODO 橘红色注释
 // // 灰色删除线注释
 ```
+显示效果如下图所示： \
+![输入图片说明](https://foruda.gitee.com/images/1693623215823932625/1a1ab335_4993153.png "")
 
 ### 2. 配置settings.json
 
