@@ -8,6 +8,18 @@
           "href": "https://www.deepseek.com/",
           "logoIcon": "icon_deepseek",
           "brief": "DeepSeek | 深度求索"
+        },
+        {
+          "title": "豆包",
+          "href": "https://www.doubao.com/chat/",
+          "logoIcon": "icon_doubao",
+          "brief": "豆包 | 字节跳动旗下"
+        },
+        {
+          "title": "千问",
+          "href": "https://www.qianwen.com/",
+          "logoIcon": "icon_qianwen",
+          "brief": "千问 | 阿里通义千问"
         }
       ]
     },

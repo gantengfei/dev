@@ -186,8 +186,12 @@
       "menupath": "MARKDOWN/VUE/",
       "menulists": [
         {
-          "name": "VUE3(TypeScript)开发环境",
-          "filename": "VUE3(TypeScript)开发环境.md"
+          "name": "创建VUE3(TypeScript)项目V3.3.4",
+          "filename": "创建VUE3(TypeScript)项目V3.3.4.md"
+        },
+        {
+          "name": "创建VUE3(TypeScript)项目V3.5.25",
+          "filename": "创建VUE3(TypeScript)项目V3.5.25.md"
         },
         {
           "name": "创建VUE3(TypeScript)项目",
@@ -380,6 +384,10 @@
         {
           "name": "前端项目测试版部署正式版",
           "filename": "前端项目测试版部署正式版.md"
+        },
+        {
+          "name": "JAVA环境变量配置",
+          "filename": "JAVA环境变量配置.md"
         }
       ]
     },
