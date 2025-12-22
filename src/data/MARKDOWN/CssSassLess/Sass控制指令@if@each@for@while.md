@@ -20,6 +20,42 @@ $theme: dark;
 }
 ```
 
+**基本语法与用法**
+
+**‌基础条件判断‌：**`@if` 后跟一个表达式，如果表达式为 `true`，则执行后续代码块。
+``` scss
+$block: true !default;
+.name{
+  display: none;
+  @if $block {
+    display: flex;
+  }
+}
+```
+
+**多条件逻辑‌：**使用 `@else if` 和 `@else` 处理多个条件。
+
+**逻辑运算符‌：**`Sass` 支持 `not`（非）、`or`（或）、`and`（与）来组合条件。
+``` scss
+@for $i from 1 through 10 {
+  .icon_tool_#{$i} {
+    background-color: #ffffff;
+
+    &.actived {
+      background-color: #ff0000;
+    }
+
+    @if $i==2 or $i==3 or $i==5 {
+      &.disabled {
+        background-color: #9c9393;
+      }
+    }
+  }
+}
+```
+
+**比较运算符‌：**使用 `==` 和 `!=` 进行相等性判断。‌
+
 ## @each
 遍历列表或映射（map）。
 ```scss
