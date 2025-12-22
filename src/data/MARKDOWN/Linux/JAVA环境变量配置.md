@@ -1,4 +1,4 @@
-
+启动 `geoserver` 地图服务，启动不起来
 ``` bash
 [root@localhost /]# cd /home/apps/geoserver-2.16.1/
 [root@localhost geoserver-2.16.1]# cd bin/
