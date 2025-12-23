@@ -84,8 +84,16 @@
           "filename": "drawImage详解.md"
         },
         {
-          "name": "js判断是否是时间",
+          "name": "js判断是否是时间（Date）",
           "filename": "js判断是否是时间.md"
+        },
+        {
+          "name": "js判断是否是数组（[]）",
+          "filename": "js判断是否是数组.md"
+        },
+        {
+          "name": "js判断是否是对象（{}）",
+          "filename": "js判断是否是对象.md"
         },
         {
           "name": "js鼠标操作事件",
