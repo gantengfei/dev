@@ -1,4 +1,4 @@
-# · 变量使用
+# ➤ 变量使用
 ``` css
 /* 原生css 和 wxss 也是支持变量*/
 page{
@@ -18,7 +18,7 @@ view{
 ```
 
 
-# · calc() 函数用于动态计算长度值
+# ➤ calc() 函数用于动态计算长度值
 ``` less
 /* less中使用calc时候注意 */
 view{
@@ -40,7 +40,7 @@ input{
 ```
 
 
-# · flex 布局
+# ➤ flex 布局
 ``` css
 .item{
     display: flex;
@@ -81,7 +81,7 @@ input{
 ```
 
 
-# · table 设置宽度无效时使用解决
+# ➤ table 设置宽度无效时使用解决
 ``` css
 table{
     table-layout: fixed;
@@ -89,7 +89,7 @@ table{
 ```
 
 
-# · 伪类 ::after ::before
+# ➤ 伪类 ::after ::before
 ``` scss
 &.actived {
     position: relative;
@@ -121,7 +121,7 @@ table{
 ```
 
 
-# · content:attr(属性) 插入标签属性值
+# ➤ content:attr(属性) 插入标签属性值
 ``` scss
 // <div class="nodata" nodata="当前时刻暂无预警"></div>
 &.nodata {
@@ -142,7 +142,7 @@ table{
 ```
 
 
-# · text-shadow 文字描边
+# ➤ text-shadow 文字描边
 ``` scss
 // 语法
 text-shadow: h-shadow v-shadow blur color;
@@ -162,7 +162,7 @@ span {
 ```
 
 
-# · 背景色渐变 linear-gradient() 函数
+# ➤ 背景色渐变 linear-gradient() 函数
 ``` scss
 // 语法
 background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
@@ -177,5 +177,27 @@ background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
 // 从左侧开始的线性渐变
 div{
   background-image: linear-gradient(to right, rgba(161, 241, 141, 1), rgba(61, 186, 61, 1), rgba(96, 184, 255, 1), rgba(0, 0, 255, 1), rgba(250, 0, 250, 1));
+}
+```
+
+
+# ➤ 文字间隔
+使用`letter-spacing`属性可以增加或减少字符之间的空间
+``` css
+selector {
+  letter-spacing: normal; /* 默认值，等同于0 */
+  /* 或者指定一个具体的长度值，例如： */
+  letter-spacing: 2px; /* 增加字符间距 */
+  letter-spacing: -1px; /* 减少字符间距 */
+}
+```
+
+调整单词间隔使用`word-spacing`属性。这个属性同样可以增加或减少单词之间的空间。
+``` css
+selector {
+  word-spacing: normal; /* 默认值，等同于0 */
+  /* 或者指定一个具体的长度值，例如： */
+  word-spacing: 5px; /* 增加单词间距 */
+  word-spacing: -2px; /* 减少单词间距 */
 }
 ```

@@ -1,4 +1,4 @@
-# npm安装
+# ➤ npm安装依赖
 
 > ## TIP
 > -S：--save的简写(开发和运行都依赖时) \
@@ -35,7 +35,7 @@ npm i --S axios
 import * as echarts from 'echarts'
 ```
 
-# vue-class-component
+# ➤ vue-class-component
 > ## TIP
 > 安装[vue-class-component](https://www.npmjs.com/package/vue-class-component)
 > 使用@Component注解，将类转化为 vue 的组件
@@ -44,7 +44,7 @@ npm i --S vue-class-component@next
 # [^8.0.0-rc.1]
 ```
 
-# element-plus
+# ➤ element-plus
 > ## TIP
 > 安装[Element Plus](https://element-plus.org/zh-CN/)
 > VueUI组件库
@@ -70,7 +70,7 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 ```
 
-# @turf/turf
+# ➤ @turf/turf
 > ## TIP
 > 安装 [turf.js](https://turfjs.org/)
 > 处理各种地图算法
@@ -90,7 +90,7 @@ import * as turf from '@turf/turf';
 (window as any).turf = turf;
 ```
 
-# plotly.js-dist
+# ➤ plotly.js-dist
 > ## TIP
 > 安装[plotly.js](https://plotly.com/javascript/reference/)
 > 图表库
@@ -106,24 +106,24 @@ declare module 'plotly.js-dist';
 import Plotly from 'plotly.js-dist';
 ```
 
-# three
+# ➤ three
 ``` bash
 npm i three@0.115.0
 ```
 
-# gif.js
+# ➤ gif.js
 ```
 npm i gif.js@0.2.0
 ```
 
-# terser
+# ➤ terser
 > 生产环境时移除console.log调试代码
 > 生产环境时移除debugge
 ```
 npm install terser --save-dev
 ```
 
-# clipboard
+# ➤ clipboard
 > 复制内容到剪贴板
 ```
 npm install clipboard --save

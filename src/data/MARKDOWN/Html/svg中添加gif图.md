@@ -14,3 +14,58 @@
   <image xlink:href="path_to_your_gif.gif" width="200" height="200" />
 </svg>
 ```
+
+**Vue项目使用Element中应用**
+``` TypeScript
+import { ElLoading } from 'element-plus'
+import loadgif from '@/assets/image/icon/loading.gif'
+
+class MaskLoadingService {
+
+  private loading: any = {};
+
+  addLoading(msg?: string, id?: any, autoclear = true, timeout = 3000) {
+    const maskid = id ? `${id}_mask` : 'maskloading';
+    if (msg === undefined) msg = "数据加载中...";
+
+    this.loading[maskid] = ElLoading.service({
+      lock: true,
+      text: msg,
+      background: 'rgba(0, 0, 0, 0)',
+      customClass: 'index_maskloading',
+      spinner: `<image xlink:href="${loadgif}" width="50" height="50" />`,
+    })
+    if (autoclear) {
+      setTimeout(() => {
+        const loaded: any = this.loading[maskid];
+        if (loaded) {
+          loaded.close();
+          delete this.loading[maskid];
+        }
+      }, timeout)
+    }
+  }
+
+  removeLoading(id?: any) {
+    const maskid = id ? `${id}_mask` : 'maskloading';
+    const loaded: any = this.loading[maskid];
+    if (loaded) {
+      loaded.close();
+      delete this.loading[maskid];
+    }
+  }
+
+  allClearLoading() {
+    for (const key in this.loading) {
+      const loaded: any = this.loading[key];
+      if (loaded) {
+        loaded.close();
+        delete this.loading[key];
+      }
+    }
+  }
+
+}
+
+export const mload = new MaskLoadingService();
+```

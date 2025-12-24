@@ -5,6 +5,24 @@ $(function () {
   let month = nowdate.getMonth() + 1;
   $('.footer-wrap').empty().html(`G · ©2022.05~${year}.${String(month).padStart(2, '0')}`);
 
+  // 当前时间
+  $('.head-box .timebox .day').empty().html(`星期${week[nowdate.getDay()]}<br>${nowdate.format('yyyy-mm-dd')}`)
+  $('.head-box .timebox .hhmm').empty().html(nowdate.format('HH:MM'))
+  $('.head-box .timebox .ss').empty().html(nowdate.format(':ss'))
+  setInterval(() => {
+    let date = new Date();
+    $('.head-box .timebox .day').empty().html(`星期${week[date.getDay()]}<br>${date.format('yyyy-mm-dd')}`)
+    $('.head-box .timebox .hhmm').empty().html(date.format('HH:MM'))
+    $('.head-box .timebox .ss').empty().html(date.format(':ss'))
+  }, 1000);
+
+  // 退休时间
+  let st = new Date(nowdate.format('yyyy-mm-dd'))
+  let et = new Date('2053-10-01')
+  const { years, months, days, totalDays } = getDateDiff(st, et)
+  $('.head-box .retiretime').empty().html(`${totalDays}DAY`).attr('title', `${years}年${months}月${days}天`)
+
+
   const data = $.ajax({ async: false, url: '../src/data/lists.json' }).responseJSON;
 
   let navActive = window.location.hash.replace('#', '');
@@ -111,6 +129,8 @@ $(function () {
 
 })
 
+const week = ['日', '一', '二', '三', '四', '五', '六']
+
 function loadmd(filename, path) {
   let _path = `../src/data/${path}${filename}`
   axios({ url: _path }).then(res => {
@@ -205,4 +225,33 @@ function imgShow(outerdiv, innerdiv, bigimg, _this) {
   $(outerdiv).click(function () {//再次点击淡出消失弹出层
     $(this).fadeOut("fast");
   });
+}
+
+function getDateDiff(startDate, endDate) {
+  const sYear = startDate.getFullYear();
+  const sMonth = startDate.getMonth() + 1;
+  const sDay = startDate.getDate();
+  const eYear = endDate.getFullYear();
+  const eMonth = endDate.getMonth() + 1;
+  const eDay = endDate.getDate();
+
+  // 计算总天数差
+  const timeDiff = Math.abs(endDate.getTime() - startDate.getTime());
+  const totalDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+  // 计算年数
+  let years = eYear - sYear;
+  if (years > 0) years--
+
+  // 计算月数
+  let sm_diff = 12 - sMonth;
+  let em_num = eMonth - 1;
+  let months = sm_diff + em_num;
+
+  // 计算天数
+  const startDayOfMonth = new Date(sYear, sMonth, 0).getDate();   // 开始天当月天数
+  let sd_diff = startDayOfMonth - sDay; // 开始天不算进去
+  let days = sd_diff + eDay; // 结束当天算进去
+
+  return { years, months, days, totalDays };
 }

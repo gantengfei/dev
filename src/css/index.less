@@ -45,6 +45,54 @@ body {
       background-size: 4px 4px;
       backdrop-filter: saturate(50%) blur(4px);
       -webkit-backdrop-filter: saturate(50%) blur(4px);
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+      display: flex;
+      justify-content: space-between;
+
+      .rightwrap {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 24px;
+
+        .timebox {
+
+          display: flex;
+
+          span {
+            font-family: PingFang SC;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+
+            &.day {
+
+              line-height: 14px;
+              font-size: 12px;
+            }
+
+            &.hhmm {
+              font-size: 30px;
+              margin-left: 4px;
+            }
+
+            &.ss {
+              display: flex;
+              align-items: flex-end;
+              line-height: 26px;
+              font-size: 13px;
+              margin-left: 2px;
+            }
+          }
+        }
+
+        .retiretime {
+          align-content: end;
+          line-height: 24px;
+          font-size: 10px;
+          color: #666;
+          margin-right: 12px;
+        }
+      }
     }
 
     .sidebar-box {
@@ -222,7 +270,7 @@ body {
           font-size: 14px;
           color: #00323c;
           text-decoration: none;
-
+          font-family: "Courier New", Microsoft YaHei;
 
           &.rightmenu1 {}
 

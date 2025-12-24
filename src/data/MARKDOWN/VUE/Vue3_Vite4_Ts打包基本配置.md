@@ -1,5 +1,4 @@
-**Vite常用基本配置**
-`vite.config.ts`
+# Vite常用基本配置 `vite.config.ts`
 ``` TypeScript
 import { fileURLToPath, URL } from 'node:url'
 
@@ -60,8 +59,7 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
 ```
 
 
-**开发环境配置**
-`.env.development`
+# 开发环境配置 `.env.development`
 ```
 # 变量必须以 VITE_ 为前缀才能暴露给外部读取
 VITE_ENV = 'development'
@@ -85,8 +83,7 @@ VITE_APP_WEB_PATH_API = ''
 VITE_DATA_REAR = '/DATAS'
 ```
 
-**生产环境配置**
-`.env.production`
+# 生产环境配置 `.env.production`
 ```
 # 变量必须以 VITE_ 为前缀才能暴露给外部读取
 VITE_ENV = 'production'

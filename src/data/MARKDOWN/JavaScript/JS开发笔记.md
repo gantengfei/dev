@@ -1,4 +1,4 @@
-**`hasOwnProperty(propertyName)` 方法**
+# ➤ `hasOwnProperty(propertyName)` 方法
 ```
 hasOwnProperty(propertyName)方法
 是用来检测属性是否为对象的自有属性，如果是，返回true，否者false; 参数propertyName指要检测的属性名；
@@ -19,7 +19,7 @@ hasOwnProperty() 方法是 Object 的原型方法（也称实例方法）
 
 ---
 
-**时间格式化-正则转换**
+# ➤ 时间格式化-正则转换
 ``` JavaScript
 // 2020-02-12 08:30:00
 let pattern = /(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/g;
@@ -31,7 +31,7 @@ format = '20200212083000'.replace(pattern, '$1-$2-$3 $4:$5:$6');  // 输出：20
 
 ---
 
-**密码验证**
+# ➤ 密码验证
 ``` JavaScript
 let strongRegex = new RegExp("^(?=.*[0-9])(?=.*[a-zA-Z!@_#$%^&*()\-+=,.?]).{6,32}$", "g");
 strongRegex.test(password)
@@ -42,7 +42,7 @@ strongRegex.test(password)
 
 ---
 
-**`splice()` 方法**
+# ➤ `splice()` 方法
 
 > 会改变原数组
 
@@ -65,7 +65,7 @@ this.webLangs.splice(2, 0, 'sass', 'less')
 
 ---
 
-**`slice()` 方法**
+# ➤ `slice()` 方法
 
 > 不会改变原字符串和数组
 
@@ -86,7 +86,7 @@ console.log(arr.slice()) // 输出：[1, 2, 3, 4, 5]
 
 ---
 
-**`filter`/`map`/`reduce` 高阶函数**
+# ➤ `filter`/`map`/`reduce` 高阶函数
 ``` JavaScript
 // 编程范式：命令式编程/声明式编程
 // 编程范式：面向对象编程（第一公民：对象）/函数式编程（第一公民：函数）
