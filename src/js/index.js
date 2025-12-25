@@ -23,7 +23,7 @@ $(function () {
   $('.head-box .retiretime').empty().html(`${totalDays}DAY`).attr('title', `${years}年${months}月${days}天`)
 
 
-  const data = $.ajax({ async: false, url: '../src/data/lists.json' }).responseJSON;
+  const data = $.ajax({ async: false, url: '/src/data/lists.json' }).responseJSON;
 
   let navActive = window.location.hash.replace('#', '');
 
@@ -132,7 +132,7 @@ $(function () {
 const week = ['日', '一', '二', '三', '四', '五', '六']
 
 function loadmd(filename, path) {
-  let _path = `../src/data/${path}${filename}`
+  let _path = `/src/data/${path}${filename}`
   axios({ url: _path }).then(res => {
     // console.log(res.data);
     $('#mdview').empty().html(marked(res.data));

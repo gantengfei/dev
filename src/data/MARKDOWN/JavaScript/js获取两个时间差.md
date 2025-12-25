@@ -47,7 +47,7 @@ function getDateDiff(startDate, endDate) {
 # 方法二：简单计算（不考虑月份天数差异）
 ``` JavaScript
 let st = new Date('2025-12-23')
-let et = new Date('2026-03-01')
+let et = new Date('2026-03-24')
 const { years, months, days, totalDays } = getDateDiff(st, et)
 
 console.log(`相差总天数：${totalDays}天`) // 91天
