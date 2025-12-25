@@ -219,43 +219,43 @@ body {
 
     .rightmenuwrap {
       float: left;
-      margin-top: 38px;
+      margin-top: 54px;
       margin-left: 30px;
       background-color: #ffffff;
       border-radius: 5px;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
       padding: 8px 16px 16px;
+      box-sizing: border-box;
+      max-height: calc(100vh - 38px - 32px);
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      &:hover {
+        &::-webkit-scrollbar {
+          display: block;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+        width: 8px;
+        background-color: rgba(220, 220, 220, 0.1);
+        border-radius: 2px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: rgba(220, 220, 220, 0.1);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 8px;
+        background-color: rgba(200, 200, 200, 0.3);
+        border-radius: 2px;
+      }
 
       &.fixed {
         position: fixed;
-        top: 38px;
-        max-height: calc(100% - 90px);
-        margin-top: 0;
-        overflow-x: hidden;
-        overflow-y: auto;
-
-        &:hover {
-          &::-webkit-scrollbar {
-            display: block;
-          }
-        }
-
-        &::-webkit-scrollbar {
-          display: none;
-          width: 8px;
-          background-color: rgba(220, 220, 220, 0.1);
-          border-radius: 2px;
-        }
-
-        &::-webkit-scrollbar-track {
-          background-color: rgba(220, 220, 220, 0.1);
-        }
-
-        &::-webkit-scrollbar-thumb {
-          width: 8px;
-          background-color: rgba(200, 200, 200, 0.3);
-          border-radius: 2px;
-        }
+        top: 0;
       }
 
       .title {

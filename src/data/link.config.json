@@ -163,6 +163,12 @@
           "title": "开发组件",
           "lists": [
             {
+              "title": "jQuery插件库",
+              "href": "https://www.jq22.com/",
+              "logoIcon": "",
+              "brief": "精选、优质、全面的jQuery插件"
+            },
+            {
               "title": "ECharts",
               "href": "https://echarts.apache.org/zh/index.html",
               "logoIcon": "icon_echart",

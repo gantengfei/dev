@@ -197,7 +197,8 @@ export const useDrawStore = defineStore('Draw', {
 
 ```
 
-在vue页面路由改变后存储数据还存在需要清除还原初始状态
+> ## NOTICE
+> 在vue页面路由改变后存储数据还存在需要清除还原初始状态
 
 ``` html
 <template>
