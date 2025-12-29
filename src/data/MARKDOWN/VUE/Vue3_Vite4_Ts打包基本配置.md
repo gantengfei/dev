@@ -1,3 +1,53 @@
+
+# 开发环境配置 `.env.development`
+```
+# 变量必须以 VITE_ 为前缀才能暴露给外部读取
+VITE_ENV = 'development'
+
+VITE_APP_TITLE = '开发环境配置'
+
+# 输出文件版本
+VITE_APP_VERSION = '0.0.0-dev'
+
+# 指定输出路径
+VITE_APP_OUTDir = 'dist'
+
+# 服务器请求响应协议
+VITE_APP_SERVER_PROTOCOL = 'http://'
+VITE_SERVER_API = '10.181.23.233'
+
+# 前端部署路径
+VITE_APP_WEB_PATH_API = ''
+
+# 后台服务器数据路径
+VITE_DATA_REAR = '/DATAS'
+```
+
+# 生产环境配置 `.env.production`
+```
+# 变量必须以 VITE_ 为前缀才能暴露给外部读取
+VITE_ENV = 'production'
+
+VITE_APP_TITLE = '生产环境配置'
+
+# 输出文件版本 递增规则：重大变更.功能新增.Bug修复+构建元数据
+VITE_APP_VERSION = '1.0.0+20250819'
+
+# 指定输出路径
+VITE_APP_OUTDir = 'qh'
+
+# 服务器请求响应协议
+VITE_APP_SERVER_PROTOCOL = 'http://'
+VITE_SERVER_API = '10.181.23.233'
+
+# 前端部署路径
+VITE_APP_WEB_PATH_API = '/qh'
+
+# 后台服务器数据路径
+VITE_DATA_REAR = '/DATAS'
+```
+
+
 # Vite常用基本配置 `vite.config.ts`
 ``` TypeScript
 import { fileURLToPath, URL } from 'node:url'
@@ -46,6 +96,12 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
       },
       rollupOptions: {
         output: {
+          // 依赖包-分包处理
+          manualChunks(id) {
+            if (id.includes('node_modules') && id.endsWith('.js') || id.endsWith('.ts')) {
+              return 'vendor';
+            }
+          },
           // 默认生成的文件名通常包含哈希值（如app.123456.js），但不包含版本号
           // 使用哈希值([hash])和版本号同时作为文件名后缀
           entryFileNames: `assets/[name].${env.VITE_APP_VERSION}.[hash].js`,
@@ -56,53 +112,4 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
     }
   })
 }
-```
-
-
-# 开发环境配置 `.env.development`
-```
-# 变量必须以 VITE_ 为前缀才能暴露给外部读取
-VITE_ENV = 'development'
-
-VITE_APP_TITLE = '开发环境配置'
-
-# 输出文件版本
-VITE_APP_VERSION = '0.0.0-dev'
-
-# 指定输出路径
-VITE_APP_OUTDir = 'dist'
-
-# 服务器请求响应协议
-VITE_APP_SERVER_PROTOCOL = 'http://'
-VITE_SERVER_API = '10.181.23.233'
-
-# 前端部署路径
-VITE_APP_WEB_PATH_API = ''
-
-# 后台服务器数据路径
-VITE_DATA_REAR = '/DATAS'
-```
-
-# 生产环境配置 `.env.production`
-```
-# 变量必须以 VITE_ 为前缀才能暴露给外部读取
-VITE_ENV = 'production'
-
-VITE_APP_TITLE = '生产环境配置'
-
-# 输出文件版本 递增规则：重大变更.功能新增.Bug修复+构建元数据
-VITE_APP_VERSION = '1.0.0+20250819'
-
-# 指定输出路径
-VITE_APP_OUTDir = 'qh'
-
-# 服务器请求响应协议
-VITE_APP_SERVER_PROTOCOL = 'http://'
-VITE_SERVER_API = '10.181.23.233'
-
-# 前端部署路径
-VITE_APP_WEB_PATH_API = '/qh'
-
-# 后台服务器数据路径
-VITE_DATA_REAR = '/DATAS'
 ```
