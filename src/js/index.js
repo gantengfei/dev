@@ -1,6 +1,6 @@
 
 const host = window.location.host;
-const WEB_PATH = host.includes('github') ? '/dev':''
+const WEB_PATH = host.includes('github') ? '/dev' : ''
 
 $(function () {
   let nowdate = new Date();
@@ -114,6 +114,27 @@ $(function () {
         $('.rightmenuwrap').removeAttr('style').removeClass('fixed');
       }
     }
+
+    // 获取文档总高度
+    const scrollHeight = document.documentElement.scrollHeight;
+    // 获取视口高度
+    const clientHeight = document.documentElement.clientHeight;
+    // 获取已滚动距离
+    const scrollTopY = window.scrollY;
+
+    // 可滚动的最大距离（防止除以 0）
+    const maxScroll = scrollHeight - clientHeight;
+
+    if (maxScroll <= 0) {
+      // 内容不足一屏，直接设为 100%
+      $('.progress-bar').width('100%');
+      return;
+    }
+    // 计算滚动百分比（0 ~ 100）
+    const percent = (scrollTopY / maxScroll) * 100;
+
+    // 更新进度条宽度
+    $('.progress-bar').width(`${percent}%`);
   })
 
   // $(window).resize(() => {
