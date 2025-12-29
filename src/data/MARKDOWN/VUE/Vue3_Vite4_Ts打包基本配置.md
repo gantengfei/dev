@@ -96,9 +96,14 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
       },
       rollupOptions: {
         output: {
-          // 依赖包-分包处理
+          // 分包处理
           manualChunks(id) {
-            if (id.includes('node_modules') && id.endsWith('.js') || id.endsWith('.ts')) {
+            // 拆分 node_modules
+            if (id.includes('node_modules') && (id.endsWith('.js') || id.endsWith('.ts'))) {
+              if (id.includes('turf')) return 'vendor-turf';
+              if (id.includes('echarts') || id.includes('zrender')) return 'vendor-echarts';
+              if (id.includes('plotly')) return 'vendor-plotly';
+              // 其他第三方库
               return 'vendor';
             }
           },
