@@ -1,4 +1,4 @@
-JavaScript 图片路径转 Base64编码
+# JavaScript 图片路径转 Base64 编码
 
 使用 `fetch API` 获取图片内容
 ``` TypeScript

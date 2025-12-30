@@ -101,7 +101,7 @@ trim_trailing_whitespace = true
 // // 灰色删除线注释
 ```
 显示效果如下图所示： \
-![输入图片说明](https://foruda.gitee.com/images/1693623215823932625/1a1ab335_4993153.png "")
+![输入图片说明](./src/img/images/1a1ab335_4993153.png "")
 
 ### 2. 配置settings.json
 

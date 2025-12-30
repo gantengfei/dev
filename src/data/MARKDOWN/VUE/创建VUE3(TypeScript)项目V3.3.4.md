@@ -41,7 +41,7 @@ Done.
 ```
 
 显示： \
-![输入图片说明](https://foruda.gitee.com/images/1693893747705947478/50988401_4993153.png "")
+![输入图片说明](./src/img/images/50988401_4993153.png "")
 
 
 # 二、启动VUE 项目
@@ -55,11 +55,11 @@ npm install
 npm run dev
 ```
 显示：\
-![输入图片说明](https://foruda.gitee.com/images/1693895282280182376/d8a26b0d_4993153.png "")
+![输入图片说明](./src/img/images/d8a26b0d_4993153.png "")
 
 看到以上提示，项目启动成功。
 打开浏览器，在地址栏输入 http://localhost:5173 即可打开项目。\
-![输入图片说明](https://foruda.gitee.com/images/1693896822379884895/5d857bd2_4993153.png "")
+![输入图片说明](./src/img/images/5d857bd2_4993153.png "")
 
 
 # 三、打包
@@ -67,4 +67,4 @@ npm run dev
 ``` bash
 npm run build
 ```
-![输入图片说明](https://foruda.gitee.com/images/1694508995992746626/9db4156d_4993153.png "")
+![输入图片说明](./src/img/images/9db4156d_4993153.png "")

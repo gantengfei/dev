@@ -5,7 +5,7 @@
 gradientColors([255, 0, 0, 1], [0, 255, 0, 1], 10)
 ```
 
-![输入图片说明](https://foruda.gitee.com/images/1730347176718424905/e20e37ee_4993153.png "")
+![输入图片说明](./src/img/images/e20e37ee_4993153.png "")
 
 > <span style="display: inline-block;width: 20px;">0</span>	<span style="background-color:rgba(255, 0, 0, 1);padding:2px 4px;color:#FFF;">rgba(255, 0, 0, 1)</span> \
 > <span style="display: inline-block;width: 20px;">0.1</span>	<span style="background-color:rgba(230, 26, 0, 1);padding:2px 4px;color:#FFF;">rgba(230, 26, 0, 1)</span> \

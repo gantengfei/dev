@@ -5,14 +5,14 @@
 ``` bash
 echo "Hello, World!"
 ```
-![输入图片说明](https://foruda.gitee.com/images/1746688604188480805/6381f5f4_4993153.png "")
+![输入图片说明](./src/img/images/6381f5f4_4993153.png "")
 
 加上选项 `-e` 可以支持转义字符，例如换行符 `\n` 和制表符 `\t`：
 
 ``` bash
 echo -e "Hello,\nWorld!"
 ```
-![输入图片说明](https://foruda.gitee.com/images/1746688685446573236/6be1faea_4993153.png "")
+![输入图片说明](./src/img/images/6be1faea_4993153.png "")
 
 # 使用 ANSI 转义序列为文字添加颜色
 
@@ -61,28 +61,28 @@ echo -e "\033[<style>;<text color>;<background color>m<your text>\033[0m"
 ``` bash
 echo -e "\033[31m这是红色文字\033[0m"
 ```
-![输入图片说明](https://foruda.gitee.com/images/1746688810960726127/bf3fb834_4993153.png "")
+![输入图片说明](./src/img/images/bf3fb834_4993153.png "")
 
 ### 绿色文字 + 黄色背景
 
 ``` bash
 echo -e "\033[32;43m绿色文字黄色背景色\033[0m"
 ```
-![输入图片说明](https://foruda.gitee.com/images/1746688870123796002/85f239db_4993153.png "")
+![输入图片说明](./src/img/images/85f239db_4993153.png "")
 
 ### 加粗蓝色文字
 
 ``` bash
 echo -e "\033[1;34m蓝色粗体\033[0m"
 ```
-![输入图片说明](https://foruda.gitee.com/images/1746688908810685697/6af76e67_4993153.png "")
+![输入图片说明](./src/img/images/6af76e67_4993153.png "")
 
 ### 闪烁的红色文字
 
 ``` bash
 echo -e "\033[5;31m闪烁的红色文字\033[0m"
 ```
-![输入图片说明](https://foruda.gitee.com/images/1746688959444810810/15ac7896_4993153.png "")
+![输入图片说明](./src/img/images/15ac7896_4993153.png "")
 
 ## example
 **newqhdl.sh**

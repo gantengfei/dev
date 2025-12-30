@@ -1,5 +1,5 @@
 # 一、简单例子
-![输入图片说明](https://foruda.gitee.com/images/1732840904983156481/5bdf4046_4993153.png "")
+![输入图片说明](./src/img/images/5bdf4046_4993153.png "")
 
 # 二、应用例子
 1.在`src\utils\worker`文件夹中创建`xxx.worker.ts`（worker文件）

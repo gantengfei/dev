@@ -1,4 +1,4 @@
-**drawImage 方法有三种形态**
+# drawImage 方法有三种形态
 
 `drawImage(image, dx, dy)` 在画布指定位置绘制原图 \
 `drawImage(image, dx, dy, dw, dh)` 在画布指定位置上按原图大小绘制指定大小的图 \

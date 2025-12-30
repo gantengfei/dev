@@ -35,7 +35,7 @@
 ``` bash
 [root@localhost ~]$ free -g
 ```
-![输入图片说明](https://foruda.gitee.com/images/1712538429808521109/941a6396_4993153.png "")
+![输入图片说明](./src/img/images/941a6396_4993153.png "")
 
 > total：表示 总计物理内存的大小。 \
 > used：表示 已使用多少。 \

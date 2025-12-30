@@ -45,7 +45,7 @@ onMounted(async () => {
 
 }
 ```
-![输入图片说明](https://foruda.gitee.com/images/1712818942699120440/7fb91f0f_4993153.png "")
+![输入图片说明](./src/img/images/7fb91f0f_4993153.png "")
 
 
-![输入图片说明](https://foruda.gitee.com/images/1712817608814719814/abe6b616_4993153.png "")
+![输入图片说明](./src/img/images/abe6b616_4993153.png "")

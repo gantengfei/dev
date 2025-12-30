@@ -1,4 +1,4 @@
-**1.进入全屏**
+# 1.进入全屏
 ``` JavaScript
 // 进入全屏
 let fullScreen = function () {
@@ -18,7 +18,7 @@ let fullScreen = function () {
 ```
 
 
-**2.退出全屏**
+# 2.退出全屏
 ``` JavaScript
 // 退出全屏
 let exitFullScreen = function () {
@@ -51,7 +51,7 @@ if (document.fullscreenElement !== null) {
 ```
 
 
-**3.全屏事件**
+# 3.全屏事件
 ``` JavaScript
 // 全屏事件
 document.addEventListener("fullscreenchange", function (e) {
@@ -68,7 +68,7 @@ document.addEventListener("fullscreenchange", function (e) {
 ```
 
 
-**4.案例：** 按钮点击事件
+# 4.案例：按钮点击事件
 ``` JavaScript
 // 全屏
 $('.tool_FullscreenControl').click(function (e) {
@@ -83,7 +83,7 @@ $('.tool_FullscreenControl').click(function (e) {
 })
 ```
 
-**5.案例：**`iframe`子页面控制父页面全屏
+# 5.案例：`iframe`子页面控制父页面全屏
 ``` JavaScript
 // 子页面点击事件
 $(".tool_FullscreenControl").click(function (e) {
