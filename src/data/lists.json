@@ -361,6 +361,20 @@
       ]
     },
     {
+      "menuname": "Markdown",
+      "menupath": "MARKDOWN/Markdown/",
+      "menulists": [
+        {
+          "name": "常用Markdown语法",
+          "filename": "常用Markdown语法.md"
+        },
+        {
+          "name": "笔记常用语法格式",
+          "filename": "笔记常用语法格式.md"
+        }
+      ]
+    },
+    {
       "menuname": "Windows",
       "menupath": "MARKDOWN/Windows/",
       "menulists": [
