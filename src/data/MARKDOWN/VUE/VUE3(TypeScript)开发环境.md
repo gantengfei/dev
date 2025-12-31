@@ -38,5 +38,5 @@ trim_trailing_whitespace = true
 ### 2. 禁用扩展
 
 #### 2.1. vetur
-> ## WARNING
+> ## WARN
 > Vetur 暂不支持ts语法

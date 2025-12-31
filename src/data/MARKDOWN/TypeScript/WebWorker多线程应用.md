@@ -97,7 +97,7 @@ addEventListener("message", (event) => {
 
 当前`worker`中依赖`turf.js`需要提前将依赖库内置，将`turf.min.js`放置在`src/utils/basics/`目录中。
 
-> ## WARNING
+> ## WARN
 > **注意：**打包后找不到这个引入的包，同时需要将`turf.min.js`放置在`public/basics/`目录中。
 
 ``` TypeScript

@@ -7,7 +7,7 @@
 
 ⚠️ <span style="text-decoration:line-through;color:#f56c6c;">Vue Language Features (Volar)</span>
 
-> ## WARNING
+> ## WARN
 > 此扩展已弃用。请改用 Vue - Official扩展。
 
 ![输入图片说明](./src/img/images/8704747d_4993153.png "")
@@ -15,7 +15,7 @@
 
 ⚠️ <span style="text-decoration:line-through;color:#f56c6c;">TypeScript Vue Plugin (Volar)</span>
 
-> ## WARNING
+> ## WARN
 > 此扩展已弃用。请改用 Vue - Official扩展。
 
 ![输入图片说明](./src/img/images/66af178f_4993153.png "")

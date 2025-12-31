@@ -53,7 +53,7 @@ function isObject(value) {
 ---
 
 
-> ## WARNING 注意事项
+> ## WARN 注意事项
 > - ● `typeof null` 返回 `'object'`，需额外判断
 > - ● `instanceof Object` 无法区分数组和对象
 > - ● 避免使用 `__proto__`，因未纳入标准

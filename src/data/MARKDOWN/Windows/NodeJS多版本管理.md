@@ -82,7 +82,7 @@ npm -v
 ```
 
 版本没有切换时会出现
-> ## WARNING
+> ## WARN
 > <span style="color:#f56c6c">'npm' 不是内部或外部命令，也不是可运行的程序或批处理文件。</span>
 
 ![输入图片说明](./src/img/images/1cc40872_4993153.png "")

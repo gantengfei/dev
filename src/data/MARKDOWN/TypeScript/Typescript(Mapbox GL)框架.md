@@ -50,7 +50,7 @@ compass -v
 sass -v
 # Sass 3.4.25 (Selective Steve)
 ```
-> ## WARNING
+> ## WARN
 > **注意**：*sass编译时中文目录报错，建议修改英文目录;*
 
 ---

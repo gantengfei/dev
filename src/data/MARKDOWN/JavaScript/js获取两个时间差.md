@@ -54,7 +54,7 @@ console.log(`相差总天数：${totalDays}天`) // 91天
 console.log(`相差年月天数：${years}年${months}月${days}天`); // 0年3月1天
 ```
 
-> ## WARNING
+> ## WARN
 > 计算不考虑月份天数差异，将每个月按照30天计算。
 
 ``` JavaScript

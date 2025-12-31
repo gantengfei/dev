@@ -24,7 +24,7 @@
 <router-view v-if="!$route.meta.keepAlive"></router-view>
 ```
 
-> ## WARNING
+> ## WARN
 > 由于router新版本的原因
 > ![输入图片说明](./src/img/images/6b269055_4993153.png "warnings")
 
