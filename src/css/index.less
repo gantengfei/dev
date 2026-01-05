@@ -387,13 +387,11 @@ body {
   padding: -16px;
 
   h1 {
-    padding: 0 16px;
     font-size: 18px;
     color: #000;
   }
 
   h2 {
-    padding: 0 16px;
     font-size: 14px;
     color: #999;
     border: none;
@@ -401,7 +399,7 @@ body {
 
     &::before {
       position: absolute;
-      left: 16px;
+      left: 0;
       right: 0;
       bottom: 0;
       content: "";
@@ -412,7 +410,6 @@ body {
   .weblistwrap {
     width: 100%;
     overflow: hidden;
-    padding: 0 12px;
     margin-top: 8px;
 
     li {
@@ -449,7 +446,21 @@ body {
         }
 
         &>span {
-          color: #606266;
+          color: #333;
+          // position: relative;
+
+          // &:not(.icon) {
+          //   &::before {
+          //     content: "";
+          //     position: absolute;
+          //     bottom: -3px;
+          //     left: -4px;
+          //     right: -16px;
+          //     display: block;
+          //     height: 2px;
+          //     background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #0990f8 8.33%, #07e1df 91.15%, rgba(0, 0, 0, 0) 100%);
+          //   }
+          // }
 
           &.icon {
             width: 100%;
@@ -467,6 +478,7 @@ body {
         }
 
         &>i {
+          margin-top: 2px;
           display: block;
           color: #5a5a5a;
           font-size: 12px;
@@ -545,6 +557,14 @@ body {
 
       .icon_qianwen {
         background-image: url(../img/webicon/qianwen-logo.png);
+      }
+
+      .icon_map_qq {
+        background-image: url(../img/webicon/mapqq-logo.png);
+      }
+
+      .icon_map_baidu {
+        background-image: url(../img/webicon/mapbaidu-logo.png);
       }
     }
   }

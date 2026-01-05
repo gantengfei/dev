@@ -254,38 +254,49 @@
             {
               "title": "拾取坐标系统",
               "href": "http://api.map.baidu.com/lbsapi/getpoint/",
-              "logoIcon": "",
+              "logoIcon": "icon_map_baidu",
               "brief": "百度地图"
             },
             {
               "title": "百度地图API",
               "href": "http://lbsyun.baidu.com/index.php?title=%E9%A6%96%E9%A1%B5",
-              "logoIcon": "",
+              "logoIcon": "icon_map_baidu",
               "brief": "百度地图API SDK | 地图开发"
             },
             {
               "title": "坐标拾取器",
               "href": "https://lbs.qq.com/tool/getpoint/index.html",
-              "logoIcon": "",
+              "logoIcon": "icon_map_qq",
               "brief": "腾讯地图"
             },
             {
               "title": "WebService API",
               "href": "https://lbs.qq.com/service/webService/webServiceGuide/webServiceOverview",
-              "logoIcon": "",
+              "logoIcon": "icon_map_qq",
               "brief": "WebService API | 腾讯位置服务"
             },
             {
               "title": "JavaScript API GL",
               "href": "https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocIndex",
-              "logoIcon": "",
+              "logoIcon": "icon_map_qq",
               "brief": "JavaScript API | 腾讯位置服务"
             },
             {
               "title": "我的应用",
               "href": "https://lbs.qq.com/dev/console/application/mine",
-              "logoIcon": "",
+              "logoIcon": "icon_map_qq",
               "brief": "我的应用 | 腾讯位置服务"
+            }
+          ]
+        },
+        {
+          "title": "统计",
+          "lists": [
+            {
+              "title": "百度统计",
+              "href": "https://tongji.baidu.com/",
+              "logoIcon": "",
+              "brief": "一站式智能数据分析平台"
             }
           ]
         }
@@ -390,13 +401,13 @@
               "title": "MSDN工具站",
               "href": "https://msdn.itellyou.cn/",
               "logoIcon": "",
-              "brief": ""
+              "brief": "window软件"
             },
             {
               "title": "Xclient MAC应用",
               "href": "https://xclient.info/",
               "logoIcon": "",
-              "brief": ""
+              "brief": "mac软件"
             }
           ]
         },
