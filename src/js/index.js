@@ -291,13 +291,3 @@ function updateProgressBar() {
   // 更新进度条宽度
   $('.progress-bar').width(`${percent}%`);
 }
-
-
-// 统计代码获取
-var _hmt = _hmt || [];
-(function () {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?d97764aadc7d680d539bab5c94a7cc2f";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
