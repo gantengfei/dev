@@ -297,7 +297,7 @@ function updateProgressBar() {
 var _hmt = _hmt || [];
 (function () {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?8923e3fc09ec1961bae76cb4683ac93a";
+  hm.src = "https://hm.baidu.com/hm.js?d97764aadc7d680d539bab5c94a7cc2f";
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
