@@ -92,8 +92,8 @@ import * as turf from '@turf/turf';
 
 # ➤ plotly.js-dist
 > ## TIP
-> 安装[plotly.js](https://plotly.com/javascript/reference/)
-> 图表库
+> 安装 [plotly.js](https://plotly.com/javascript/reference/) 图表库
+
 ``` bash
 npm i plotly.js-dist
 ```
@@ -106,25 +106,30 @@ declare module 'plotly.js-dist';
 import Plotly from 'plotly.js-dist';
 ```
 
+> ## NOTICE
+> `plotly.js` 与 `plotly.js-dist` 的区别: 主要体现在模块化和使用场景上。‌
+> - ● `plotly.js` 是完整的库，包含所有功能，适合直接在浏览器中通过 \<script> 标签引入；
+> - ● `plotly.js-dist` 是npm包，采用模块化设计，仅包含核心图表功能，体积更小，更适合在现代前端框架（如Vue、React）中通过ES模块导入，便于构建工具优化。‌
+
 # ➤ three
 ``` bash
 npm i three@0.115.0
 ```
 
 # ➤ gif.js
-```
+``` bash
 npm i gif.js@0.2.0
 ```
 
 # ➤ terser
 > 生产环境时移除console.log调试代码
 > 生产环境时移除debugge
-```
+``` bash
 npm install terser --save-dev
 ```
 
 # ➤ clipboard
 > 复制内容到剪贴板
-```
+``` bash
 npm install clipboard --save
 ```

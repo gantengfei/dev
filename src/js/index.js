@@ -214,7 +214,7 @@ function imgShow(outerdiv, innerdiv, bigimg, _this) {
     let realWidth = this.width;//获取图片真实宽度
     let realHeight = this.height;//获取图片真实高度
     let imgWidth, imgHeight;
-    let scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
+    let scale = 0.9;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
     if (realHeight > windowH * scale) {//判断图片高度
       imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放
       imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度

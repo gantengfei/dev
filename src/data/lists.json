@@ -153,6 +153,10 @@
         {
           "name": "WebWorker多线程应用",
           "filename": "WebWorker多线程应用.md"
+        },
+        {
+          "name": "浏览器IndexedDB使用",
+          "filename": "浏览器IndexedDB使用.md"
         }
       ]
     },
@@ -321,6 +325,10 @@
         {
           "name": "VUE3自动检测线上环境版本热更新",
           "filename": "VUE3自动检测线上环境版本热更新.md"
+        },
+        {
+          "name": "前端打包结果分析工具",
+          "filename": "前端打包结果分析工具.md"
         }
       ]
     },
