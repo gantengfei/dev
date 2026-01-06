@@ -10,7 +10,7 @@
 
 `Mapbox GL`、`VUE3`、`WeChat`
 
-`NodeJs`
+`NodeJs`、`Ruby`
 
 ### 2. 数据库
 
@@ -19,7 +19,7 @@
 
 ### 3. 服务器操作系统
 
-`Linux`、`CentOS7`
+`Linux`、`CentOS7`、`Ubuntu`
 
 
 ### 4. 开发工具

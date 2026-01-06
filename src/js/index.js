@@ -34,28 +34,53 @@ $(function () {
   data.DS.forEach((item, index) => {
     const { menuname, menupath, menulists } = item;
     let _isActived = false;
-    let liHtm = ``;
+    let liHtm = ``, itemNum = 0;
     menulists.forEach((iitem, iindex) => {
-      const { name, filename, filepath, isActive } = iitem;
-      let path = filepath ? filepath : menupath;
-      let active = '';
-      if (decodeURI(navActive)) {
-        if (name == decodeURI(navActive)) {
-          active = 'actived';
-          _isActived = true;
-          loadmd(filename, path);
-        }
+      if (iitem.submenulists) {
+        liHtm += `<li class="sidebar-submenu">${iitem.name}<i>(${iitem.submenulists.length})</i></li>`
+        iitem.submenulists.forEach((siitrm, siindex) => {
+          const { name, filename, filepath, isActive } = siitrm;
+          let path = filepath ? filepath : menupath;
+          let active = '';
+          if (decodeURI(navActive)) {
+            if (name == decodeURI(navActive)) {
+              active = 'actived';
+              _isActived = true;
+              loadmd(filename, path);
+            }
+          } else {
+            if (isActive) {
+              active = 'actived';
+              _isActived = true;
+              loadmd(filename, path);
+            }
+          }
+          liHtm += `<li class="sidebar-item ${active}" name="${name}" filename="${filename}" path="${path}">${name}</li>`;
+          itemNum++
+        })
       } else {
-        if (isActive) {
-          active = 'actived';
-          _isActived = true;
-          loadmd(filename, path);
+        const { name, filename, filepath, isActive } = iitem;
+        let path = filepath ? filepath : menupath;
+        let active = '';
+        if (decodeURI(navActive)) {
+          if (name == decodeURI(navActive)) {
+            active = 'actived';
+            _isActived = true;
+            loadmd(filename, path);
+          }
+        } else {
+          if (isActive) {
+            active = 'actived';
+            _isActived = true;
+            loadmd(filename, path);
+          }
         }
+        liHtm += `<li class="sidebar-item ${active}" name="${name}" filename="${filename}" path="${path}">${name}</li>`;
+        itemNum++
       }
-      liHtm += `<li class="sidebar-item ${active}" name="${name}" filename="${filename}" path="${path}">${name}</li>`;
     })
     Htm += `<li class="${_isActived ? 'open' : ''}">
-      <div class="sidebar-group ${_isActived ? 'open' : ''}"><span>${menuname}</span><span class="arrow ${_isActived ? 'down' : 'right'}"></span></div>
+      <div class="sidebar-group ${_isActived ? 'open' : ''}"><span>${menuname}<i>(${itemNum})</i></span><span class="arrow ${_isActived ? 'down' : 'right'}"></span></div>
       <ul>${liHtm}</ul>
     </li>`;
   })

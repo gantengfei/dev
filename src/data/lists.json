@@ -263,14 +263,6 @@
           "filename": "Axios使用api-manage.md"
         },
         {
-          "name": "issue：Unsupported engine",
-          "filename": "issue：Unsupported engine.md"
-        },
-        {
-          "name": "issue：Module ‘“xx.vue“‘ has no default export.Vetur",
-          "filename": "issue：Module ‘“xx.vue“‘ has no default export.Vetur.md"
-        },
-        {
           "name": "VUE简单路由的使用",
           "filename": "VUE简单路由的使用.md"
         },
@@ -283,10 +275,6 @@
           "filename": "VUE3自定义指令.md"
         },
         {
-          "name": "issue：VUE对含有私有变量的类报误",
-          "filename": "issue：VUE对含有私有变量的类报误.md"
-        },
-        {
           "name": "Vue3_Vite引入图片",
           "filename": "Vue3_Vite引入图片.md"
         },
@@ -297,10 +285,6 @@
         {
           "name": "VUE中双击复制文字",
           "filename": "VUE中双击复制文字.md"
-        },
-        {
-          "name": "issue：VUE中Mapbox加载数据问题",
-          "filename": "issue：VUE中Mapbox加载数据问题.md"
         },
         {
           "name": "Vue3_Ts中使用worker",
@@ -329,6 +313,27 @@
         {
           "name": "前端打包结果分析工具",
           "filename": "前端打包结果分析工具.md"
+        },
+        {
+          "name": "issue",
+          "submenulists": [
+            {
+              "name": "issue：Unsupported engine",
+              "filename": "issue：Unsupported engine.md"
+            },
+            {
+              "name": "issue：Module ‘“xx.vue“‘ has no default export.Vetur",
+              "filename": "issue：Module ‘“xx.vue“‘ has no default export.Vetur.md"
+            },
+            {
+              "name": "issue：VUE对含有私有变量的类报误",
+              "filename": "issue：VUE对含有私有变量的类报误.md"
+            },
+            {
+              "name": "issue：VUE中Mapbox加载数据问题",
+              "filename": "issue：VUE中Mapbox加载数据问题.md"
+            }
+          ]
         }
       ]
     },
@@ -369,20 +374,6 @@
       ]
     },
     {
-      "menuname": "Markdown",
-      "menupath": "MARKDOWN/Markdown/",
-      "menulists": [
-        {
-          "name": "常用Markdown语法",
-          "filename": "常用Markdown语法.md"
-        },
-        {
-          "name": "笔记常用语法格式",
-          "filename": "笔记常用语法格式.md"
-        }
-      ]
-    },
-    {
       "menuname": "Windows",
       "menupath": "MARKDOWN/Windows/",
       "menulists": [
@@ -391,12 +382,12 @@
           "filename": "cmd命令.md"
         },
         {
-          "name": "node命令",
-          "filename": "node命令.md"
-        },
-        {
           "name": "npm命令",
           "filename": "npm命令.md"
+        },
+        {
+          "name": "node命令",
+          "filename": "node命令.md"
         },
         {
           "name": "NodeJS多版本管理",
@@ -439,16 +430,24 @@
         {
           "name": "JAVA环境变量配置",
           "filename": "JAVA环境变量配置.md"
-        }
-      ]
-    },
-    {
-      "menuname": "CentOS7",
-      "menupath": "MARKDOWN/CentOS7/",
-      "menulists": [
+        },
         {
-          "name": "Windows中虚拟CentOS7",
-          "filename": "Windows中虚拟CentOS7.md"
+          "name": "CentOS7",
+          "submenulists": [
+            {
+              "name": "Windows中虚拟CentOS7",
+              "filename": "Windows中虚拟CentOS7.md"
+            }
+          ]
+        },
+        {
+          "name": "Ubuntu",
+          "submenulists": [
+            {
+              "name": "Ubuntu常用命令",
+              "filename": "Ubuntu常用命令.md"
+            }
+          ]
         }
       ]
     },
@@ -483,6 +482,20 @@
         {
           "name": "微软GitHub Copilot代码建议",
           "filename": "微软GitHub Copilot代码建议.md"
+        }
+      ]
+    },
+    {
+      "menuname": "Markdown",
+      "menupath": "MARKDOWN/Markdown/",
+      "menulists": [
+        {
+          "name": "常用Markdown语法",
+          "filename": "常用Markdown语法.md"
+        },
+        {
+          "name": "笔记常用语法格式",
+          "filename": "笔记常用语法格式.md"
         }
       ]
     },
