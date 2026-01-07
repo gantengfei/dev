@@ -1,70 +1,6 @@
-引用 调用
-``` typescript
-import { Request, UploadFile } from '../../basics/request/request';
+# Promise封装ajax请求
 
-/** 普通POST请求接口调用.... */
-Request({
-  url: `${consts.dataServerHost}/sys/info`,
-  data: { name: '' }
-}).then(result => {
-  console.log('%c success:返回', "color:#11BB36;font-weight:bold;");
-}).catch(error => {
-  console.error('error:返回');
-}).finally(() => {
-  console.warn('不管成功与否，都会执行的操作');
-});
-
-/** 上传文件接口调用.... */
-$('btn').click(() => {
-  let _file = document.querySelector('input[name=inputFile]');
-  if (_file.files[0]) {
-    let formData = new FormData();
-    formData.append('file', _file.files[0]);
-    uploadFile(formData);
-  }
-})
-
-function uploadFile(formData) {
-  UploadFile({
-    url: `${consts.dataServerHost}/sys/uploadFile`,
-    data: formData
-  }).then((result) => {
-    console.log('%c success:返回 => ', 'color:#11BB36;font-weight:bold;', result);
-  }).catch(error => {
-    console.error('error:返回 => ', error);
-  }).finally(() => {
-    console.warn('不管成功与否，都会执行的操作');
-  });
-}
-
-/** 多个接口查询返回数据整合 */
-let warnTypeArr = ["typea", "typeb"];
-let _requestArr = [];
-warnTypeArr.forEach(item => {
-  let _request = Request({
-    url: `${consts.dataServerHost}/warn/info`,
-    type: 'GET',
-    isNoabort: true,
-    data: { type: item }
-  }).then((result) => {
-    result['type'] = item;
-    return result;
-  }).catch(error =>{
-    return { type: item };
-  });
-  _requestArr.push(_request)
-});
-
-Promise.all(_requestArr).then((result) => {
-  console.log('%c success:返回 => ', 'color:#11BB36;font-weight:bold;', result);
-}).catch(error => {
-  console.error('error:返回 => ', error);
-});
-```
-
-
-request.ts
-``` typescript
+``` typescript @request.ts
 let Requesting = {};
 
 /**
@@ -141,4 +77,69 @@ export const UploadFile = (params) => {
 // }).catch(error => {
 //   console.error('error:返回 => ', error);
 // });
+```
+
+
+# 引用+调用
+``` typescript @xxx.ts
+import { Request, UploadFile } from '../../basics/request/request';
+
+/** 普通POST请求接口调用.... */
+Request({
+  url: `${consts.dataServerHost}/sys/info`,
+  data: { name: '' }
+}).then(result => {
+  console.log('%c success:返回', "color:#11BB36;font-weight:bold;");
+}).catch(error => {
+  console.error('error:返回');
+}).finally(() => {
+  console.warn('不管成功与否，都会执行的操作');
+});
+
+/** 上传文件接口调用.... */
+$('btn').click(() => {
+  let _file = document.querySelector('input[name=inputFile]');
+  if (_file.files[0]) {
+    let formData = new FormData();
+    formData.append('file', _file.files[0]);
+    uploadFile(formData);
+  }
+})
+
+function uploadFile(formData) {
+  UploadFile({
+    url: `${consts.dataServerHost}/sys/uploadFile`,
+    data: formData
+  }).then((result) => {
+    console.log('%c success:返回 => ', 'color:#11BB36;font-weight:bold;', result);
+  }).catch(error => {
+    console.error('error:返回 => ', error);
+  }).finally(() => {
+    console.warn('不管成功与否，都会执行的操作');
+  });
+}
+
+/** 多个接口查询返回数据整合 */
+let warnTypeArr = ["typea", "typeb"];
+let _requestArr = [];
+warnTypeArr.forEach(item => {
+  let _request = Request({
+    url: `${consts.dataServerHost}/warn/info`,
+    type: 'GET',
+    isNoabort: true,
+    data: { type: item }
+  }).then((result) => {
+    result['type'] = item;
+    return result;
+  }).catch(error =>{
+    return { type: item };
+  });
+  _requestArr.push(_request)
+});
+
+Promise.all(_requestArr).then((result) => {
+  console.log('%c success:返回 => ', 'color:#11BB36;font-weight:bold;', result);
+}).catch(error => {
+  console.error('error:返回 => ', error);
+});
 ```

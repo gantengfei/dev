@@ -1,6 +1,6 @@
 
 **类型错误**
-``` html
+``` vue
 <script lang="ts">
   import { Options, Vue } from 'vue-class-component'
 

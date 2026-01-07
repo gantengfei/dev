@@ -1,6 +1,6 @@
 # ➤ 常规写法
 
-``` html
+``` vue
 <template>
   <MapContainer />
   <div class="headwrap"></div>
@@ -43,7 +43,7 @@ const getData = () => {
 ```
 
 # ➤ TS类写法
-``` html
+``` vue
 <template>
   <MapContainer />
   <div class="headwrap"></div>

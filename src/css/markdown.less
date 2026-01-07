@@ -39,7 +39,7 @@
     }
   }
 
-  strong{
+  strong {
     font-weight: 800;
   }
 
@@ -266,6 +266,7 @@
     padding: 0.2em;
     background-color: #00000020;
     // border-radius: 4px;
+    position: relative;
 
     &::-webkit-scrollbar {
       width: 6px;
@@ -283,6 +284,29 @@
     &::-webkit-scrollbar-track {
       border-radius: 4px;
       background: rgba(0, 0, 0, .1);
+    }
+
+    .title-bar {
+      height: 36px;
+      line-height: 36px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: var(--vt-font-family-mono);
+      color: #333;
+      padding-left: 12px;
+      background-color: #f5f7fa50;
+    }
+
+    .code-lang {
+      position: absolute;
+      right: 8px;
+      top: 2px;
+      color: #fff;
+      font-weight: 600;
+
+      &.t44 {
+        top: 38px;
+      }
     }
 
     code {

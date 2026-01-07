@@ -2,7 +2,7 @@
 > 设置 → 打开设置(settings.json)
 
 **设置-配置JSON** `settings_v20251205`
-``` JSON
+``` JSON @settings.json
 {
   "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "vscode-icons", // 文件夹图标

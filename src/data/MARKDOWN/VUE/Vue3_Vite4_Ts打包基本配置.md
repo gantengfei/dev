@@ -1,6 +1,6 @@
 
 # 开发环境配置 `.env.development`
-```
+``` env@.env.development
 # 变量必须以 VITE_ 为前缀才能暴露给外部读取
 VITE_ENV = 'development'
 
@@ -24,7 +24,7 @@ VITE_DATA_REAR = '/DATAS'
 ```
 
 # 生产环境配置 `.env.production`
-```
+``` env@.env.production
 # 变量必须以 VITE_ 为前缀才能暴露给外部读取
 VITE_ENV = 'production'
 
@@ -49,7 +49,7 @@ VITE_DATA_REAR = '/DATAS'
 
 
 # Vite常用基本配置 `vite.config.ts`
-``` TypeScript
+``` TypeScript @vite.config.ts
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig, loadEnv, ConfigEnv, UserConfigExport } from 'vite'

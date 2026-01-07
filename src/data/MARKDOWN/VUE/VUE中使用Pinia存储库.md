@@ -45,7 +45,7 @@ app.mount('#app')
 **2.2** 在组件中使用 Store
 
 现在，你可以在任何组件中通过 useUserInfoStore 来使用你的 store 了：
-``` html
+``` vue
 <template>
   <div>
     <h1>{{ username }}</h1>
@@ -63,7 +63,7 @@ const { username, setUsername } = userStore;
 **3、使用 Composition API (如果需要)**
 
 如果你使用的是 Vue 3 的 Composition API，你可以通过 setup() 函数来使用 store：
-``` html
+``` vue
 <script setup>
 import { useUserInfoStore } from '@/stores/userStore';
 const userStore = useUserInfoStore();
@@ -74,7 +74,7 @@ const { username, setUsername } = userStore;
 **4、使用 Options API (如果需要)**
 
 如果你更喜欢使用 Options API，可以这样做：
-``` html
+``` vue
 <template>
   <div>
     <h1>{{ userStore.username }}</h1>
@@ -200,7 +200,7 @@ export const useDrawStore = defineStore('Draw', {
 > ## NOTICE
 > 在vue页面路由改变后存储数据还存在需要清除还原初始状态
 
-``` html
+``` vue
 <template>
   <div>AppContent</div>
 </template>

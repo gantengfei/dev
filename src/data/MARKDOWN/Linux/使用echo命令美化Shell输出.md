@@ -85,8 +85,8 @@ echo -e "\033[5;31m闪烁的红色文字\033[0m"
 ![输入图片说明](./src/img/images/15ac7896_4993153.png "")
 
 ## example
-**newqhdl.sh**
-``` bash
+
+``` bash @newqhdl.sh
 #!/bin/bash
 if [ -e qhdl.zip ];then
 

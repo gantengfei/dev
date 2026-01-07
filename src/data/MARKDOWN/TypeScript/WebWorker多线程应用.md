@@ -5,7 +5,7 @@
 ## 1.1 创建Worker文件
 
 在`src/utils/worker/`文件夹中创建`gridEditData.worker.ts`
-``` TypeScript
+``` TypeScript @src/utils/worker/gridEditData.worker.ts
 addEventListener("message", (event) => {
   const { data, isendow, lastData } = event.data; // 接收主线程传来的数据
 
@@ -37,7 +37,7 @@ addEventListener("message", (event) => {
 ```
 
 ## 1.2 主线程调用
-``` TypeScript
+``` TypeScript @src/stores/drawStore.ts
   GridEditDataOrganize: markRaw({} as Record<string, any>), // 网格编辑数据整理
   workerNum: 0,
   workerObj: markRaw({} as Record<string, any>)
@@ -100,7 +100,7 @@ addEventListener("message", (event) => {
 > ## WARN
 > **注意：**打包后找不到这个引入的包，同时需要将`turf.min.js`放置在`public/basics/`目录中。
 
-``` TypeScript
+``` TypeScript @src/utils/worker/turf.worker.ts
 // @ts-ignore
 importScripts('../external/turf.min.js')
 
@@ -132,7 +132,7 @@ addEventListener("message", (event) => {
 ## 1.2 主线程调用
 
 在主线程中调用封装的方法中使用`worker`，需异步获取返回的结果。
-``` TypeScript
+``` TypeScript @src/utils/mapbox/CorrectionTool.svc.ts
 async getPointArea(pt: any, geo: any) {
   console.time('网格化耗时')
   const grid2: any = await uti.arrayInterpolate(gridOpts, geos1, grid);//射线法, 只适合规则逻辑下的插值
@@ -142,7 +142,7 @@ async getPointArea(pt: any, geo: any) {
 }
 ```
 
-``` TypeScript
+``` TypeScript @src/utils/helpers/uti.ts
 /** 将网格拆分多行到10个池子中同时处理
  * grids [[unll,unll],[unll,unll],[unll,unll]]
  * _grids {0:[unll,unll],1:[unll,unll],2:[unll,unll]}

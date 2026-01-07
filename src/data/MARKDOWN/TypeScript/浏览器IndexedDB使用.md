@@ -41,7 +41,7 @@ npm install idb
 
 封装成一个模块（如 `db.ts`）：
 
-``` TypeScript
+``` TypeScript @src/utils/helpers/db.ts
 import { openDB } from 'idb';
 
 const DB_NAME = 'QHDLDB';
@@ -88,7 +88,7 @@ export async function clearRadarGridObj() {
 
 在组件中使用：
 
-```
+``` TypeScript
 import { addRadarGridObj } from './db.ts';
 await addRadarGridObj({ code: 'mcr' });
 ```

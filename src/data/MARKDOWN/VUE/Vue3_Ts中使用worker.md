@@ -3,7 +3,7 @@
 
 # 二、应用例子
 1.在`src\utils\worker`文件夹中创建`xxx.worker.ts`（worker文件）
-``` TypeScript
+``` TypeScript @xxx.worker.ts
 addEventListener("message", (event) => {
   const datas = event.data;
   // 1-在此处理数据
@@ -13,7 +13,7 @@ addEventListener("message", (event) => {
 })
 ```
 2.在`Vue`中使用`worker`
-``` html
+``` vue
 <template>
 </template>
 

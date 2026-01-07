@@ -67,7 +67,7 @@ created(el, binding, vnode, prevNode) {}
 ## 4.1、局部自定义指令
 4.1.1、在`<script setup>`定义组件内的指令，任何以v开头的驼峰式命名的变量都可以被用作一个自定义指令
 
-``` html
+``` vue
 <template>
   <input v-focus />
 </template>
@@ -83,7 +83,7 @@ created(el, binding, vnode, prevNode) {}
 
 4.1.2、options api 自定义指令需要在directives选项中注册
 
-``` html
+``` vue
 <template>
   <input v-focus />
 </template>
@@ -106,9 +106,7 @@ export default{
 
 ## 4.2、全局自定义指令
 
-4.2.1、src/directives/focus.ts
-
-``` TypeScript
+``` TypeScript @src/directives/focus.ts
 export default function(app: any) {
 app.directive("focus", {
     mounted(el: any) {
@@ -119,9 +117,7 @@ app.directive("focus", {
 }
 ```
 
-4.2.2、src/directives/index.ts
-
-``` TypeScript
+``` TypeScript @src/directives/index.ts
 import registerFocus from './focus'; // 获取焦点
 
 export default function registerDirectives(app: any) {
@@ -129,9 +125,7 @@ export default function registerDirectives(app: any) {
 }
 ```
 
-4.2.3、 main.ts
-
-``` TypeScript
+``` TypeScript @main.ts
 import registerDirectives from './directives'
 
 const app = createApp(App)
@@ -146,7 +140,7 @@ registerDirectives(app)
 
 ## 5.1 拖拽指令 v-drag
 
-``` TypeScript
+``` TypeScript @src/utils/directives/drag.ts
 export default function (app: any) {
   // 指令的名称，定义时指令前面不需要写v-
   // 使用的时候要用 v-
@@ -170,7 +164,7 @@ export default function (app: any) {
 
 ## 5.2 拖拽指令 v-draggable
 
-``` TypeScript
+``` TypeScript @src/utils/directives/draggable.ts
 export default function (app: any) {
   // 指令的名称，定义时指令前面不需要写v-
   // 使用的时候要用 v-

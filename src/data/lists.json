@@ -117,8 +117,12 @@
           "filename": "js深度拷贝的几种方法.md"
         },
         {
-          "name": "‌try...throw...catch异常处理机制",
-          "filename": "‌try...throw...catch异常处理机制.md"
+          "name": "try...throw...catch异常处理机制",
+          "filename": "try...throw...catch异常处理机制.md"
+        },
+        {
+          "name": "js中的空值合并操作符",
+          "filename": "js中的空值合并操作符.md"
         }
       ]
     },
@@ -352,6 +356,10 @@
         {
           "name": "Mapbox GL中fitBounds()平移缩放到可见区域",
           "filename": "Mapbox GL中fitBounds()平移缩放到可见区域.md"
+        },
+        {
+          "name": "Mapbox GL设置背景层样式",
+          "filename": "Mapbox GL设置背景层样式.md"
         },
         {
           "name": "Google地图各级比例尺及空间分辨率",

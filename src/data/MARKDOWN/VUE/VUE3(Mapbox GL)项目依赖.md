@@ -56,7 +56,7 @@ npm install element-plus@latest
 # [^2.4.3]
 ```
 在 `main.ts` 文件中配置使用：
-``` TypeScript
+``` TypeScript @src/main.ts
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 //@ts-ignore
@@ -84,7 +84,7 @@ npm i --S @turf/turf
 # [^6.5.0]
 ```
 在 `main.ts` 文件中配置使用：
-``` TypeScript
+``` TypeScript @src/main.ts
 //@ts-ignore
 import * as turf from '@turf/turf';
 (window as any).turf = turf;
@@ -98,7 +98,7 @@ import * as turf from '@turf/turf';
 npm i plotly.js-dist
 ```
 在`typings/index.ts`中配置：
-``` TypeScript
+``` TypeScript @typings/index.d.ts
 declare module 'plotly.js-dist';
 ```
 在模块中使用：

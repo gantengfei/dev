@@ -9,8 +9,7 @@ The "manualChunks" option is deprecated. Use the "output.manualChunks" option in
 
 
 **<span style="color:#cf3417;">旧写法（已弃用）：</span>**
-``` TypeScript
-// vite.config.js
+``` TypeScript @vite.config.js
 export default {
   build: {
     manualChunks: {
@@ -24,8 +23,7 @@ export default {
 **<span style="color:#16ab0d;">新写法（推荐）：</span>**
 
 在 `vite.config.js` 中，正确配置路径为：
-``` TypeScript
-// vite.config.js
+``` TypeScript @vite.config.js
 export default {
   build: {
     rollupOptions: {
@@ -44,7 +42,7 @@ export default {
 # 二、两种配置形式
 
 ## 1. 对象形式（Object） —— 简单静态分组
-``` TypeScript
+``` TypeScript @vite.config.js
 manualChunks: {
   // chunk 名称: [模块 ID 或模块名数组]
   vendor: ['react', 'react-dom'],
@@ -63,13 +61,13 @@ manualChunks: {
 > - ● 对于本地模块，建议使用绝对路径（可通过 `path.resolve` 构造），因为 Rollup 内部使用的是绝对路径 ID。
 
 ## 2. 函数形式（Function） —— 动态、灵活控制（推荐）
-``` TypeScript
+``` TypeScript @vite.config.js
 manualChunks(id) {
   // id: 模块的绝对文件路径（例如 /project/node_modules/react/index.js）
   // 返回值：字符串（chunk 名称）或 undefined（使用默认分包策略）
 }
 ```
-``` TypeScript
+``` TypeScript @vite.config.js
 import path from 'path';
 
 manualChunks(id) {
@@ -106,8 +104,7 @@ manualChunks(id) {
 
 
 ### ◆ 在项目中应用
-``` TypeScript
-// vite.config.ts
+``` TypeScript @vite.config.js
 export default {
   build: {
     rollupOptions: {
@@ -145,14 +142,14 @@ export default {
 
 # 四、调试技巧
 打印所有模块 ID（辅助编写规则）：
-``` TypeScript
+``` TypeScript @vite.config.js
 manualChunks(id) {
   console.log('Module ID:', id);
   // 根据输出编写你的分组逻辑
 }
 ```
 使用正则匹配（更健壮）：
-```
+``` TypeScript
 const reactRegex = /[\\/]node_modules[\\/]react/;
 if (reactRegex.test(id)) {
   return 'react';

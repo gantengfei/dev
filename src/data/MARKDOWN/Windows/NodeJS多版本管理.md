@@ -12,7 +12,7 @@
 
 # 参数设置
 设置国内镜像，nvm安装目录下的settings.txt (eg: D:\Program Files\nvm\settings.txt)
-```
+``` txt @settings.txt
 root: D:\Program Files\nvm
 path: D:\Program Files\nodejs
 

@@ -4,7 +4,7 @@
 > background v2.0.0 版本配置
 
 **设置-配置JSON** `settings_v20241105`
-``` JSON
+``` JSON @settings.json
 {
   "workbench.colorTheme": "Monokai", // 颜色主题
   "workbench.iconTheme": "vscode-icons", // 文件夹图标

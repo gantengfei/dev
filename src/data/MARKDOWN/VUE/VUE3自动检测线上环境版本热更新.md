@@ -2,7 +2,7 @@
 
 在`utils/helpers`文件夹下新建`autoUpdateSystem.ts`
 
-``` TypeScript
+``` TypeScript @autoUpdateSystem.ts
 import { ElMessageBox } from 'element-plus';
 
 let lastScripts: string[] = [];

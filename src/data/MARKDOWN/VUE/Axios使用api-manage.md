@@ -1,4 +1,4 @@
-``` TypeScript
+``` TypeScript @src/api/manage.ts
 import request from '@/utils/request/request'
 
 /** POST请求 request.post(url:string,params:{})
@@ -124,7 +124,7 @@ export function UploadFileAction(url: string, FormData: any) {
 **使用-1**
 
 父级组件中使用`Suspense` 异步加载
-``` html
+``` vue
 <template>
   <Suspense>
     <CaselibraryMenu />
@@ -139,7 +139,7 @@ const menuConfig = (await fileAction(consts.menuConfig)).data;
 ```
 
 **使用-2**
-``` html
+``` vue
 <script lang="ts" setup>
 import { fileAction } from '@/api/manage';
 import { ref } from 'vue'
@@ -154,7 +154,7 @@ const initMenuConfig = async ()=>{
 ```
 
 **使用-3**
-``` html
+``` vue
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import { fileAction } from '@/api/manage';

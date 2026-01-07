@@ -107,7 +107,7 @@ export default router
 ```
 
 `components/HeadMenuContainer.vue` 导航菜单组件
-``` html
+``` vue
 <template>
   <div class="headwrap">
     <div class="headmenu">
@@ -225,7 +225,7 @@ export default router
 ```
 
 `components/HeadMenuContainer.vue` 导航菜单组件
-``` html
+``` vue
 <template>
   <div class="headwrap">
     <div class="headmenu">
@@ -334,7 +334,7 @@ let initMenu = (type: string) => {
 （2）传参分为声明式传参和编程式传参
 
 **声明式传参**：该方式是通过 `router-link` 组件的`to`属性实现，该方法的参数可以是一个字符串路径，或者一个描述地址的对象。
-``` xml
+``` vue
 //父路由组件
 <router-link :to="/menu/123">菜单页table</router-link>
 ```
@@ -383,7 +383,7 @@ this.$router.push({
 `params` 传参（不显示参数）也可分为 **声明式** 和 **编程式** 两种方式，与前面不同的是，这里是通过路由的别名 name 进行传值的，并且子路由不需要配置参数。
 
 **声明式传参：**该方式是通过 `router-link` 组件的`to`属性实现，比如：
-``` xml
+``` vue
 //父路由组件
 <router-link :to="{name:'menu',params:{type:123}}">进入搜索页面</router-link>
 ```

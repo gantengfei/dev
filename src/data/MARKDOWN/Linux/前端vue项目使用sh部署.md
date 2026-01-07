@@ -14,7 +14,8 @@ sh newqhdl.sh
 ```
 
 # 二、创建`newqhdl.sh`文件
-``` bash
+
+``` bash @newqhdl.sh
 #!/bin/bash
 if [ -e qhdl.zip ];then
 
@@ -42,9 +43,9 @@ fi
 
 # 三、`newqhdl.sh`文件内容注解
 
-> qhdl为青海短临系统
+> qhdl为青海短临系统名称
 
-``` bash
+``` bash @newqhdl.sh
 # 1.系统时间格式化
 timestr=$(date +%Y%m%d%H%M%S)
 # 2.命名即将打包备份的压缩包文件名

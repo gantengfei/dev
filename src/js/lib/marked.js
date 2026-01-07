@@ -11,9 +11,10 @@
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.marked = factory());
-}(this, (function () { 'use strict';
+    typeof define === 'function' && define.amd ? define(factory) :
+      (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.marked = factory());
+}(this, (function () {
+  'use strict';
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -75,7 +76,7 @@
 
   function createCommonjsModule(fn) {
     var module = { exports: {} };
-  	return fn(module, module.exports), module.exports;
+    return fn(module, module.exports), module.exports;
   }
 
   var defaults = createCommonjsModule(function (module) {
@@ -250,13 +251,13 @@
   }
 
   var noopTest = {
-    exec: function noopTest() {}
+    exec: function noopTest() { }
   };
 
   function merge(obj) {
     var i = 1,
-        target,
-        key;
+      target,
+      key;
 
     for (; i < arguments.length; i++) {
       target = arguments[i];
@@ -276,7 +277,7 @@
     // before it to distinguish it from an escaped pipe
     var row = tableRow.replace(/\|/g, function (match, offset, str) {
       var escaped = false,
-          curr = offset;
+        curr = offset;
 
       while (--curr >= 0 && str[curr] === '\\') {
         escaped = !escaped;
@@ -291,7 +292,7 @@
         return ' |';
       }
     }),
-        cells = row.split(/ \|/);
+      cells = row.split(/ \|/);
     var i = 0;
 
     if (cells.length > count) {
@@ -345,7 +346,7 @@
 
     var l = str.length;
     var level = 0,
-        i = 0;
+      i = 0;
 
     for (; i < l; i++) {
       if (str[i] === '\\') {
@@ -407,9 +408,9 @@
 
   var defaults$1 = defaults.defaults;
   var rtrim$1 = helpers.rtrim,
-      splitCells$1 = helpers.splitCells,
-      _escape = helpers.escape,
-      findClosingBracket$1 = helpers.findClosingBracket;
+    splitCells$1 = helpers.splitCells,
+    _escape = helpers.escape,
+    findClosingBracket$1 = helpers.findClosingBracket;
 
   function outputLink(cap, link, raw) {
     var href = link.href;
@@ -633,14 +634,14 @@
 
         var itemMatch = cap[0].match(this.rules.block.item);
         var next = false,
-            item,
-            space,
-            bcurr,
-            bnext,
-            addBack,
-            loose,
-            istask,
-            ischecked;
+          item,
+          space,
+          bcurr,
+          bnext,
+          addBack,
+          loose,
+          istask,
+          ischecked;
         var l = itemMatch.length;
         bcurr = this.rules.block.listItemStart.exec(itemMatch[0]);
 
@@ -660,7 +661,7 @@
               continue;
             } else {
               if ( // different bullet style
-              !this.options.pedantic || this.options.smartLists ? bnext[2][bnext[2].length - 1] !== bull[bull.length - 1] : isordered === (bnext[2].length === 1)) {
+                !this.options.pedantic || this.options.smartLists ? bnext[2][bnext[2].length - 1] !== bull[bull.length - 1] : isordered === (bnext[2].length === 1)) {
                 addBack = itemMatch.slice(i + 1).join('\n');
                 list.raw = list.raw.substring(0, list.raw.length - addBack.length);
                 i = l - 1;
@@ -1146,8 +1147,8 @@
   }();
 
   var noopTest$1 = helpers.noopTest,
-      edit$1 = helpers.edit,
-      merge$1 = helpers.merge;
+    edit$1 = helpers.edit,
+    merge$1 = helpers.merge;
   /**
    * Block-Level Grammar
    */
@@ -1161,15 +1162,15 @@
     blockquote: /^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/,
     list: /^( {0,3})(bull) [\s\S]+?(?:hr|def|\n{2,}(?! )(?! {0,3}bull )\n*|\s*$)/,
     html: '^ {0,3}(?:' // optional indentation
-    + '<(script|pre|style)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)' // (1)
-    + '|comment[^\\n]*(\\n+|$)' // (2)
-    + '|<\\?[\\s\\S]*?(?:\\?>\\n*|$)' // (3)
-    + '|<![A-Z][\\s\\S]*?(?:>\\n*|$)' // (4)
-    + '|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)' // (5)
-    + '|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:\\n{2,}|$)' // (6)
-    + '|<(?!script|pre|style)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$)' // (7) open tag
-    + '|</(?!script|pre|style)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$)' // (7) closing tag
-    + ')',
+      + '<(script|pre|style)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)' // (1)
+      + '|comment[^\\n]*(\\n+|$)' // (2)
+      + '|<\\?[\\s\\S]*?(?:\\?>\\n*|$)' // (3)
+      + '|<![A-Z][\\s\\S]*?(?:>\\n*|$)' // (4)
+      + '|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)' // (5)
+      + '|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:\\n{2,}|$)' // (6)
+      + '|<(?!script|pre|style)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$)' // (7) open tag
+      + '|</(?!script|pre|style)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$)' // (7) closing tag
+      + ')',
     def: /^ {0,3}\[(label)\]: *\n? *<?([^\s>]+)>?(?:(?: +\n? *| *\n *)(title))? *(?:\n+|$)/,
     nptable: noopTest$1,
     table: noopTest$1,
@@ -1191,9 +1192,9 @@
   block._comment = /<!--(?!-?>)[\s\S]*?(?:-->|$)/;
   block.html = edit$1(block.html, 'i').replace('comment', block._comment).replace('tag', block._tag).replace('attribute', / +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex();
   block.paragraph = edit$1(block._paragraph).replace('hr', block.hr).replace('heading', ' {0,3}#{1,6} ').replace('|lheading', '') // setex headings don't interrupt commonmark paragraphs
-  .replace('blockquote', ' {0,3}>').replace('fences', ' {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n').replace('list', ' {0,3}(?:[*+-]|1[.)]) ') // only lists starting from 1 can interrupt
-  .replace('html', '</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)').replace('tag', block._tag) // pars can be interrupted by type (6) html blocks
-  .getRegex();
+    .replace('blockquote', ' {0,3}>').replace('fences', ' {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n').replace('list', ' {0,3}(?:[*+-]|1[.)]) ') // only lists starting from 1 can interrupt
+    .replace('html', '</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)').replace('tag', block._tag) // pars can be interrupted by type (6) html blocks
+    .getRegex();
   block.blockquote = edit$1(block.blockquote).replace('paragraph', block.paragraph).getRegex();
   /**
    * Normal Block Grammar
@@ -1206,27 +1207,27 @@
 
   block.gfm = merge$1({}, block.normal, {
     nptable: '^ *([^|\\n ].*\\|.*)\\n' // Header
-    + ' {0,3}([-:]+ *\\|[-| :]*)' // Align
-    + '(?:\\n((?:(?!\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)',
+      + ' {0,3}([-:]+ *\\|[-| :]*)' // Align
+      + '(?:\\n((?:(?!\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)',
     // Cells
     table: '^ *\\|(.+)\\n' // Header
-    + ' {0,3}\\|?( *[-:]+[-| :]*)' // Align
-    + '(?:\\n *((?:(?!\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)' // Cells
+      + ' {0,3}\\|?( *[-:]+[-| :]*)' // Align
+      + '(?:\\n *((?:(?!\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)' // Cells
 
   });
   block.gfm.nptable = edit$1(block.gfm.nptable).replace('hr', block.hr).replace('heading', ' {0,3}#{1,6} ').replace('blockquote', ' {0,3}>').replace('code', ' {4}[^\\n]').replace('fences', ' {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n').replace('list', ' {0,3}(?:[*+-]|1[.)]) ') // only lists starting from 1 can interrupt
-  .replace('html', '</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)').replace('tag', block._tag) // tables can be interrupted by type (6) html blocks
-  .getRegex();
+    .replace('html', '</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)').replace('tag', block._tag) // tables can be interrupted by type (6) html blocks
+    .getRegex();
   block.gfm.table = edit$1(block.gfm.table).replace('hr', block.hr).replace('heading', ' {0,3}#{1,6} ').replace('blockquote', ' {0,3}>').replace('code', ' {4}[^\\n]').replace('fences', ' {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n').replace('list', ' {0,3}(?:[*+-]|1[.)]) ') // only lists starting from 1 can interrupt
-  .replace('html', '</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)').replace('tag', block._tag) // tables can be interrupted by type (6) html blocks
-  .getRegex();
+    .replace('html', '</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)').replace('tag', block._tag) // tables can be interrupted by type (6) html blocks
+    .getRegex();
   /**
    * Pedantic grammar (original John Gruber's loose markdown specification)
    */
 
   block.pedantic = merge$1({}, block.normal, {
     html: edit$1('^ *(?:comment *(?:\\n|\\s*$)' + '|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)' // closed tag
-    + '|<tag(?:"[^"]*"|\'[^\']*\'|\\s[^\'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))').replace('comment', block._comment).replace(/tag/g, '(?!(?:' + 'a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub' + '|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)' + '\\b)\\w+(?!:|[^\\w\\s@]*@)\\b').getRegex(),
+      + '|<tag(?:"[^"]*"|\'[^\']*\'|\\s[^\'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))').replace('comment', block._comment).replace(/tag/g, '(?!(?:' + 'a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub' + '|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)' + '\\b)\\w+(?!:|[^\\w\\s@]*@)\\b').getRegex(),
     def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,
     heading: /^(#{1,6})(.*)(?:\n+|$)/,
     fences: noopTest$1,
@@ -1242,10 +1243,10 @@
     autolink: /^<(scheme:[^\s\x00-\x1f<>]*|email)>/,
     url: noopTest$1,
     tag: '^comment' + '|^</[a-zA-Z][\\w:-]*\\s*>' // self-closing tag
-    + '|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>' // open tag
-    + '|^<\\?[\\s\\S]*?\\?>' // processing instruction, e.g. <?php ?>
-    + '|^<![a-zA-Z]+\\s[\\s\\S]*?>' // declaration, e.g. <!DOCTYPE html>
-    + '|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>',
+      + '|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>' // open tag
+      + '|^<\\?[\\s\\S]*?\\?>' // processing instruction, e.g. <?php ?>
+      + '|^<![a-zA-Z]+\\s[\\s\\S]*?>' // declaration, e.g. <!DOCTYPE html>
+      + '|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>',
     // CDATA section
     link: /^!?\[(label)\]\(\s*(href)(?:\s+(title))?\s*\)/,
     reflink: /^!?\[(label)\]\[(?!\s*\])((?:\\[\[\]]?|[^\[\]\\])+)\]/,
@@ -1358,7 +1359,7 @@
 
   var defaults$2 = defaults.defaults;
   var block$1 = rules.block,
-      inline$1 = rules.inline;
+    inline$1 = rules.inline;
   var repeatString$1 = helpers.repeatString;
   /**
    * smartypants text replacement
@@ -1366,13 +1367,13 @@
 
   function smartypants(text) {
     return text // em-dashes
-    .replace(/---/g, "\u2014") // en-dashes
-    .replace(/--/g, "\u2013") // opening singles
-    .replace(/(^|[-\u2014/(\[{"\s])'/g, "$1\u2018") // closing singles & apostrophes
-    .replace(/'/g, "\u2019") // opening doubles
-    .replace(/(^|[-\u2014/(\[{\u2018\s])"/g, "$1\u201C") // closing doubles
-    .replace(/"/g, "\u201D") // ellipses
-    .replace(/\.{3}/g, "\u2026");
+      .replace(/---/g, "\u2014") // en-dashes
+      .replace(/--/g, "\u2013") // opening singles
+      .replace(/(^|[-\u2014/(\[{"\s])'/g, "$1\u2018") // closing singles & apostrophes
+      .replace(/'/g, "\u2019") // opening doubles
+      .replace(/(^|[-\u2014/(\[{\u2018\s])"/g, "$1\u201C") // closing doubles
+      .replace(/"/g, "\u201D") // ellipses
+      .replace(/\.{3}/g, "\u2026");
   }
   /**
    * mangle email addresses
@@ -1381,8 +1382,8 @@
 
   function mangle(text) {
     var out = '',
-        i,
-        ch;
+      i,
+      ch;
     var l = text.length;
 
     for (i = 0; i < l; i++) {
@@ -1442,19 +1443,19 @@
       var lexer = new Lexer(options);
       return lexer.lex(src);
     }
-    /**
-     * Static Lex Inline Method
-     */
-    ;
+      /**
+       * Static Lex Inline Method
+       */
+      ;
 
     Lexer.lexInline = function lexInline(src, options) {
       var lexer = new Lexer(options);
       return lexer.inlineTokens(src);
     }
-    /**
-     * Preprocessing
-     */
-    ;
+      /**
+       * Preprocessing
+       */
+      ;
 
     var _proto = Lexer.prototype;
 
@@ -1464,10 +1465,10 @@
       this.inline(this.tokens);
       return this.tokens;
     }
-    /**
-     * Lexing
-     */
-    ;
+      /**
+       * Lexing
+       */
+      ;
 
     _proto.blockTokens = function blockTokens(src, tokens, top) {
       if (tokens === void 0) {
@@ -1700,10 +1701,10 @@
 
       return tokens;
     }
-    /**
-     * Lexing/Compiling
-     */
-    ;
+      /**
+       * Lexing/Compiling
+       */
+      ;
 
     _proto.inlineTokens = function inlineTokens(src, tokens, inLink, inRawBlock) {
       if (tokens === void 0) {
@@ -1878,7 +1879,7 @@
 
   var defaults$3 = defaults.defaults;
   var cleanUrl$1 = helpers.cleanUrl,
-      escape$1 = helpers.escape;
+    escape$1 = helpers.escape;
   /**
    * Renderer
    */
@@ -1904,11 +1905,41 @@
 
       _code = _code.replace(/\n$/, '') + '\n';
 
+      // 标注语言
+      let codelang = (code) => {
+        if (!code) return '';
+        const _code = code.toLowerCase().replace(/\s/g, "")
+        switch (_code) {
+          case 'typescript': return 'ts';
+          case 'javascript': return 'js';
+          case 'markdown': return 'md';
+          default: return _code;
+        }
+      }
+      // 语言样式
+      let langswitch = (code) => {
+        if (!code) return '';
+        const _code = code.toLowerCase().replace(/\s/g, "")
+        switch (_code) {
+          case 'html': return 'xml';
+          case 'vue': return 'xml';
+          case 'env': return 'ini';
+          case 'bat': return 'ini';
+          default: return _code;
+        }
+      }
+
+      if (infostring.includes('@')) {
+        const _lang = infostring.split('@')[0]
+        const title = infostring.split('@')[1]
+        return `<pre><div class="title-bar">${title}</div><span class="code-lang t44">${codelang(_lang)}</span><code class="${this.options.langPrefix + escape$1(langswitch(_lang), true)}">${(escaped ? _code : escape$1(_code, true))}</code></pre>\n`
+      }
+
       if (!lang) {
         return '<pre><code>' + (escaped ? _code : escape$1(_code, true)) + '</code></pre>\n';
       }
 
-      return '<pre><code class="' + this.options.langPrefix + escape$1(lang, true) + '">' + (escaped ? _code : escape$1(_code, true)) + '</code></pre>\n';
+      return `<pre><span class="code-lang">${codelang(lang)}</span><code class="${this.options.langPrefix + escape$1(langswitch(lang), true)}">${(escaped ? _code : escape$1(_code, true))}</code></pre>\n`
     };
 
     _proto.blockquote = function blockquote(quote) {
@@ -1922,7 +1953,7 @@
     _proto.heading = function heading(text, level, raw, slugger) {
       if (this.options.headerIds) {
         // return '<h' + level + ' class="headtitle" id="' + this.options.headerPrefix + slugger.slug(raw) + '" level="' + level + '">' + text + '</h' + level + '>\n';
-        return '<h' + level + ' class="headtitle" id="' + text.replaceAll('<code>','').replaceAll('</code>','') + '" level="' + level + '">' + text + '</h' + level + '>\n';
+        return '<h' + level + ' class="headtitle" id="' + text.replaceAll('<code>', '').replaceAll('</code>', '') + '" level="' + level + '">' + text + '</h' + level + '>\n';
       } // ignore IDs
 
 
@@ -1935,7 +1966,7 @@
 
     _proto.list = function list(body, ordered, start) {
       var type = ordered ? 'ol' : 'ul',
-          startatt = ordered && start !== 1 ? ' start="' + start + '"' : '';
+        startatt = ordered && start !== 1 ? ' start="' + start + '"' : '';
       return '<' + type + startatt + '>\n' + body + '</' + type + '>\n';
     };
 
@@ -1965,7 +1996,7 @@
       var tag = flags.align ? '<' + type + ' align="' + flags.align + '">' : '<' + type + '>';
       return tag + content + '</' + type + '>\n';
     } // span level renderer
-    ;
+      ;
 
     _proto.strong = function strong(text) {
       return '<strong>' + text + '</strong>';
@@ -2033,7 +2064,7 @@
    * returns only the textual part of the token
    */
   var TextRenderer_1 = /*#__PURE__*/function () {
-    function TextRenderer() {}
+    function TextRenderer() { }
 
     var _proto = TextRenderer.prototype;
 
@@ -2089,13 +2120,13 @@
 
     _proto.serialize = function serialize(value) {
       return value.toLowerCase().trim() // remove html tags
-      .replace(/<[!\/a-z].*?>/ig, '') // remove unwanted chars
-      .replace(/[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, '').replace(/\s/g, '-');
+        .replace(/<[!\/a-z].*?>/ig, '') // remove unwanted chars
+        .replace(/[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, '').replace(/\s/g, '-');
     }
-    /**
-     * Finds the next safe (unique) slug to use
-     */
-    ;
+      /**
+       * Finds the next safe (unique) slug to use
+       */
+      ;
 
     _proto.getNextSafeSlug = function getNextSafeSlug(originalSlug, isDryRun) {
       var slug = originalSlug;
@@ -2117,12 +2148,12 @@
 
       return slug;
     }
-    /**
-     * Convert string to unique id
-     * @param {object} options
-     * @param {boolean} options.dryrun Generates the next unique slug without updating the internal accumulator.
-     */
-    ;
+      /**
+       * Convert string to unique id
+       * @param {object} options
+       * @param {boolean} options.dryrun Generates the next unique slug without updating the internal accumulator.
+       */
+      ;
 
     _proto.slug = function slug(value, options) {
       if (options === void 0) {
@@ -2160,19 +2191,19 @@
       var parser = new Parser(options);
       return parser.parse(tokens);
     }
-    /**
-     * Static Parse Inline Method
-     */
-    ;
+      /**
+       * Static Parse Inline Method
+       */
+      ;
 
     Parser.parseInline = function parseInline(tokens, options) {
       var parser = new Parser(options);
       return parser.parseInline(tokens);
     }
-    /**
-     * Parse Loop
-     */
-    ;
+      /**
+       * Parse Loop
+       */
+      ;
 
     var _proto = Parser.prototype;
 
@@ -2182,24 +2213,24 @@
       }
 
       var out = '',
-          i,
-          j,
-          k,
-          l2,
-          l3,
-          row,
-          cell,
-          header,
-          body,
-          token,
-          ordered,
-          start,
-          loose,
-          itemBody,
-          item,
-          checked,
-          task,
-          checkbox;
+        i,
+        j,
+        k,
+        l2,
+        l3,
+        row,
+        cell,
+        header,
+        body,
+        token,
+        ordered,
+        start,
+        loose,
+        itemBody,
+        item,
+        checked,
+        task,
+        checkbox;
       var l = tokens.length;
 
       for (i = 0; i < l; i++) {
@@ -2358,16 +2389,16 @@
 
       return out;
     }
-    /**
-     * Parse Inline Tokens
-     */
-    ;
+      /**
+       * Parse Inline Tokens
+       */
+      ;
 
     _proto.parseInline = function parseInline(tokens, renderer) {
       renderer = renderer || this.renderer;
       var out = '',
-          i,
-          token;
+        i,
+        token;
       var l = tokens.length;
 
       for (i = 0; i < l; i++) {
@@ -2455,11 +2486,11 @@
   }();
 
   var merge$2 = helpers.merge,
-      checkSanitizeDeprecation$1 = helpers.checkSanitizeDeprecation,
-      escape$2 = helpers.escape;
+    checkSanitizeDeprecation$1 = helpers.checkSanitizeDeprecation,
+    escape$2 = helpers.escape;
   var getDefaults = defaults.getDefaults,
-      changeDefaults = defaults.changeDefaults,
-      defaults$5 = defaults.defaults;
+    changeDefaults = defaults.changeDefaults,
+    defaults$5 = defaults.defaults;
   /**
    * Marked
    */

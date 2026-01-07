@@ -2,7 +2,7 @@
 
 微信多开场景配置，创建`微信.bat`文件，文件内写入微信应用程序的目标路径
 
-```
+``` bat
 start D:\"Program Files (x86)"\Tencent\Weixin\Weixin.exe
 start D:\"Program Files (x86)"\Tencent\Weixin\Weixin.exe
 ```

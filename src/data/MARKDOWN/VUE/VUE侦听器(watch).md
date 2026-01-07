@@ -26,7 +26,7 @@ flush选项可以用于指定watch的回调函数在何时执行 \
 **情况一**、监视ref定义的基本类型的数据，直接填写数据名即可，监视的是其value值的改变
 
 > 监视的适合不需要写.value
-``` html
+``` vue
 <script lang="ts" setup>
 import { ref,watch } from 'vue';
 
@@ -40,7 +40,7 @@ watch(sum, (newVal,oldVal) => {
 
 
 **情况二**、监视ref定义的对象类型的数据，直接写数据名，监视的是对象的地址值，如果想监视对象内部的数据，要手动开启深度监视
-``` html
+``` vue
 <script lang="ts" setup>
 import { ref,watch } from 'vue';
 
@@ -60,7 +60,7 @@ watch(options, (Value) => {
 
 
 **情况三**、监视【reactive】定义的【对象类型】数据，且默认是开启深度监听的，该深度监听是递归的且无法关闭
-``` html
+``` vue
 <script lang="ts" setup>
 import { ref,watch } from 'vue';
 
@@ -76,7 +76,7 @@ watch(options, (newValue,oldValue) => {
 ```
 
 **情况四**、监视ref或者reactive定义的【对象类型】数据中的某个属性
-``` html
+``` vue
 <script lang="ts" setup>
 import { ref,watch } from 'vue';
 
@@ -101,7 +101,7 @@ watch(()=>options.data, (value) => {
 ```
 
 **情况五**、监视多个数据
-``` html
+``` vue
 <script lang="ts" setup>
 import { ref,watch } from 'vue';
 
@@ -122,7 +122,7 @@ watch(()=>[options.data.time,options.name], (value) => {
 # 普通语法 script
 在 `<script>` 中使用
 
-``` html
+``` vue
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 

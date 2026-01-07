@@ -8,7 +8,7 @@ npm install axios
 
 # axios二次封装
 
-``` TypeScript
+``` TypeScript @src/utils/request/request.ts
 import axios from 'axios';
 
 const BASE_URL = "";
@@ -59,9 +59,7 @@ error => {
 export default service
 ```
 
-> ## TIP
-> ts路径：src\utils\request\request.ts
-``` TypeScript
+``` TypeScript @src\utils\request\request.ts
 import axios from 'axios';
 
 const BASE_URL = "";

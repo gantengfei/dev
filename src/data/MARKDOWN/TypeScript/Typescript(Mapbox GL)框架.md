@@ -63,7 +63,7 @@ sass -v
 > ## TIP
 > 统一编码风格 \
 > 框架中使用到 .editorconfig 配置
-``` ini
+``` ini @.editorconfig
 # https://editorconfig.org
 
 root = true
@@ -109,7 +109,7 @@ trim_trailing_whitespace = true
 > 设置 → 打开设置(settings.json)
 
 **设置-配置JSON参考** `settings_v20241030`
-``` JSON
+``` JSON @settings.json
 {
   "workbench.colorTheme": "Monokai", // 颜色主题
   "workbench.iconTheme": "vscode-icons", // 文件夹图标

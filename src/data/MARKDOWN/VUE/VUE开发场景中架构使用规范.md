@@ -1,7 +1,7 @@
 # 1、视图层
 
 这一层使用 `Composition API`（组合式）架构，因为通过编译器语法糖确实可以使用非常简明的代码来声明 `props` 和 `emits` 的类型。
-``` html
+``` vue
 <template>
   <div>AppContent</div>
 </template>
@@ -23,7 +23,7 @@ onMounted(() => {
 这一层与业务相关，使用 `Options API`（选项式），架构中应用Class定义组件（`vue-class-component`）。
 
 `vue-class-component` 作为一个类装饰器库，提供了一种基于 TypeScript 类语法的组件定义方式，不仅提升了代码的可读性和可维护性，还充分利用了 TypeScript 的强大特性。
-``` html
+``` vue
 <template>
   <div>AppContent</div>
 </template>

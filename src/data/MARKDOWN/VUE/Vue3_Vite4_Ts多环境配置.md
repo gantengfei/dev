@@ -8,8 +8,8 @@
 
 设置.env中的内容信息 注意vue3+vite 必须使用VITE开头的配置信息 否则无法获取
 
-**.env.development**
-```
+### .env.development
+``` env@.env.development
 # 变量必须以 VITE_ 为前缀才能暴露给外部读取
 VITE_ENV = 'development'
 
@@ -25,8 +25,8 @@ VITE_APP_BASE_API = '/api'
 VITE_BASE_URL_REAR = '127.0.0.1:8080'
 ```
 
-**.env.production**
-```
+### .env.production
+``` env@.env.production
 # 变量必须以 VITE_ 为前缀才能暴露给外部读取
 VITE_ENV = 'production'
 
@@ -44,7 +44,7 @@ VITE_BASE_URL_REAR = '127.0.0.1'
 
 ## 配置package.json
 新增完成之后 在根目录下的 `package.json` 中修改 `scripts` 的 `dev` 和 `buid` 如下：
-``` Json
+``` Json @package.json
   "scripts": {
     "dev": "vite --mode development",
     "build": "run-p type-check build-only",
@@ -63,7 +63,7 @@ VITE_BASE_URL_REAR = '127.0.0.1'
 
 ## 配置vite.config.ts
 最后更改 `vite.config.ts` 文件如下：
-``` TypeScript
+``` TypeScript @vite.config.ts
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig, loadEnv, ConfigEnv, UserConfigExport } from 'vite'

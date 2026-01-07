@@ -41,7 +41,7 @@ input{
 
 
 # ➤ flex 布局
-``` css
+``` scss
 .item{
     display: flex;
     .img_wrap{
