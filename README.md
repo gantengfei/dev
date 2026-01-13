@@ -6,7 +6,7 @@
 
 ### 1. 前端
 
-`Html`、`JavaScript`、`TypeScript`、`Css`、`Sass`、`Less`
+`Html`、`JavaScript`、`TypeScript`、`Css`、`Sass（Scss）`、`Less`
 
 `Mapbox GL`、`VUE3`、`WeChat`
 

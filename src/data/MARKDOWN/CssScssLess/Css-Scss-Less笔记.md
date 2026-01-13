@@ -26,7 +26,7 @@ view{
 }
 ```
 ``` scss
-/* sass中使用calc时候注意 */
+/* scss中使用calc时候注意 */
 view{
     $menuHeight: 32px;
     height: calc(100% - #{$menuHeight});

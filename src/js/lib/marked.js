@@ -1953,7 +1953,7 @@
     _proto.heading = function heading(text, level, raw, slugger) {
       if (this.options.headerIds) {
         // return '<h' + level + ' class="headtitle" id="' + this.options.headerPrefix + slugger.slug(raw) + '" level="' + level + '">' + text + '</h' + level + '>\n';
-        return '<h' + level + ' class="headtitle" id="' + text.replaceAll('<code>', '').replaceAll('</code>', '') + '" level="' + level + '">' + text + '</h' + level + '>\n';
+        return '<h' + level + ' class="headtitle" id="' + text.replaceAll('<code>', '').replaceAll('</code>', '').replaceAll('<strong>', '').replaceAll('</strong>', '') + '" level="' + level + '">' + text + '</h' + level + '>\n';
       } // ignore IDs
 
 

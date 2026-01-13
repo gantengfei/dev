@@ -2,7 +2,7 @@
 
 Sass（SCSS 语法）提供一组控制指令用于条件判断与循环，常用于生成重复的样式或根据变量分支。下面是简要用法与示例。
 
-## @if / @else if / @else
+## ❑ @if / @else if / @else
 根据条件选择样式块。
 ```scss
 $theme: dark;
@@ -56,7 +56,7 @@ $block: true !default;
 
 **比较运算符‌：**使用 `==` 和 `!=` 进行相等性判断。‌
 
-## @each
+## ❑ @each
 遍历列表或映射（map）。
 ```scss
 // 列表
@@ -72,7 +72,7 @@ $themes: (primary: #06c, danger: #e00);
 }
 ```
 
-## @for
+## ❑ @for
 按索引循环，可使用 from ... through（包含结束值）或 from ... to（不包含结束值）。
 ```scss
 // 生成 .col-1 到 .col-12
@@ -86,7 +86,7 @@ $themes: (primary: #06c, danger: #e00);
 }
 ```
 
-## @while
+## ❑ @while
 基于条件的循环，注意避免无限循环。
 ```scss
 $i: 1;
