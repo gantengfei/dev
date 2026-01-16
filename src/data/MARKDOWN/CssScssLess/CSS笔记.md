@@ -20,3 +20,32 @@ border-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|i
 | `inherit` | 规定应该从父元素继承边框样式。                                        |
 
 **JavaScript** 语法：	`object.style.borderStyle="dotted double"`
+
+
+# ➤ `::before` 伪元素的 `content` 属性
+
+在 **CSS** 中，`::before` 伪元素的 `content` 属性通常用于插入静态文本、图标（如 Unicode 字符）或引号等。但不能直接通过 **JavaScript** 那样的方式动态读取 **DOM** 元素的内容。
+
+可以利用 **CSS** 自定义属性（CSS Variables） 来实现从 **HTML** 元素上“传递”内容到 `::before` 的 `content` 中。
+
+## ❑ 使用 `attr()` 函数 + 自定义属性
+
+1. 在 **HTML** 元素上设置一个自定义属性（例如 `data-before`）。
+2. 在 **CSS** 中使用 `attr()` 函数读取该属性值，并赋给 `content`。
+
+``` html
+<div class="example" data-before="提示：">这是一段文字</div>
+```
+
+``` css
+.example::before {
+  content: attr(data-before);
+  color: red;
+  font-weight: bold;
+}
+```
+
+> ## NOTICE 注意事项
+> - ● `attr()` 在 `content` 中只能用于伪元素（`::before` / `::after`），不能用于普通元素的其他属性（除非在实验性支持中）。
+> - ● `attr()` 默认返回字符串。虽然 **CSS** 规范未来可能支持其他类型（如数字、URL），但目前主流浏览器仅安全支持字符串。
+> - ● 如果希望显示元素的 文本内容 或 其他动态内容，必须通过 JavaScript 将其写入一个 `data-*` 属性，再由 **CSS** 读取。
