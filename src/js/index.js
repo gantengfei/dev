@@ -23,7 +23,7 @@ $(function () {
   let st = new Date(nowdate.format('yyyy-mm-dd'))
   let et = new Date('2053-10-01')
   const { years, months, days, totalDays } = getDateDiff(st, et)
-  $('.head-box .retiretime').empty().html(`${totalDays}DAY`).attr('title', `${years}年${months}月${days}天`)
+  $('.head-box .retiretime').empty().html(`${totalDays}DAY`).attr('title', `📅2053年10月\n⏳${years}年${months}月${days}天『${totalDays}天』`)
 
 
   const data = $.ajax({ async: false, url: `${WEB_PATH}/src/data/lists.json` }).responseJSON;

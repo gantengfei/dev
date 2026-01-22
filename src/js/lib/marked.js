@@ -1925,6 +1925,7 @@
           case 'vue': return 'xml';
           case 'env': return 'ini';
           case 'bat': return 'ini';
+          case 'conf': return 'ini';
           default: return _code;
         }
       }

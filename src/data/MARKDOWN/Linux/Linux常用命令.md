@@ -230,48 +230,6 @@ du -h --max-depth=1
 
 
 
-# ➤ Nginx
-**查看Nginx安装目录**
-``` bash
-[root@localhost ~]$ whereis nginx
-```
-**进入路径**
-``` bash
-[root@localhost ~]$ cd /usr/local/nginx/
-```
-**启动Ngin命令**
-``` bash
-[root@localhost ~]$ cd sbin/
-[root@localhost ~]$ ./nginx
-```
-**停止Nginx命令**
-``` bash
-[root@localhost ~]$ ./nginx -s stop
-```
-**重启Nginx命令**
-``` bash
-[root@localhost ~]$ ./nginx -s reload
-```
-**查看Nginx状态**
-
-`ps -ef`‌ 采用标准格式输出 `UID`、`PID`、`PPID`、`C` 等列，信息更详细但可读性稍差。
-``` bash
-[root@localhost ~]$ ps -ef|grep nginx
-```
-
-`‌ps aux`‌ 采用 `BSD` 风格输出，包含 `USER`、`%CPU`、`%MEM`、`VSZ`、`RSS` 等列，适合快速查看进程资源占用情况。
-``` bash
-[root@localhost ~]$ ps aux|grep nginx
-```
-
-**关闭Nginx命令**
-``` bash
-[root@localhost ~]$ kill -9 主进程号
-```
-
-
-
-
 # ➤ `vim`命令
 ## 普通模式
 1.一般命令模式 \
@@ -282,9 +240,9 @@ du -h --max-depth=1
 
 ## 编辑模式
 1.**进入编辑模式** \
-`i` 进入编辑模式
+键盘 `i` 键 进入编辑模式
 
-键盘`ESC`键，退出编辑模式，返回到一般命令模式
+键盘 `ESC` 键，退出编辑模式，返回到一般命令模式
 
 2.**退出编辑器** \
 `:wq!` 保存当前文件并退出 \
