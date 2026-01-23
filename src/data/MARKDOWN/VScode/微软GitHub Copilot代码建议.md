@@ -52,3 +52,16 @@ GitHub Copilot 支持多种编程语言和框架，包括但不限于：C#、C++
 # Visual Studio Code 使用 GitHub 账号登录
 
 ![输入图片说明](./src/img/images/2025-09-24_16-07-15.png "")
+
+# 查看 GitHub Copilot 免费使用额度
+
+GitHub Copilot 的免费版本为用户提供有限的使用额度：
+
+- ● **‌每月 `2000` 次代码补全**‌：每次代码建议（无论是否被接受）都会计入此限额，适用于 VS Code、Visual Studio、JetBrains 系列等集成开发环境。‌
+- ● **‌每月 `50` 次聊天请求**‌：可通过 Copilot Chat 功能提问、解释代码、调试或重构，但超出后需付费。‌
+
+超出免费额度后，用户需升级至付费计划（如 Copilot Pro，每月 10 美元）以获得无限次使用权限。‌
+
+登录 [GitHub](https://github.com) ➥ 右上角个人LOGO中选择**Settings** ➥ [GitHub Copilot](https://github.com/settings/copilot/features)
+
+![输入图片说明](./src/img/images/2026-01-23_10-52-25.png "")

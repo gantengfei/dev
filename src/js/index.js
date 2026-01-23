@@ -213,7 +213,10 @@ function loadMarkedMenu() {
   $('.rightmenuwrap ul li').each((index, elem) => {
     $(elem).click(() => {
       let a = document.getElementById($(elem).attr('anchor'));
-      if (a) a.scrollIntoView(true);
+      if (a) {
+        a.scrollIntoView(true);
+        window.scrollBy(0, -40); // 元素滚动到视口后，向上偏移40像素
+      }
     })
   })
 
