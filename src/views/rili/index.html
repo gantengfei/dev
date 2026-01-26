@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📅</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.ico" />
+  <link rel="stylesheet" href="../../css/rili.css">
+</head>
+
+<body>
+
+  <div class="rilibox">
+    <div class="yearbox">
+      <img class="yearrili" src="">
+    </div>
+  </div>
+
+</body>
+
+<script>
+
+  let year = window.location.hash.replace('#', '');
+
+  if (!year) year = new Date().getFullYear();
+
+  let y = [2025, 2026]
+  if (!y.includes(Number(year))) year = y[y.length - 1]
+
+  document.title = `📅 ${year}年`
+
+  document.getElementsByClassName('yearrili')[0].src = `../../img/rili/${year}.png`
+
+</script>
+
+</html>
