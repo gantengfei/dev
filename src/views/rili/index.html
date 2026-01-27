@@ -17,6 +17,9 @@
     </div>
   </div>
 
+  <div class="switchover left" onclick="handleClick(-1)" title="上一年"></div>
+  <div class="switchover right" onclick="handleClick(1)" title="下一年"></div>
+
 </body>
 
 <script>
@@ -25,12 +28,36 @@
 
   if (!year) year = new Date().getFullYear();
 
-  let y = [2025, 2026]
-  if (!y.includes(Number(year))) year = y[y.length - 1]
+  let yArr = [2025, 2026, 2027, 2028, 2029, 2030]
+  if (!yArr.includes(Number(year))) year = yArr[yArr.length - 1]
 
-  document.title = `📅 ${year}年`
+  updateYear()
+  switchoverState()
 
-  document.getElementsByClassName('yearrili')[0].src = `../../img/rili/${year}.png`
+  function updateYear() {
+    document.title = `📅 ${year}年`
+    document.getElementsByClassName('yearrili')[0].src = `../../img/rili/${year}.png`
+  }
+
+  function switchoverState() {
+    const greaterThanThreshold = yArr.filter(num => num > Number(year));
+    const lessThanThreshold = yArr.filter(num => num < Number(year));
+
+    let leftDom = document.getElementsByClassName('switchover left')[0];
+    let rightDom = document.getElementsByClassName('switchover right')[0];
+
+    if (greaterThanThreshold.length == 0) rightDom.classList.add('hidden')
+    else rightDom.classList.remove('hidden')
+
+    if (lessThanThreshold.length == 0) leftDom.classList.add('hidden')
+    else leftDom.classList.remove('hidden')
+  }
+
+  function handleClick(num) {
+    year = Number(year) + num;
+    updateYear()
+    switchoverState()
+  }
 
 </script>
 

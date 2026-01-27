@@ -18,7 +18,7 @@ li {
 }
 
 .rilibox {
-  width: 76vw;
+  width: 66vw;
   box-sizing: border-box;
   padding: 50px 24px;
   margin: 0 auto;
@@ -34,17 +34,34 @@ li {
   }
 }
 
-.yearlist {
+.switchover {
   position: fixed;
-  left: 24px;
-  top: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  opacity: 0.2;
 
-  ul {
-    li {
-      line-height: 32px;
-      font-size: 16px;
-      padding-left: 24px;
-      cursor: pointer;
-    }
+  &.left {
+    left: 36px;
+    background-image: url(../img/icon/icon_left.png);
+  }
+
+  &.right {
+    right: 36px;
+    background-image: url(../img/icon/icon_right.png);
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }
