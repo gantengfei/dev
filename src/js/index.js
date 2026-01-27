@@ -166,7 +166,7 @@ $(function () {
 
 
   $('.head-box .day').on('click', () => {
-    window.open('/src/views/rili/')
+    window.open(`${WEB_PATH}/src/views/rili/`)
   })
 })
 
