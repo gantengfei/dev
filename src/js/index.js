@@ -164,10 +164,6 @@ $(function () {
     $('html,body').animate({ scrollTop: '0px' }, 500)
   })
 
-
-  $('.head-box .day').on('click', () => {
-    window.open(`${WEB_PATH}/src/views/rili/`)
-  })
 })
 
 const week = ['日', '一', '二', '三', '四', '五', '六']
@@ -356,4 +352,8 @@ function mousewheel(obj, upfun, downfun) {
       downfun()
     }
   }
+}
+
+function handleRiliView() {
+  window.open(`${WEB_PATH}/views/rili/`)
 }
