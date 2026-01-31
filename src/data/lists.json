@@ -492,6 +492,16 @@
       ]
     },
     {
+      "menuname": "macOS",
+      "menupath": "MARKDOWN/macOS/",
+      "menulists": [
+        {
+          "name": "终端(Terminal)命令",
+          "filename": "终端(Terminal)命令.md"
+        }
+      ]
+    },
+    {
       "menuname": "VScode",
       "menupath": "MARKDOWN/VScode/",
       "menulists": [
