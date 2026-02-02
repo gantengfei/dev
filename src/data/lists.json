@@ -496,8 +496,16 @@
       "menupath": "MARKDOWN/macOS/",
       "menulists": [
         {
+          "name": "MacBook Pro设备信息",
+          "filename": "MacBook Pro设备信息.md"
+        },
+        {
           "name": "终端(Terminal)命令",
           "filename": "终端(Terminal)命令.md"
+        },
+        {
+          "name": "macOS12安装VScode版本要求",
+          "filename": "macOS12安装VScode版本要求.md"
         }
       ]
     },
