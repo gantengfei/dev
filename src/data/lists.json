@@ -8,10 +8,20 @@
           "name": "常用链接",
           "filename": "常用链接.md",
           "isActive": true
-        },
+        }
+      ]
+    },
+    {
+      "menuname": "前端开发",
+      "menupath": "MARKDOWN/WebDev/",
+      "menulists": [
         {
           "name": "开发版本号规范",
           "filename": "开发版本号规范.md"
+        },
+        {
+          "name": "Gitee镜像Github发布部署",
+          "filename": "Gitee镜像Github发布部署.md"
         }
       ]
     },

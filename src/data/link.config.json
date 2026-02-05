@@ -122,44 +122,6 @@
           ]
         },
         {
-          "title": "GeoJson在线工具",
-          "lists": [
-            {
-              "title": "geojson.io",
-              "href": "https://geojson.io/#map=2/20.0/0.0",
-              "logoIcon": "",
-              "brief": "在线校验GeoJson数据",
-              "isMark": true
-            },
-            {
-              "title": "mapshaper",
-              "href": "https://mapshaper.org",
-              "logoIcon": "",
-              "brief": "GeoJson转.shp文件",
-              "isMark": true
-            },
-            {
-              "title": "echartsMap",
-              "href": "https://hxkj.vip/demo/echartsMap/",
-              "logoIcon": "",
-              "brief": "下载MapGeoJson数据"
-            },
-            {
-              "title": "阿里云 DataV.GeoAtlas",
-              "href": "https://datav.aliyun.com/portal/school/atlas/area_selector",
-              "logoIcon": "",
-              "brief": "地理GeoJson下载",
-              "isMark": true
-            },
-            {
-              "title": "PS拉框助手",
-              "href": "https://www.pslkzs.com/ps/index.php",
-              "logoIcon": "",
-              "brief": "PS插件"
-            }
-          ]
-        },
-        {
           "title": "开发组件",
           "lists": [
             {
@@ -208,13 +170,6 @@
               "brief": "原生态 Web UI 组件库"
             },
             {
-              "title": "Mapbox GL JS",
-              "href": "https://docs.mapbox.com/mapbox-gl-js/api/",
-              "logoIcon": "icon_mapbox",
-              "brief": "API Reference",
-              "isMark": true
-            },
-            {
               "title": "Vue.js",
               "href": "https://cn.vuejs.org/",
               "logoIcon": "icon_vuejs",
@@ -249,7 +204,7 @@
           ]
         },
         {
-          "title": "日常地图",
+          "title": "地图服务API",
           "lists": [
             {
               "title": "拾取坐标系统",
@@ -286,6 +241,45 @@
               "href": "https://lbs.qq.com/dev/console/application/mine",
               "logoIcon": "icon_map_qq",
               "brief": "我的应用 | 腾讯位置服务"
+            },
+            {
+              "title": "Mapbox GL JS",
+              "href": "https://docs.mapbox.com/mapbox-gl-js/api/",
+              "logoIcon": "icon_mapbox",
+              "brief": "API Reference",
+              "isMark": true
+            },            {
+              "title": "geojson.io",
+              "href": "https://geojson.io/#map=2/20.0/0.0",
+              "logoIcon": "",
+              "brief": "在线校验GeoJson数据",
+              "isMark": true
+            },
+            {
+              "title": "mapshaper",
+              "href": "https://mapshaper.org",
+              "logoIcon": "",
+              "brief": "GeoJson转.shp文件",
+              "isMark": true
+            },
+            {
+              "title": "echartsMap",
+              "href": "https://hxkj.vip/demo/echartsMap/",
+              "logoIcon": "",
+              "brief": "下载MapGeoJson数据"
+            },
+            {
+              "title": "阿里云 DataV.GeoAtlas",
+              "href": "https://datav.aliyun.com/portal/school/atlas/area_selector",
+              "logoIcon": "",
+              "brief": "地理GeoJson下载",
+              "isMark": true
+            },
+            {
+              "title": "PS拉框助手",
+              "href": "https://www.pslkzs.com/ps/index.php",
+              "logoIcon": "",
+              "brief": "PS插件 提供地图绘制功能"
             }
           ]
         },
