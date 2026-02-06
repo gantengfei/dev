@@ -114,6 +114,7 @@ $(function () {
         let path = $(elem).attr('path');
         location.href = `#${name}`;
         loadmd(filename, path);
+        if ($('body').hasClass('mobileView')) $('.sidebar-box').fadeOut();
       }
     })
   })
@@ -164,6 +165,10 @@ $(function () {
     $('html,body').animate({ scrollTop: '0px' }, 500)
   })
 
+  $('.leftmenutab').on('click', function () {
+    $('.sidebar-box').fadeToggle();
+  })
+
 })
 
 const week = ['日', '一', '二', '三', '四', '五', '六']
@@ -176,7 +181,7 @@ function loadmd(filename, path) {
 
     hljs.highlightAll();
 
-    loadMarkedMenu();
+    if (!$('body').hasClass('mobileView')) loadMarkedMenu();
 
     imgAmplifier();
 

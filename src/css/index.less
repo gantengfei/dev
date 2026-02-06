@@ -71,6 +71,20 @@ body {
       display: flex;
       justify-content: space-between;
 
+      .leftwrap {
+        .leftmenutab {
+          display: none;
+          width: 24px;
+          height: 38px;
+          margin-left: 24px;
+          background-image: url(../img/icon/icon_menu.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          cursor: pointer;
+        }
+      }
+
       .rightwrap {
         display: flex;
         justify-content: flex-end;
@@ -607,6 +621,100 @@ body {
 
       .icon_map_baidu {
         background-image: url(../img/webicon/mapbaidu-logo.png);
+      }
+    }
+  }
+}
+
+.mobileView {
+  .home-container {
+    .box-container {
+      .head-box {
+        // height: .38rem;
+
+        .leftwrap {
+          .leftmenutab {
+            display: block;
+            // height: .38rem;
+            // margin-left: .24rem;
+          }
+        }
+
+        // .rightwrap {
+        //   margin-right: .24rem;
+
+        //   .timebox {
+        //     span {
+        //       &.day {
+        //         line-height: .14rem;
+        //         font-size: .12rem;
+        //       }
+
+        //       &.hhmm {
+        //         font-size: .30rem;
+        //       }
+
+        //       &.ss {
+        //         line-height: .26rem;
+        //         font-size: .13rem;
+        //       }
+        //     }
+        //   }
+
+        //   .retiretime {
+        //     align-content: end;
+        //     line-height: .24rem;
+        //     font-size: .10rem;
+        //     margin-right: .12rem;
+        //   }
+        // }
+      }
+    }
+
+    .sidebar-box {
+      display: none;
+      z-index: 10;
+      top: .38rem;
+      width: 80%;
+      height: calc(100% - .38rem);
+      background-color: var(--bg-color-body);
+      font-size: 14px;
+    }
+
+    .main-box {
+      width: 100%;
+      margin-left: 0;
+      margin-top: .38rem;
+      border-radius: 0;
+    }
+
+    .rightmenuwrap {
+      display: none;
+    }
+  }
+
+  .footer-wrap {
+    line-height: .32rem;
+    padding: .32rem 0 .16rem 0;
+  }
+
+  .back-top-btn {
+    right: .3rem;
+    bottom: .5rem;
+    width: .48rem;
+    height: .48rem;
+    background-size: contain;
+
+    &.toping {
+      bottom: 2rem;
+    }
+  }
+
+  .webpagewrap {
+
+    .weblistwrap {
+      li {
+        width: 100%;
       }
     }
   }

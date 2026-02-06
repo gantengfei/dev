@@ -44,7 +44,7 @@ if [ -e "${ZIP_FILE}" ];then
   fi
 
   # 解压新版本
-  unzip -q "${ZIP_FILE}"
+  unzip "${ZIP_FILE}"
 
   rm -rf "${ZIP_FILE}"
 
