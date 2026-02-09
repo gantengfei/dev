@@ -114,7 +114,7 @@ $(function () {
         let path = $(elem).attr('path');
         location.href = `#${name}`;
         loadmd(filename, path);
-        if ($('body').hasClass('mobileView')) $('.sidebar-box').fadeOut();
+        if (isMobileView()) $('.sidebar-box').fadeOut();
       }
     })
   })
@@ -181,18 +181,9 @@ function loadmd(filename, path) {
 
     hljs.highlightAll();
 
-    if (!$('body').hasClass('mobileView')) loadMarkedMenu();
+    if (!isMobileView()) loadMarkedMenu();
 
     imgAmplifier();
-
-    let bigimgDom = $('#bigimg')
-    mousewheel(bigimgDom[0], function () {
-      let zoomWidth = bigimgDom.innerWidth() * 1.02;
-      bigimgDom.css({ width: zoomWidth + "px" })
-    }, function () {
-      let zoomWidth = bigimgDom.innerWidth() / 1.02;
-      bigimgDom.css({ width: zoomWidth + "px" })
-    })
   })
 }
 
@@ -238,12 +229,21 @@ function loadMarkedMenu() {
 
 /** 图片放大器 */
 function imgAmplifier() {
-  $("img").click(function () {
+  $("img").off('click').on('click', function () {
     let _this = $(this);//将当前的img元素作为_this传入函数
     if (_this.attr('id') != 'bigimg') {
       imgShow("#outerdiv", "#bigimg", _this);
     }
   });
+
+  let bigimgDom = $('#bigimg')
+  mousewheel(bigimgDom[0], function () {
+    let zoomWidth = bigimgDom.innerWidth() * 1.02;
+    bigimgDom.css({ width: zoomWidth + "px" })
+  }, function () {
+    let zoomWidth = bigimgDom.innerWidth() / 1.02;
+    bigimgDom.css({ width: zoomWidth + "px" })
+  })
 }
 
 function imgShow(outerdiv, bigimg, _this) {
@@ -361,4 +361,8 @@ function mousewheel(obj, upfun, downfun) {
 
 function handleRiliView() {
   window.open(`${WEB_PATH}/views/rili/`)
+}
+
+function isMobileView(){
+  return $('body').hasClass('mobileView')
 }

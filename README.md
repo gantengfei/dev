@@ -1,6 +1,6 @@
-# 开发笔记
+# 📚 [开发笔记](https://gantengfei.github.io/dev/)
 
-📚 [开发笔记](https://gantengfei.github.io/dev/)使用 `Markdown` 记录在开发中应用到的整理和遇到的问题整理。
+笔记使用 `Markdown` 整理在开发中应用和遇到的问题记录。
 
 ## 笔记内容
 
@@ -19,7 +19,7 @@
 
 ### 3. 服务器操作系统
 
-`Linux`、`CentOS7`、`Ubuntu`
+`Windows`、`macOS`、`Linux`、`CentOS7`、`Ubuntu`
 
 
 ### 4. 开发工具
