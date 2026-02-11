@@ -1,5 +1,6 @@
 
-# 方法一：使用正则表达式判断
+# 判断是否是时间
+## 方法一：使用正则表达式判断
 
 使用正则表达式判断时间格式是否正确
 ``` JavaScript
@@ -25,10 +26,7 @@ time.match(/^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2})$/);
 ```
 
 
----
-
-
-# 方法二：使用Date对象判断
+## 方法二：使用Date对象判断
 
 使用Date对象判断时间是否合法
 ``` JavaScript
@@ -40,3 +38,25 @@ function isTime(time) {
   return date instanceof Date && !isNaN(date.getTime());
 }
 ```
+
+
+# 判断系统时间
+
+## 北京时(BJT)
+
+``` JavaScript
+new Date().toTimeString() // 输出：'17:27:00 GMT+0800 (中国标准时间)'
+
+new Date().toTimeString().includes('GMT+0800') // 输出：true
+```
+
+![输入图片说明](./src/img/images/2026-02-10_01-01-27.png "")
+
+
+## 世界时(UTC)
+
+``` JavaScript
+new Date().toTimeString() // 输出：'01:00:10 GMT+0000 (协调世界时)'
+```
+
+![输入图片说明](./src/img/images/2026-02-10_01-01-51.png "")

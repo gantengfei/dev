@@ -22,6 +22,15 @@
         {
           "name": "Gitee镜像Github发布部署",
           "filename": "Gitee镜像Github发布部署.md"
+        },
+        {
+          "name": "GoJS",
+          "submenulists": [
+            {
+              "name": "GoJS V3.1去水印",
+              "filename": "GoJS V3.1去水印.md"
+            }
+          ]
         }
       ]
     },
