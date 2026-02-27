@@ -415,6 +415,10 @@
         {
           "name": "用ArcMap合并裁剪区域",
           "filename": "用ArcMap合并裁剪区域.md"
+        },
+        {
+          "name": "行政地区划分",
+          "filename": "行政地区划分.md"
         }
       ]
     },
@@ -489,6 +493,10 @@
         {
           "name": "JAVA环境变量配置",
           "filename": "JAVA环境变量配置.md"
+        },
+        {
+          "name": "PM2操作命令",
+          "filename": "PM2操作命令.md"
         },
         {
           "name": "CentOS7",

@@ -164,6 +164,12 @@
               "brief": "轻量高效的拓扑图组件"
             },
             {
+              "title": "GoJS",
+              "href": "https://gojs.net/latest/samples/",
+              "logoIcon": "icon_GoJS",
+              "brief": "GoJS是JS库用于实现交互图表(网络拓扑图)"
+            },
+            {
               "title": "Layui",
               "href": "https://layui.dev/",
               "logoIcon": "icon_layui",
