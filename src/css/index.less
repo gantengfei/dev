@@ -74,7 +74,10 @@ body {
       justify-content: space-between;
 
       .leftwrap {
+        overflow: hidden;
+
         .leftmenutab {
+          float: left;
           display: none;
           width: 24px;
           height: 38px;
@@ -85,6 +88,26 @@ body {
           background-size: contain;
           cursor: pointer;
         }
+
+        // .logo {
+        //   float: left;
+        //   position: relative;
+        //   line-height: 38px;
+        //   margin-left: 16px;
+        //   font-family: PingFang SC;
+        //   font-size: 16px;
+        //   font-weight: 600;
+        //   color: #000;
+        //   user-select: none;
+
+        //   &::before {
+        //     content: "</>";
+        //     line-height: 38px;
+        //     font-weight: 600;
+        //     color: #42b883;
+        //     margin-right: 8px;
+        //   }
+        // }
       }
 
       .rightwrap {
@@ -638,6 +661,10 @@ body {
 
       .icon_GoJS {
         background-image: url(../img/webicon/gojs-logo.png);
+      }
+
+      .icon_tinypng {
+        background-image: url(../img/webicon/tinypng-logo.png);
       }
     }
   }

@@ -1,7 +1,7 @@
 {
   "links": [
     {
-      "title": "📌 AI平台",
+      "title": "AI平台",
       "lists": [
         {
           "title": "DeepSeek",
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "title": "📌 导航类网站",
+      "title": "导航类网站",
       "lists": [
         {
           "title": "优设导航",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "title": "📌 开发类网站",
+      "title": "开发类网站",
       "children": [
         {
           "title": "代码管理",
@@ -303,7 +303,7 @@
       ]
     },
     {
-      "title": "📌 设计类网站",
+      "title": "设计类网站",
       "children": [
         {
           "title": "在线UI设计工具",
@@ -353,7 +353,7 @@
             {
               "title": "TinyPNG",
               "href": "https://tinypng.com/",
-              "logoIcon": "",
+              "logoIcon": "icon_tinypng",
               "brief": "PNG压缩工具",
               "isMark": true
             },
@@ -392,7 +392,7 @@
       ]
     },
     {
-      "title": "📌 其它网站",
+      "title": "其它网站",
       "children": [
         {
           "title": "系统软件",

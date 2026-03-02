@@ -1,22 +1,25 @@
-# ➤ CSS `border-style` 属性
-## ❑ CSS 语法
+# ➤ `border-style` 属性
+
+border-style属性设置一个元素的四个边框的样式。此属性可以有一到四个值。
+
+## ❑ 语法
 ``` css
 border-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
 ```
 ## ❑ 属性值
 
-| 值      | 描述                                                                  |
-| :------ | :-------------------------------------------------------------------- |
+| 值        | 描述                                                                  |
+| :-------- | :-------------------------------------------------------------------- |
 | `none`    | 定义无边框。                                                          |
 | `hidden`  | 与 "none" 相同。不过应用于表时除外，对于表，hidden 用于解决边框冲突。 |
 | `dotted`  | 定义点状边框。在大多数浏览器中呈现为实线。                            |
 | `dashed`  | 定义虚线。在大多数浏览器中呈现为实线。                                |
 | `solid`   | 定义实线。                                                            |
-| `double`  | 定义双线。双线的宽度等于 `border-width` 的值。                          |
-| `groove`  | 定义 3D 凹槽边框。其效果取决于 `border-color` 的值。                    |
-| `ridge`   | 定义 3D 垄状边框。其效果取决于 `border-color` 的值。                    |
-| `inset`   | 定义 3D inset 边框。其效果取决于 `border-color` 的值。                  |
-| `outset`  | 定义 3D outset 边框。其效果取决于 `border-color` 的值。                 |
+| `double`  | 定义双线。双线的宽度等于 `border-width` 的值。                        |
+| `groove`  | 定义 3D 凹槽边框。其效果取决于 `border-color` 的值。                  |
+| `ridge`   | 定义 3D 垄状边框。其效果取决于 `border-color` 的值。                  |
+| `inset`   | 定义 3D inset 边框。其效果取决于 `border-color` 的值。                |
+| `outset`  | 定义 3D outset 边框。其效果取决于 `border-color` 的值。               |
 | `inherit` | 规定应该从父元素继承边框样式。                                        |
 
 **JavaScript** 语法：	`object.style.borderStyle="dotted double"`
@@ -120,3 +123,28 @@ div{
   }
 }
 ```
+
+
+# ➤ text-align-last 属性
+
+text-align-last 属性规定如何对齐文本的最后一行。
+
+注意：text-align-last 属性只有在 text-align 属性设置为 "justify" 时才起作用。
+
+## ❑ 语法
+``` css
+text-align-last: auto|left|right|center|justify|start|end|initial|inherit;
+```
+## ❑ 属性值
+| 值        | 描述                                                                                                                 |
+| :-------- | :------------------------------------------------------------------------------------------------------------------- |
+| `auto`    | 默认值。最后一行被调整，并向左对齐。                                                                                 |
+| `left`    | 最后一行向左对齐。                                                                                                   |
+| `right`   | 最后一行向右对齐。                                                                                                   |
+| `center`  | 最后一行居中对齐。                                                                                                   |
+| `justify` | 最后一行被调整为两端对齐。                                                                                           |
+| `start`   | 最后一行在行开头对齐（如果 `text-direction` 是从左到右，则向左对齐；如果 `text-direction` 是从右到左，则向右对齐）。 |
+| `end`     | 最后一行在行末尾对齐（如果 `text-direction` 是从左到右，则向右对齐；如果 `text-direction` 是从右到左，则向左对齐）。 |
+| `initial` | 设置该属性为它的默认值。                                                                                             |
+| `inherit` | 从父元素继承该属性。                                                                                                 |
+
