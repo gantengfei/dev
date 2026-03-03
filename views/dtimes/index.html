@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⏳ 倒计时</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../../src/img/favicon.ico" />
+  <link rel="stylesheet" href="../../src/js/lib/time-to/timeTo.css">
+  <link rel="stylesheet" href="../../src/css/dtiems.css">
+</head>
+
+<body>
+
+  <div class="dtiemswrap">
+    <div class="timewrap">
+      <span>上午（12:00）</span>
+      <div class="dtime" id="amtimer"></div>
+    </div>
+    <div class="timewrap">
+      <span>下午（17:30）</span>
+      <div class="dtime" id="pmtimer"></div>
+    </div>
+  </div>
+
+  <script src="../../src/js/lib/jquery-2.1.1.min.js"></script>
+  <script src="../../src/js/lib/time-to/jquery.time-to.js"></script>
+  <script>
+    const nowDate = new Date();
+    let year = nowDate.getFullYear();
+    let month = nowDate.getMonth() + 1;
+    let day = nowDate.getDay() + 1;
+
+    const amTime = `${year}-${month}-${day} 12:00:00`;
+    const pmTime = `${year}-${month}-${day} 17:30:00`;
+
+    $('#amtimer').timeTo(new Date(amTime), { theme: 'black' });
+    $('#pmtimer').timeTo(new Date(pmTime), { theme: 'black' });
+
+  </script>
+</body>
+
+</html>

@@ -363,6 +363,10 @@ function handleRiliView() {
   window.open(`${WEB_PATH}/views/rili/`)
 }
 
+function handleDtimerView() {
+  window.open(`${WEB_PATH}/views/dtimes/`)
+}
+
 function isMobileView(){
   return $('body').hasClass('mobileView')
 }
