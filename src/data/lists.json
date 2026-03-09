@@ -449,20 +449,33 @@
           "filename": "node命令.md"
         },
         {
-          "name": "NodeJS多版本管理",
-          "filename": "NodeJS多版本管理.md"
+          "name": "PowerShell问题",
+          "filename": "PowerShell问题.md"
+        },
+        {
+          "name": "nvm工具管理NodeJS多版本",
+          "filename": "nvm工具管理NodeJS多版本.md"
         },
         {
           "name": "Ruby安装compass问题整理",
           "filename": "Ruby安装compass问题整理.md"
         },
         {
-          "name": "微信双开(N开)",
-          "filename": "微信双开(N开).md"
-        },
-        {
-          "name": "大文件拆分压缩分卷",
-          "filename": "大文件拆分压缩分卷.md"
+          "name": "应用",
+          "submenulists": [
+            {
+              "name": "微信双开(N开)",
+              "filename": "微信双开(N开).md"
+            },
+            {
+              "name": "大文件拆分压缩分卷",
+              "filename": "大文件拆分压缩分卷.md"
+            },
+            {
+              "name": "去除电脑桌面图标快捷箭头",
+              "filename": "去除电脑桌面图标快捷箭头.md"
+            }
+          ]
         }
       ]
     },

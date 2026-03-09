@@ -18,14 +18,14 @@ compass -v  # 检查是否能正常输出版本号
 ~`http://ruby.taobao.org/` 淘宝源(已停止维护)~
 
 
-# Ruby 3.4.5
+# ✅Ruby 3.4.5
 Windows环境安装`rubyinstaller-3.4.5-1-x64.exe`
 
 使用`Start Command Prompt with Ruby`终端内安装`compass`
 ``` bash
 gem install compass
 ```
-## 告警一
+## ⚠️告警一
 
 ### 1.1提示告警内容
 ``` log
@@ -41,7 +41,7 @@ WARNING:  You don't have c:/users/lenovo/appdata/local/microsoft/windowsapps in 
 + 3.新建条目并添加`%USERPROFILE%\AppData\Local\Microsoft\WindowsApps`
 + 4.所有窗口点击确定保存
 
-## 提示二
+## ⚠️提示二
 ### 2.1提示内容
 Compass 1.0.3安装成功后的捐赠提示。
 ``` log
@@ -49,7 +49,7 @@ Compass is charityware. If you love it, please donate on our behalf at http://um
 Successfully installed compass-1.0.3
 ```
 
-## 告警三
+## ⚠️告警三
 在项目中执行`compass watch`出现告警内容。
 ### 3.1提示告警内容
 ``` log
@@ -64,14 +64,14 @@ Run with --trace to see the full backtrace
 该问题属于Ruby版本升级引发的API变更，与文件系统操作相关的类似方法（如`Dir.exists?`）也需同步更新为`Dir.exist?`
 
 
-# Ruby 3.1.6
+# ✅Ruby 3.1.6
 Windows环境安装`rubyinstaller-3.1.6-1-x64.exe`
 
 使用`Start Command Prompt with Ruby`终端内安装`compass`
 ``` bash
 gem install compass
 ```
-## 告警一
+## ⚠️告警一
 ### 1.1提示告警内容
 ``` log
 C:/Ruby31-x64/lib/ruby/3.1.0/rubygems.rb:265:in `find_spec_for_exe': can't find gem sass (>= 0.a) with executable sass (Gem::GemNotFoundException)
@@ -100,8 +100,8 @@ gem update sass
 + 检查gem环境是否正常（`gem env`）
 + 如果使用bundler，确保Gemfile中包含sass gem并运行bundle install
 
-## 告警二
-## 2.1提示告警内容
+## ⚠️告警二
+### 2.1提示告警内容
 ``` log
 MSYS2 seems to be unavailable
 Download http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20180531.exe
@@ -134,7 +134,8 @@ Installation failed: 404 Not Found
 > 通过`ruby -v`验证安装成功即可开始基础开发。
 
 
-# Ruby 2.6.3
+
+# ✅Ruby 2.6.3
 Windows环境安装`rubyinstaller-2.6.3-1-x64.exe`
 
 使用`Start Command Prompt with Ruby`终端内安装`compass`
@@ -142,16 +143,52 @@ Windows环境安装`rubyinstaller-2.6.3-1-x64.exe`
 gem install compass
 ```
 
-## 告警一
+## ⚠️告警一
 ### 1.1提示告警内容
+``` log
+ERROR:  Error installing compass:
+        The last version of ffi (~> 1.0) to support your Ruby & RubyGems was 1.17.3. Try installing it with `gem install ffi -v 1.17.3` and then running the current command again
+        ffi requires Ruby version >= 3.0, < 3.1.dev. The current ruby version is 2.6.3.62.
+```
+这个错误是因为当前的 Ruby 版本（2.6.3）太旧了，而 `compass` 依赖的 `ffi` 库的最新兼容版本要求 Ruby 版本在 3.0 到 3.1 之间。
+### 2.2解决方案
+在 Ruby 2.6，需要手动安装一个更旧的 `ffi` 版本，该版本仍支持 Ruby 2.6，然后再安装 `compass`。
+
+根据 `ffi` 的历史记录，支持 Ruby 2.6 的最后一个版本通常是 1.15.5 或 1.16.0 左右（1.17.x 开始要求更高版本）。
+
+1、卸载当前可能失败的 ffi:
+``` bash
+gem uninstall ffi
+```
+
+2、安装兼容 Ruby 2.6 的旧版 ffi: \
+尝试安装 1.15.5 (这是一个已知支持旧 Ruby 的稳定版本):
+``` bash
+gem install ffi -v 1.15.5
+```
+> 如果 1.15.5 失败，可以尝试 1.14.0 或 1.12.0。
+
+成功安装信息：
+``` log
+Fetching ffi-1.15.5-x64-mingw32.gem
+Successfully installed ffi-1.15.5-x64-mingw32
+Parsing documentation for ffi-1.15.5-x64-mingw32
+Installing ri documentation for ffi-1.15.5-x64-mingw32
+Done installing documentation for ffi after 1 seconds
+1 gem installed
+```
+
+
+## ⚠️告警二
+### 2.1提示告警内容
 ``` log
 >gem install compass -v 1.0.3
 ERROR:  Error installing compass:
         The last version of multi_json (~> 1.0) to support your Ruby & RubyGems was 1.15.0. Try installing it with `gem install multi_json -v 1.15.0` and then running the current command again
         multi_json requires Ruby version >= 3.0. The current ruby version is 2.6.3.62.
 ```
-根据错误信息，这个问题是由于Ruby版本过低（2.6.3）与multi_json要求的Ruby版本（≥3.0）不兼容导致的。
-### 1.2解决方案
+根据错误信息，这个问题是由于 Ruby 版本过低（2.6.3）与 `multi_json` 要求的Ruby版本（≥3.0）不兼容导致的。
+### 2.2解决方案
 更新multi_json版本，尝试指定兼容版本：
 ``` bash
 gem install multi_json -v '1.15.0'

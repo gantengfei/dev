@@ -12,6 +12,7 @@
 
 <body>
 
+  <div class="ntimewrap" id="nowtime"></div>
   <div class="dtiemswrap">
     <div class="timewrap">
       <span>上午（12:00）</span>
@@ -36,6 +37,12 @@
 
     $('#amtimer').timeTo(new Date(amTime), { theme: 'black' });
     $('#pmtimer').timeTo(new Date(pmTime), { theme: 'black' });
+
+    $('#nowtime').timeTo({
+      displayCaptions: true,
+      fontSize: 48,
+      captionSize: 14
+    });
 
   </script>
 </body>

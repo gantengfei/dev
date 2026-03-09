@@ -1926,6 +1926,7 @@
           case 'env': return 'ini';
           case 'bat': return 'ini';
           case 'conf': return 'ini';
+          case 'powershell': return 'shell';
           default: return _code;
         }
       }
