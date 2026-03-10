@@ -30,10 +30,10 @@
     const nowDate = new Date();
     let year = nowDate.getFullYear();
     let month = nowDate.getMonth() + 1;
-    let day = nowDate.getDay() + 1;
+    let day = nowDate.getDate();
 
-    const amTime = `${year}-${month}-${day} 12:00:00`;
-    const pmTime = `${year}-${month}-${day} 17:30:00`;
+    const amTime = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')} 12:00:00`;
+    const pmTime = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')} 17:30:00`;
 
     $('#amtimer').timeTo(new Date(amTime), { theme: 'black' });
     $('#pmtimer').timeTo(new Date(pmTime), { theme: 'black' });

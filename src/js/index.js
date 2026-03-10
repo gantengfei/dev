@@ -367,6 +367,10 @@ function handleDtimerView() {
   window.open(`${WEB_PATH}/views/dtimes/`)
 }
 
-function isMobileView(){
+function handleClockView() {
+  window.open(`${WEB_PATH}/views/clock/`)
+}
+
+function isMobileView() {
   return $('body').hasClass('mobileView')
 }
