@@ -4,7 +4,7 @@ var config = {
   // 'pointer_color': '#000000',
 
   'background_style': 2,
-  'background_color': '#001034',
+  'background_color': '#363B3F',
   'pointer_color': '#ffffff',
 
   /*'sound':0,
