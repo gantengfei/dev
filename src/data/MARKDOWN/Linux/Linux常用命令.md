@@ -129,6 +129,9 @@ du -h --max-depth=1
 ## ◆ 拷贝到指定目录
 ``` bash
 [root@localhost ~]$ cp filename /home/code_temp/
+
+# 权限问题使用
+[root@localhost ~]$ sudo cp -r filename /home/code_temp/
 ```
 
 ## ◆ 文件重命名
