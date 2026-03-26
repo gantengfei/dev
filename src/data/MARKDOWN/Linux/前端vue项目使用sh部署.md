@@ -33,6 +33,10 @@ mkdir -p "${BACKUP_DIR}" >/dev/null 2>&1
 
 if [ -e "${ZIP_FILE}" ];then
 
+  echo -e "========================================"
+  echo -e "> > > 开始部署 ${SYSTEM_NAME} ..."
+  echo -e "========================================"
+
   if [ -d "${DEST_DIR}" ];then
     timestr=$(date +%Y%m%d%H%M%S)
     log_file="${APP_NAME}_${timestr}.tar.gz"
@@ -40,6 +44,10 @@ if [ -e "${ZIP_FILE}" ];then
     # 备份现有目录
     tar -zcvf ${log_file} "${APP_NAME}" >/dev/null 2>&1
     mv ${log_file} "${BACKUP_DIR}/" >/dev/null 2>&1
+
+    echo -e "> > > 备份成功：${log_file}"
+    echo -e "========================================"
+
     rm -rf "${APP_NAME}"
   fi
 
@@ -76,6 +84,10 @@ mkdir -p "${BACKUP_DIR}" >/dev/null 2>&1
 
 if [ -e "${TAR_FILE}" ];then
 
+  echo -e "========================================"
+  echo -e "> > > 开始部署 ${SYSTEM_NAME} ..."
+  echo -e "========================================"
+
   if [ -d "${DEST_DIR}" ];then
     timestr=$(date +%Y%m%d%H%M%S)
     log_file="${APP_NAME}_${timestr}.tar.gz"
@@ -83,6 +95,10 @@ if [ -e "${TAR_FILE}" ];then
     # 备份现有目录
     tar -zcvf ${log_file} "${APP_NAME}" >/dev/null 2>&1
     mv ${log_file} "${BACKUP_DIR}/" >/dev/null 2>&1
+
+    echo -e "> > > 备份成功：${log_file}"
+    echo -e "========================================"
+
     rm -rf "${APP_NAME}"
   fi
 

@@ -104,14 +104,14 @@ console.log(total);
 // true:当返回true时，函数内部会自动将这次回调的value加入到新的数组中
 // false:当返回false时，函数内部会过滤掉这次的value
 let newNums = nums.filter((v, i) => v < 100)
-console.log(newNums);
+console.log(newNums); // [10, 20, 40, 50]
 // map函数的使用
 let new2Nums = newNums.map((v, i) => v * 2)
-console.log(new2Nums);
+console.log(new2Nums); // [20, 40, 80, 100]
 // reduce函数的使用
 // reduce作用对数组中所有的内容进行汇总
 let total = new2Nums.reduce((preValue, value) => preValue + value, 0)
-console.log(total);
+console.log(total); // 240
 
 // ----- 3 -----
 //1.需求:取出所有小于100的数字
