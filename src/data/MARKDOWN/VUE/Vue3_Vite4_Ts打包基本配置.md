@@ -90,8 +90,21 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
       minify: 'terser',
       terserOptions: {
         compress: {
-          drop_console: true, // 生产环境时移除console
           drop_debugger: true, // 生产环境时去除debugger
+          // drop_console: true, // 生产环境时移除console
+          drop_console: false, // 生产环境时移除console，注意：这里只列出希望移除的方法，未列出的（如 error, warn）会被保留
+          pure_funcs: [
+            'console.log',
+            'console.info',
+            'console.debug',
+            'console.trace',
+            'console.dir',
+            'console.dirxml',
+            'console.group',
+            'console.groupCollapsed',
+            'console.groupEnd',
+            'console.table'
+          ]
         },
       },
       rollupOptions: {

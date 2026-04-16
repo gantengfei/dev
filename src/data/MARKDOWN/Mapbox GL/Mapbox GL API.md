@@ -21,4 +21,24 @@ map.flyTo({
         return t;
     }
 });
+
+// fly with padding 中心位置往左上偏移
+map.flyTo({ center: [lon, lat], padding: { top: 0, bottom: 300, left: 0, right: 560 } })
+```
+
+# 设置图层样式
+``` javascript
+// 设置图层样式
+map.setPaintProperty('xxxxxLayer', 'text-color', '#f9fa96')
+
+// 批量设置图层样式
+const idArr = [11, 16, 19]
+map.setPaintProperty('xxxxxLayer', 'text-color', ['case', ['in', ['get', 'id'], idArr], '#ff0000', '#f9fa96'])
+
+// 批量设置图层样式
+const idsArr = ['11', '16', '19']
+map.setPaintProperty('xxxxxLayer', 'text-color', ['case', ['in', ['get', 'id'], ['literal', idsArr]], '#ff0000', '#f9fa96'])
+
+// 控制图层显隐 visible（可见）/none（不可见）
+map.setLayoutProperty('xxxxxLayer', 'visibility', 'visible')
 ```

@@ -182,3 +182,24 @@ let a2 = ages.findIndex(ages=> {
 })
 // a2输出：10 (返回的是匹配到的第一个元素的值)
 ```
+
+# ➤ 布尔值
+
+布尔值只有两个值:`true`和`false`
+
+判断变量是否等于 'xxx'
+``` JavaScript
+// ❌ 冗余写法
+const result = (val === 'xxx') ? true : false;
+
+// ✅ 优化写法
+const result = val === 'xxx';
+```
+
+强制转为布尔值，可以使用双非号。
+
+``` JavaScript
+const result = Boolean('xxx');
+// ✅ 强制转换（虽然对于 'xxx' 来说结果还是 true）
+const result = !!'xxx';
+```

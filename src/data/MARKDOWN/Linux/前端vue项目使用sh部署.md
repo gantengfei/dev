@@ -52,7 +52,7 @@ if [ -e "${ZIP_FILE}" ];then
   fi
 
   # 解压新版本
-  unzip "${ZIP_FILE}"
+  unzip "${ZIP_FILE}" >/dev/null 2>&1
 
   rm -rf "${ZIP_FILE}"
 
