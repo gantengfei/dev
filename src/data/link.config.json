@@ -427,6 +427,23 @@
               "brief": "免费打印的儿童工作表"
             }
           ]
+        },
+        {
+          "title": "AI工具",
+          "lists": [
+            {
+              "title": "Prompt123",
+              "href": "https://prompt123.cn/",
+              "logoIcon": "",
+              "brief": "中文AI提示词"
+            },
+            {
+              "title": "WaytoAGI",
+              "href": "https://www.waytoagi.com/zh",
+              "logoIcon": "",
+              "brief": "AI 知识库和工具站"
+            }
+          ]
         }
       ]
     }
