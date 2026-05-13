@@ -121,6 +121,8 @@ fi
 
 ``` bat @tarPack.bat
 @echo off
+chcp 65001 >nul
+setlocal enabledelayedexpansion
 
 :: ========== 配置区 ==========
 set "FOLDER_NAME=xmname"
@@ -170,7 +172,8 @@ if exist "%FOLDER_NAME%\" (
 )
 
 echo.
-pause
+echo 请按任意键继续...
+pause >nul
 
 ```
 
@@ -180,7 +183,7 @@ pause
 > - **或用 Notepad++ → 编码 → 转为 ANSI → 保存**
 
 
-# 三、`newqhdl.sh`文件内容注解
+## `newqhdl.sh`文件内容注解
 
 > qhdl为青海短临系统名称
 
@@ -199,4 +202,54 @@ rm -rf qhdl
 unzip qhdl.zip
 # 7.删除上传的新包
 rm -rf qhdl.zip
+```
+
+
+# 三、删除测试数据
+
+## .bat脚本 删除测试数据.bat
+
+``` bat @删除测试数据.bat
+@echo off
+chcp 65001 >nul
+setlocal enabledelayedexpansion
+
+echo.
+echo ========================================
+echo    删除测试数据工具
+echo ========================================
+echo.
+
+:: Set paths
+set "PROJECT_ROOT=%~dp0"
+
+echo [1/2] 正在清理 qhdl\data\outData 文件夹...
+set "OUTDATA_DIR1=%PROJECT_ROOT%qhdl\data\outData"
+if exist "%OUTDATA_DIR1%" (
+    del /q /s "%OUTDATA_DIR1%\*.*" >nul 2>&1
+    for /d %%i in ("%OUTDATA_DIR1%\*") do rd /s /q "%%i" >nul 2>&1
+    echo   - qhdl\data\outData 清理成功
+) else (
+    echo   - qhdl\data\outData 不存在，已跳过
+)
+echo.
+
+echo [2/2] 正在清理 qhdl2\data\outData 文件夹...
+set "OUTDATA_DIR2=%PROJECT_ROOT%qhdl2\data\outData"
+if exist "%OUTDATA_DIR2%" (
+    del /q /s "%OUTDATA_DIR2%\*.*" >nul 2>&1
+    for /d %%i in ("%OUTDATA_DIR2%\*") do rd /s /q "%%i" >nul 2>&1
+    echo   - qhdl2\data\outData 清理成功
+) else (
+    echo   - qhdl2\data\outData 不存在，已跳过
+)
+echo.
+
+echo ========================================
+echo    删除测试数据完成！
+echo ========================================
+echo.
+echo 请按任意键继续...
+pause >nul
+
 ```
