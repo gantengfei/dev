@@ -7,11 +7,14 @@ $(function () {
   const stf = new Date('1990-10-17')
   const etf = new Date('2053-10-01')
   const tftxTime = getDateDiff(st, etf)
-
+  console.log(tftxTime)
   // 计算进度
   const tfTotalDays = getDateDiff(stf, etf).totalDays
   const tfPassedDays = getDateDiff(stf, st).totalDays
-  const tfPercent = ((tfPassedDays / tfTotalDays) * 100).toFixed(2)
+  let tfPercent = ((tfPassedDays / tfTotalDays) * 100)
+  // 限制百分比在0-100之间
+  tfPercent = Math.min(Math.max(tfPercent, 0), 100)
+  tfPercent = tfPercent.toFixed(1)
 
   // 计算延迟年数（延迟月数/12）
   const tfDelayYears = (36 / 12).toFixed(0)
@@ -28,7 +31,10 @@ $(function () {
   // 计算进度
   const xueTotalDays = getDateDiff(sxue, exue).totalDays
   const xuePassedDays = getDateDiff(sxue, st).totalDays
-  const xuePercent = ((xuePassedDays / xueTotalDays) * 100).toFixed(2)
+  let xuePercent = ((xuePassedDays / xueTotalDays) * 100)
+  // 限制百分比在0-100之间
+  xuePercent = Math.min(Math.max(xuePercent, 0), 100)
+  xuePercent = xuePercent.toFixed(1)
 
   // 计算延迟年数（延迟月数/12）
   const xueDelayYears = (60 / 12).toFixed(0)
@@ -39,9 +45,26 @@ $(function () {
 
   // 更新男性卡片
   $('.tf-days').html(tftxTime.totalDays)
-  $('.tf-years-months-days').html(`约${tftxTime.years}年${tftxTime.months}月${tftxTime.days}日`)
+
+  // 构建年月日显示文本，为0时不显示
+  let tfTimeText = '约'
+  if (tftxTime.years > 0) tfTimeText += `${tftxTime.years}年`
+  if (tftxTime.months > 0) tfTimeText += `${tftxTime.months}月`
+  tfTimeText += `${tftxTime.days}天`
+  $('.tf-years-months-days').html(tfTimeText)
+
   $('.tf-percent').html(`${tfPercent}%`)
   $('.tf-progress').css('width', `${tfPercent}%`)
+
+  // 判断是否退休（进度>=100%）
+  if (parseFloat(tfPercent) >= 100) {
+    $('.tf-retire-congrats').show()
+    $('.tf-days').parent().hide() // 隐藏倒计时
+  } else {
+    $('.tf-retire-congrats').hide()
+    $('.tf-days').parent().show()
+  }
+
   $('.tf-retire-age').html('63岁')
   $('.tf-delay-years').html(tfDelayYears)
   $('.tf-retire-weekday').html(tfWeekday)
@@ -54,9 +77,26 @@ $(function () {
 
   // 更新女性卡片
   $('.xue-days').html(xuetxTime.totalDays)
-  $('.xue-years-months-days').html(`约${xuetxTime.years}年${xuetxTime.months}月${xuetxTime.days}日`)
+
+  // 构建年月日显示文本，为0时不显示
+  let xueTimeText = '约'
+  if (xuetxTime.years > 0) xueTimeText += `${xuetxTime.years}年`
+  if (xuetxTime.months > 0) xueTimeText += `${xuetxTime.months}月`
+  xueTimeText += `${xuetxTime.days}天`
+  $('.xue-years-months-days').html(xueTimeText)
+
   $('.xue-percent').html(`${xuePercent}%`)
   $('.xue-progress').css('width', `${xuePercent}%`)
+
+  // 判断是否退休（进度>=100%）
+  if (parseFloat(xuePercent) >= 100) {
+    $('.xue-retire-congrats').show()
+    $('.xue-days').parent().hide() // 隐藏倒计时
+  } else {
+    $('.xue-retire-congrats').hide()
+    $('.xue-days').parent().show()
+  }
+
   $('.xue-retire-age').html('55岁')
   $('.xue-delay-years').html(xueDelayYears)
   $('.xue-retire-weekday').html(xueWeekday)
@@ -71,6 +111,8 @@ $(function () {
 
 
 function getDateDiff(startDate, endDate) {
+  if (new Date(startDate).getTime() > new Date(endDate).getTime()) return { years: 0, months: 0, days: 0, totalDays: 0 };
+
   const sYear = startDate.getFullYear();
   const sMonth = startDate.getMonth() + 1;
   const sDay = startDate.getDate();
@@ -89,7 +131,16 @@ function getDateDiff(startDate, endDate) {
   // 计算月数
   let sm_diff = 12 - sMonth;
   let em_num = eMonth - 1;
-  let months = sm_diff + em_num;
+  let months = 0;
+  if (years > 0) {
+    months = sm_diff + em_num;
+    if (months > 12) {
+      months = months - 12;
+      years++;
+    }
+  } else {
+    months = eMonth - sMonth - 1;
+  }
 
   // 计算天数
   const startDayOfMonth = new Date(sYear, sMonth, 0).getDate();   // 开始天当月天数

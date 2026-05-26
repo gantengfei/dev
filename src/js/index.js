@@ -280,6 +280,8 @@ function imgShow(outerdiv, bigimg, _this) {
 }
 
 function getDateDiff(startDate, endDate) {
+  if (new Date(startDate).getTime() > new Date(endDate).getTime()) return { years: 0, months: 0, days: 0, totalDays: 0 };
+
   const sYear = startDate.getFullYear();
   const sMonth = startDate.getMonth() + 1;
   const sDay = startDate.getDate();
@@ -298,7 +300,16 @@ function getDateDiff(startDate, endDate) {
   // 计算月数
   let sm_diff = 12 - sMonth;
   let em_num = eMonth - 1;
-  let months = sm_diff + em_num;
+  let months = 0;
+  if (years > 0) {
+    months = sm_diff + em_num;
+    if (months > 12) {
+      months = months - 12;
+      years++;
+    }
+  } else {
+    months = eMonth - sMonth - 1;
+  }
 
   // 计算天数
   const startDayOfMonth = new Date(sYear, sMonth, 0).getDate();   // 开始天当月天数

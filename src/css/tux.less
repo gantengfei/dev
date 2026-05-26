@@ -139,6 +139,28 @@ body {
   margin-top: 5px;
 }
 
+// 恭喜退休样式
+.retire-congrats {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff6b6b;
+  margin-top: 15px;
+  padding: 15px;
+  background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+  border-radius: 15px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
 // 工作进度
 .work-progress {
   background: #f8f9fa;
