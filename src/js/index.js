@@ -23,21 +23,8 @@ $(function () {
   const st = new Date(nowdate.format('yyyy-mm-dd'))
   const et = new Date('2053-10-01')
   const txTime = getDateDiff(st, et)
-  const net = new Date(`2047-02-01`)
-  const ntxTime = getDateDiff(st, net)
 
-  const rttt = `--------------👨--------------\n` +
-    `延迟月数：36个月\n` +
-    `退休年龄：60+3=63周岁\n` +
-    `📅 2053年10月01日(星期三)\n` +
-    `⏳ ${txTime.years}年${txTime.months}月${txTime.days}天『${txTime.totalDays}天』\n` +
-    `--------------👩--------------\n` +
-    `延迟月数：60个月\n` +
-    `退休年龄：50+5=55周岁\n` +
-    `📅 2047年02月01日(星期五)\n` +
-    `⏳ ${ntxTime.years}年${ntxTime.months}月${ntxTime.days}天『${ntxTime.totalDays}天』`;
-
-  $('.head-box .retiretime').empty().html(`${txTime.totalDays}DAY`).attr('title', rttt)
+  $('.head-box .retiretime').empty().html(`${txTime.totalDays}DAY`)
 
 
   const data = $.ajax({ async: false, url: `${WEB_PATH}/src/data/lists.json` }).responseJSON;
@@ -383,6 +370,10 @@ function handleDtimerView() {
 
 function handleClockView() {
   window.open(`${WEB_PATH}/views/clock/`)
+}
+
+function handleTuxView() {
+  window.open(`${WEB_PATH}/views/tux/`)
 }
 
 function isMobileView() {

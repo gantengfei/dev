@@ -1,0 +1,370 @@
+// 全局样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+// 页面标题
+.page-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+}
+
+// 主容器
+.tuxbox {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// 卡片基础样式
+.retire-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 100%;
+  max-width: 550px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+  }
+}
+
+// 卡片头部
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .card-female & {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+}
+
+.avatar-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatar {
+  font-size: 60px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.header-info {
+  color: white;
+}
+
+.gender-label {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.birth-info {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+// 卡片主体
+.card-main {
+  padding: 30px;
+}
+
+// 倒计时区域
+.countdown-section {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.countdown-label {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.countdown-days {
+  margin-bottom: 10px;
+}
+
+.days-number {
+  font-size: 72px;
+  font-weight: bold;
+  color: #667eea;
+  line-height: 1;
+
+  .card-female & {
+    color: #f5576c;
+  }
+}
+
+.days-unit {
+  font-size: 24px;
+  color: #999;
+  margin-left: 5px;
+}
+
+.countdown-years {
+  font-size: 16px;
+  color: #888;
+  margin-top: 5px;
+}
+
+// 工作进度
+.work-progress {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.progress-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.progress-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #667eea;
+
+  .card-female & {
+    color: #f5576c;
+  }
+}
+
+.progress-bar-wrapper {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+// 进度条标签
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2px;
+}
+
+// 进度条渐变效果
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+
+  .card-female & {
+    background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    animation: shimmer 2s infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+// 年龄标记
+.age-start,
+.age-end {
+  font-size: 13px;
+  color: #888;
+}
+
+.retire-age-info {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  padding-top: 10px;
+}
+
+.retire-age-text {
+  color: #666;
+}
+
+.retire-age-number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f5576c;
+  margin: 0 5px;
+}
+
+.retire-age-delay {
+  color: #888;
+  font-size: 13px;
+}
+
+// 卡片底部
+.card-footer {
+  padding: 20px 30px 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #e9ecef;
+    transform: translateX(3px);
+  }
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-icon {
+  font-size: 18px;
+}
+
+.item-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.item-value {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .tuxbox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .retire-card {
+    max-width: 100%;
+  }
+
+  .card-header {
+    padding: 20px;
+  }
+
+  .avatar-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .avatar {
+    font-size: 48px;
+  }
+
+  .gender-label {
+    font-size: 20px;
+  }
+
+  .birth-info {
+    font-size: 14px;
+  }
+
+  .card-main {
+    padding: 20px;
+  }
+
+  .days-number {
+    font-size: 56px;
+  }
+
+  .days-unit {
+    font-size: 20px;
+  }
+
+  .progress-value {
+    font-size: 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-footer {
+    padding: 15px 20px 20px;
+  }
+}
