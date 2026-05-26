@@ -7,7 +7,7 @@ $(function () {
   const stf = new Date('1990-10-17')
   const etf = new Date('2053-10-01')
   const tftxTime = getDateDiff(st, etf)
-  console.log(tftxTime)
+
   // 计算进度
   const tfTotalDays = getDateDiff(stf, etf).totalDays
   const tfPassedDays = getDateDiff(stf, st).totalDays
