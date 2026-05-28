@@ -133,37 +133,21 @@ $(function () {
       });
     }
 
-    if (isRmenu) {
-      if (scrollTop > 16) {
-        let obj = $('.main-box').offset();
-        let width = $('.main-box').width();
-        $('.rightmenuwrap').css({ "left": `${obj.left + width}px` }).addClass('fixed');
-      } else {
-        $('.rightmenuwrap').removeAttr('style').removeClass('fixed');
-      }
-    }
-
     if (!ticking) {
       requestAnimationFrame(() => {
         updateProgressBar();
+        highlightActiveMenuItem();
         ticking = false;
       });
       ticking = true;
     }
   })
 
-  // $(window).resize(() => {
-  //   if ($('.rightmenuwrap').css('position') == 'fixed') {
-  //     let obj = $('.main-box').offset();
-  //     let width = $('.main-box').width();
-  //     $('.rightmenuwrap').css({ "left": `${obj.left + width}px` });
-  //   }
-  // })
-
   /** 返回顶部 */
   $('.back-top-btn').on('click', function () {
     $(this).addClass('toping');
     $('html,body').animate({ scrollTop: '0px' }, 500)
+    $('.rightmenuwrap ul').animate({ scrollTop: '0px' }, 500)
   })
 
   $('.leftmenutab').on('click', function () {
@@ -226,6 +210,62 @@ function loadMarkedMenu() {
     })
   })
 
+}
+
+/** 高亮当前激活的目录项 */
+function highlightActiveMenuItem() {
+  if (!isRmenu) return;
+
+  const headings = $('#mdview .headtitle');
+  if (headings.length === 0) return;
+
+  let currentHeading = null;
+  const scrollTop = $(window).scrollTop();
+  const offsetTop = 60; // 考虑头部高度的偏移量
+
+  // 找到当前可视区域内的标题
+  for (let i = 0; i < headings.length; i++) {
+    const heading = headings[i];
+    const headingTop = $(heading).offset().top - offsetTop;
+
+    if (scrollTop >= headingTop) {
+      currentHeading = heading;
+    } else {
+      break;
+    }
+  }
+
+  // 如果没有找到合适的标题，使用第一个标题
+  if (!currentHeading && headings.length > 0) {
+    currentHeading = headings[0];
+  }
+
+  if (currentHeading) {
+    const anchorText = $(currentHeading).text();
+    // 移除所有active类
+    $('.rightmenuwrap ul li span').removeClass('active');
+    // 为当前激活的菜单项添加active类
+    const activeItem = $(`.rightmenuwrap ul li[anchor="${anchorText}"]`);
+    activeItem.find('span').addClass('active');
+
+    // 确保高亮项在可视区域内
+    if (activeItem.length > 0) {
+      const menuUl = $('.rightmenuwrap ul');
+      const itemTop = activeItem.position().top;
+      const itemHeight = activeItem.outerHeight();
+      const menuHeight = menuUl.height();
+      const menuScrollTop = menuUl.scrollTop();
+
+      // 如果项在可视区域上方，滚动到顶部
+      if (itemTop < 0) {
+        menuUl.scrollTop(menuScrollTop + itemTop - 10);
+      }
+      // 如果项在可视区域下方，滚动到底部
+      else if (itemTop + itemHeight > menuHeight) {
+        menuUl.scrollTop(menuScrollTop + itemTop + itemHeight - menuHeight + 10);
+      }
+    }
+  }
 }
 
 /** 图片放大器 */
