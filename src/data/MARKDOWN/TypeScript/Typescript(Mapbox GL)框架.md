@@ -100,7 +100,8 @@ trim_trailing_whitespace = true
 // TODO 橘红色注释
 // // 灰色删除线注释
 ```
-显示效果如下图所示： \
+显示效果如下图所示：
+
 ![输入图片说明](./src/img/images/1a1ab335_4993153.png "")
 
 ### 2. 配置settings.json

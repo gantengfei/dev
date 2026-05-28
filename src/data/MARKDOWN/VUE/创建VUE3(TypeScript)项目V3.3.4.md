@@ -40,7 +40,8 @@ Scaffolding project in ./<your-project-name>...
 Done.
 ```
 
-显示： \
+显示：
+
 ![输入图片说明](./src/img/images/50988401_4993153.png "")
 
 
@@ -54,11 +55,13 @@ npm install
 ``` bash
 npm run dev
 ```
-显示：\
+显示：
+
 ![输入图片说明](./src/img/images/d8a26b0d_4993153.png "")
 
 看到以上提示，项目启动成功。
-打开浏览器，在地址栏输入 http://localhost:5173 即可打开项目。\
+打开浏览器，在地址栏输入 http://localhost:5173 即可打开项目。
+
 ![输入图片说明](./src/img/images/5d857bd2_4993153.png "")
 
 
@@ -67,4 +70,5 @@ npm run dev
 ``` bash
 npm run build
 ```
+
 ![输入图片说明](./src/img/images/9db4156d_4993153.png "")

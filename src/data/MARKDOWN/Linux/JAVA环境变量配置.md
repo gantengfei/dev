@@ -76,6 +76,7 @@ nano ～/.bashrc
 ```
 
 ![输入图片说明](./src/img/images/2026-01-21_11-09-08.png "")
+
 在文件末尾添加以下内容：
 ``` bash
 export JAVA_HOME=/usr/local/jdk1.8.0_291
@@ -83,6 +84,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 ```
 
 ![输入图片说明](./src/img/images/2026-01-21_11-11-41.png "")
+
 保存并退出（在 **nano** 中按 `Ctrl+O` → 回车 → `Ctrl+X`）。
 
 **然后重新加载配置：**

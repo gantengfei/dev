@@ -7,11 +7,11 @@
 
 > ## WARN
 > ⚠️ <span style="text-decoration:line-through;color:#f56c6c;font-size:18px;">Vue Language Features (Volar)</span> \
-> 此扩展已弃用。请改用 Vue - Official扩展。
+> 此扩展已弃用。请改用 Vue - Official扩展。 \
 > ![输入图片说明](./src/img/images/8704747d_4993153.png "")
 >
 > ⚠️ <span style="text-decoration:line-through;color:#f56c6c;font-size:18px;">TypeScript Vue Plugin (Volar)</span> \
-> 此扩展已弃用。请改用 Vue - Official扩展。
+> 此扩展已弃用。请改用 Vue - Official扩展。 \
 > ![输入图片说明](./src/img/images/66af178f_4993153.png "")
 
 

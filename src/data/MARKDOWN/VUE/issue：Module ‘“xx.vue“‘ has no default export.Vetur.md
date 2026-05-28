@@ -28,8 +28,10 @@ import MapContainer from '../components/MapContainer.vue';
 【解决办法】 \
 在vscode插件中选择卸载`vetur`，安装`volar`插件即可;
 
-安装`volar` \
+安装`volar`
+
 ![输入图片说明](./src/img/images/476cc727_4993153.png "")
 
-卸载`vetur` \
+卸载`vetur`
+
 ![输入图片说明](./src/img/images/2b140459_4993153.png "")

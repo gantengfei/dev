@@ -25,7 +25,7 @@
 ```
 
 > ## WARN
-> 由于router新版本的原因
+> 由于router新版本的原因 \
 > ![输入图片说明](./src/img/images/6b269055_4993153.png "warnings")
 
 将组件修改成如下内容：

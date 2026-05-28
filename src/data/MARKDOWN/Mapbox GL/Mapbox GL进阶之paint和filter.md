@@ -3,10 +3,12 @@
 
 # 说明
 本文中的示例数据源是北京的区边界数据，格式为geojson，数据字段与详情如下：
+
 ![输入图片说明](./src/img/images/c99ccf2a_4993153.png "")
 
 # filter
 [filter](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#filter)是layer里面的一个属性，通过一些条件表达式实现仅显示与过滤器匹配的要素，即图层的过滤显示，其官方说明如下图：
+
 ![输入图片说明](./src/img/images/768a6cad_4993153.png "")
 
 ## 1、==和!=
@@ -18,6 +20,7 @@ var filter = ['==', 'name', '昌平区'];
 //地图上展示除昌平外的所有区域
 var filter = ['!=', 'name', '昌平区'];
 ```
+
 ![输入图片说明](./src/img/images/f86072f7_4993153.png "")
 ![输入图片说明](./src/img/images/fe48e7aa_4993153.png "")
 
@@ -26,6 +29,7 @@ var filter = ['!=', 'name', '昌平区'];
 ``` JavaScript
 var filter = ['>=', 'count', 10];
 ```
+
 ![输入图片说明](./src/img/images/891522c4_4993153.png "")
 
 ## 3、in和match
@@ -53,7 +57,9 @@ var filter = [
   false
 ]
 ```
-![输入图片说明](./src/img/images/a85de230_4993153.png "") \
+
+![输入图片说明](./src/img/images/a85de230_4993153.png "")
+
 接着上面的例子，如果我们要实现在地图中展示除海淀和昌平区外的其他区域，我们可以直接用!in和将match的条件互换的方式来实现，如下：
 ``` JavaScript
 // in
@@ -78,6 +84,7 @@ var filter = [
   true
 ]
 ```
+
 ![输入图片说明](./src/img/images/0056eb1c_4993153.png "")
 
 ## 4、多条件
@@ -89,7 +96,9 @@ var filter = [
   ['==', 'type', 1]
 ]
 ```
+
 ![输入图片说明](./src/img/images/183d8871_4993153.png "")
+
 当然，有时我们会存在根据几何类型来进行过滤，此时，我们可用：
 ``` JavaScript
 var filter = [
@@ -115,6 +124,7 @@ var filter = [
  '#A880FF'
 ]
 ```
+
 ![输入图片说明](./src/img/images/27a37ab0_4993153.png "")
 
 ## 2、case
@@ -134,7 +144,8 @@ var filter = [
 **注意：**\
 1.第一个的判断是 `<`;\
 2.中间的判断是 `>=` 和 `<` ;\
-3.最后一个判断是 `>=` ;\
+3.最后一个判断是 `>=` ;
+
 ![输入图片说明](./src/img/images/2d24b3eb_4993153.png "")
 
 ## 3、step
@@ -160,16 +171,16 @@ var filter = [
 ]
 ```
 **说明：**\
-1.对于**非数值型**的字段，我们可以用`to-number`对字段进行转换。\
+1.对于**非数值型**的字段，我们可以用`to-number`对字段进行转换。
+
 ![输入图片说明](./src/img/images/f39cd280_4993153.png "")
 
 ## 4、interpolate
 `interpolate`，中文的翻译是“插值”，在mapbox GL中，我们可通过`interpolate`实现按照比例的插值渲染。
 **说明：**\
-1.`zoom`是一个特殊字符，特制地图的缩放级别，同样的还有`geometry-type`,特指的是geom类型。\
+1.`zoom`是一个特殊字符，特制地图的缩放级别，同样的还有`geometry-type`,特指的是geom类型。
+
 ![输入图片说明](./src/img/images/8c0fc69b_4993153.png "")
-
-
 
 完整测试代码如下：
 ``` JavaScript

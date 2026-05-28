@@ -34,7 +34,9 @@
   }
 </script>
 ```
+
 地图`maplayer`类型结构，如图所示：
+
 ![输入图片说明](./src/img/images/4e937db8_4993153.png "")
 
 具体的错误信息如下：`未捕获的类型错误：无法从类未声明的对象中读取私有成员`
@@ -49,4 +51,5 @@ import { shallowReactive } from 'vue'
 private maps: any = shallowReactive({})
 ```
 地图`maplayer`类型结构，如图所示：
+
 ![输入图片说明](./src/img/images/b99659e3_4993153.png "")

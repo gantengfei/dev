@@ -8,6 +8,7 @@
 第一次设置NVM的安装路径，也是后续安装不同NodeJS的路径 （eg: D:\Program Files\nvm） \
 第二次设置切换不同版本时系统链接的路径 （eg: D:\Program Files\nodejs） \
 4.安装完成后，打开cmd窗口，执行 `nvm -version` 检验是否安装成功
+
 ![输入图片说明](./src/img/images/d8d2d97a_4993153.png "")
 
 # 参数设置
@@ -26,6 +27,7 @@ npm_mirror: https://npmmirror.com/mirrors/npm/
 ``` bash
 nvm list available
 ```
+
 ![输入图片说明](./src/img/images/22f61adf_4993153.png "")
 
 ---
@@ -36,6 +38,7 @@ nvm install 10.24.1
 
 nvm install 16.20.2
 ```
+
 ![输入图片说明](./src/img/images/82266047_4993153.png "")
 
 ---
@@ -55,6 +58,7 @@ nvm list
 
 nvm ls
 ```
+
 ![输入图片说明](./src/img/images/0afdf848_4993153.png "")
 
 ---
@@ -65,6 +69,7 @@ nvm use 10.24.1
 
 nvm use 16.20.2
 ```
+
 ![输入图片说明](./src/img/images/84878009_4993153.png "")
 
 ---
