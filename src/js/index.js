@@ -173,6 +173,7 @@ function loadmd(filename, path) {
 }
 
 let isRmenu = false;
+let isManualScrolling = false;
 /** 加载当前md菜单 */
 function loadMarkedMenu() {
   let indexNum = 0;
@@ -201,27 +202,40 @@ function loadMarkedMenu() {
   $('.rightmenuwrap ul').empty().html(Htm);
 
   $('.rightmenuwrap ul li').each((index, elem) => {
-    $(elem).click(() => {
+    $(elem).click((e) => {
+      e.preventDefault();
       let a = document.getElementById($(elem).attr('anchor'));
       if (a) {
+        // 标记为手动滚动，暂停自动高亮更新
+        isManualScrolling = true;
+
+        $('.rightmenuwrap ul li span').removeClass('active');
+        $(elem).find('span').addClass('active');
+
         a.scrollIntoView(true);
-        window.scrollBy(0, -40); // 元素滚动到视口后，向上偏移40像素
+        window.scrollBy(0, -offsetTop); // 元素滚动到视口后，向上偏移40像素
+
+        // 滚动动画完成后，延迟恢复自动高亮更新
+        setTimeout(function () {
+          isManualScrolling = false;
+        }, 500);
       }
     })
   })
 
 }
 
+const offsetTop = 60; // 考虑头部高度的偏移量
 /** 高亮当前激活的目录项 */
 function highlightActiveMenuItem() {
   if (!isRmenu) return;
+  if (isManualScrolling) return;
 
   const headings = $('#mdview .headtitle');
   if (headings.length === 0) return;
 
   let currentHeading = null;
   const scrollTop = $(window).scrollTop();
-  const offsetTop = 60; // 考虑头部高度的偏移量
 
   // 找到当前可视区域内的标题
   for (let i = 0; i < headings.length; i++) {

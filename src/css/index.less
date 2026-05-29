@@ -396,6 +396,7 @@ body {
         flex: 1;
         overflow-y: auto;
         overflow-x: hidden;
+
         &:hover {
           &::-webkit-scrollbar {
             display: block;
@@ -646,15 +647,16 @@ body {
         box-sizing: border-box;
         padding: 4px 8px;
         border-radius: 4px;
-        box-sizing: border-box;
         position: relative;
         background-color: #f2f2f2;
 
         &:hover {
           background-color: #e5e5e5;
+          text-decoration: none;
 
           &>span {
             color: var(--text-color-hover);
+            text-decoration: underline;
           }
         }
 

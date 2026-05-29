@@ -1,12 +1,15 @@
 # Math 对象
 Math 对象用于执行数学任务。 \
 Math 对象并不像 Date 和 String 那样是对象的类，因此没有构造函数 Math()。
+
 ## 语法
 ``` javascript
 var x = Math.PI; // 返回 PI
 var y = Math.sqrt(16); // 返回 16 的平方根
 ```
+
 ## Math 对象属性
+
 | 属性    | 描述                                                    |
 | :------ | :------------------------------------------------------ |
 | E       | 返回算术常量 e，即自然对数的底数（约等于2.718）。       |
@@ -19,6 +22,7 @@ var y = Math.sqrt(16); // 返回 16 的平方根
 | SQRT2   | 返回 2 的平方根（约等于 1.414）。                       |
 
 ## Math 对象方法
+
 | 方法             | 描述                                                          |
 | :--------------- | :------------------------------------------------------------ |
 | abs(x)           | 返回 x 的绝对值。                                             |
@@ -43,15 +47,18 @@ var y = Math.sqrt(16); // 返回 16 的平方根
 | trunc(x)         | 将数字的小数部分去掉，只保留整数部分。                        |
 
 # 一、Math.trunc() 保留整数部分
-## 1、定义
+**❑ 定义**
+
 Math.trunc()方法去除数字的小数部分，保留整数部分。
 
-## 2、语法
+**❑ 语法**
+
 ``` javascript
 Math.trunc(value)
 ```
 
-## 3、示例
+**❑ 示例**
+
 ``` javascript
 console.log(Math.trunc(2.01));         // 2
 console.log(Math.trunc(2.9));          // 2
@@ -63,15 +70,18 @@ console.log(Math.trunc(undefined));    // NaN
 ```
 
 # 二、Math.round() 四舍五入取整
-##  1.定义
+**❑ 定义**
+
 Math.round()方法返回一个数字四舍五入后的整数部分。
 
-## 2、语法
+**❑ 语法**
+
 ``` javascript
 Math.round(value)
 ```
 
-## 3、示例
+**❑ 示例**
+
 ``` javascript
 console.log(Math.round((2.01));       // 2
 console.log(Math.round(2.9));          // 3
@@ -83,15 +93,18 @@ console.log(Math.round(undefined));    // NaN
 ```
 
 # 三、Math.ceil() 向上取整
-## 1、定义
+**❑ 定义**
+
 Math.ceil()方法返回一个大于或等于数字的最小整数，即向上取整。
 
-## 2、语法
+**❑ 语法**
+
 ``` javascript
 Math.ceil(value)
 ```
 
-3、示例
+**❑ 示例**
+
 ``` javascript
 console.log(Math.ceil(2.01));         // 3
 console.log(Math.ceil(2.9));          // 3
@@ -103,15 +116,18 @@ console.log(Math.ceil(undefined));    // NaN
 ```
 
 # 四、Math.floor() 向下取整
-## 1、定义
+**❑ 定义**
+
 Math.floor()方法返回一个小于或等于数字的最小整数，即向下取整。
 
-## 2、语法
+**❑ 语法**
+
 ``` javascript
 Math.floor(value)
 ```
 
-## 3、示例
+**❑ 示例**
+
 ``` javascript
 console.log(Math.floor(2.01));         // 2
 console.log(Math.floor(2.9));          // 2

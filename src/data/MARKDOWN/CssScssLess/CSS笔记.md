@@ -2,11 +2,12 @@
 
 border-style属性设置一个元素的四个边框的样式。此属性可以有一到四个值。
 
-## ❑ 语法
+**❑ 语法**
+
 ``` css
 border-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
 ```
-## ❑ 属性值
+**❑ 属性值**
 
 | 值        | 描述                                                                  |
 | :-------- | :-------------------------------------------------------------------- |
@@ -131,11 +132,13 @@ text-align-last 属性规定如何对齐文本的最后一行。
 
 注意：text-align-last 属性只有在 text-align 属性设置为 "justify" 时才起作用。
 
-## ❑ 语法
+**❑ 语法**
+
 ``` css
 text-align-last: auto|left|right|center|justify|start|end|initial|inherit;
 ```
-## ❑ 属性值
+**❑ 属性值**
+
 | 值        | 描述                                                                                                                 |
 | :-------- | :------------------------------------------------------------------------------------------------------------------- |
 | `auto`    | 默认值。最后一行被调整，并向左对齐。                                                                                 |

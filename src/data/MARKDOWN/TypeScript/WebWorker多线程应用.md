@@ -129,7 +129,7 @@ addEventListener("message", (event) => {
 })
 ```
 
-## 1.2 主线程调用
+## 2.2 主线程调用
 
 在主线程中调用封装的方法中使用`worker`，需异步获取返回的结果。
 ``` TypeScript @src/utils/mapbox/CorrectionTool.svc.ts
