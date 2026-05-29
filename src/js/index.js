@@ -33,7 +33,7 @@ $(function () {
 
   let Htm = ``;
   data.DS.forEach((item, index) => {
-    const { menuname, menupath, menulists } = item;
+    const { menuname, menupath, menulists, icon } = item;
     let _isActived = false;
     let liHtm = ``, itemNum = 0;
     menulists.forEach((iitem, iindex) => {
@@ -81,7 +81,7 @@ $(function () {
       }
     })
     Htm += `<li class="${_isActived ? 'open' : ''}">
-      <div class="sidebar-group ${_isActived ? 'open' : ''}"><span>${menuname}<i>(${itemNum})</i></span><span class="arrow ${_isActived ? 'down' : 'right'}"></span></div>
+      <div class="sidebar-group ${_isActived ? 'open' : ''}"><span class="group-title ${icon}">${menuname}<i>(${itemNum})</i></span><span class="arrow ${_isActived ? 'down' : 'right'}"></span></div>
       <ul>${liHtm}</ul>
     </li>`;
   })

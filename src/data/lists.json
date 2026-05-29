@@ -3,6 +3,7 @@
     {
       "menuname": "开发日常",
       "menupath": "MARKDOWN/common/",
+      "icon": "icon-dev",
       "menulists": [
         {
           "name": "常用链接",
@@ -14,6 +15,7 @@
     {
       "menuname": "前端开发",
       "menupath": "MARKDOWN/WebDev/",
+      "icon": "icon-web",
       "menulists": [
         {
           "name": "开发版本号规范",
@@ -37,6 +39,7 @@
     {
       "menuname": "JavaScript开发",
       "menupath": "MARKDOWN/JavaScript/",
+      "icon": "icon-js",
       "menulists": [
         {
           "name": "JS开发笔记",
@@ -152,6 +155,7 @@
     {
       "menuname": "TypeScript开发",
       "menupath": "MARKDOWN/TypeScript/",
+      "icon": "icon-ts",
       "menulists": [
         {
           "name": "TypeScript类型",
@@ -190,6 +194,7 @@
     {
       "menuname": "CSS-Scss-Less",
       "menupath": "MARKDOWN/CssScssLess/",
+      "icon": "icon-css",
       "menulists": [
         {
           "name": "CSS-Scss-Less笔记",
@@ -232,6 +237,7 @@
     {
       "menuname": "Html",
       "menupath": "MARKDOWN/Html/",
+      "icon": "icon-html",
       "menulists": [
         {
           "name": "HTML开发笔记",
@@ -246,6 +252,7 @@
     {
       "menuname": "微信小程序",
       "menupath": "MARKDOWN/WeChat/",
+      "icon": "icon-wechat",
       "menulists": [
         {
           "name": "微信小程序开发",
@@ -256,6 +263,7 @@
     {
       "menuname": "VUE",
       "menupath": "MARKDOWN/VUE/",
+      "icon": "icon-vue",
       "menulists": [
         {
           "name": "创建VUE3(TypeScript)项目V3.3.4",
@@ -391,6 +399,7 @@
     {
       "menuname": "Mapbox GL开发",
       "menupath": "MARKDOWN/Mapbox GL/",
+      "icon": "icon-mapbox",
       "menulists": [
         {
           "name": "Mapbox GL API",
@@ -433,6 +442,7 @@
     {
       "menuname": "SQL",
       "menupath": "MARKDOWN/SQL/",
+      "icon": "icon-sql",
       "menulists": [
         {
           "name": "PostgreSQL常用语句",
@@ -443,6 +453,7 @@
     {
       "menuname": "Windows",
       "menupath": "MARKDOWN/Windows/",
+      "icon": "icon-windows",
       "menulists": [
         {
           "name": "cmd命令",
@@ -490,6 +501,7 @@
     {
       "menuname": "Linux",
       "menupath": "MARKDOWN/Linux/",
+      "icon": "icon-linux",
       "menulists": [
         {
           "name": "Linux常用命令",
@@ -542,6 +554,7 @@
     {
       "menuname": "macOS",
       "menupath": "MARKDOWN/macOS/",
+      "icon": "icon-macos",
       "menulists": [
         {
           "name": "MacBook Pro设备信息",
@@ -560,6 +573,7 @@
     {
       "menuname": "VScode",
       "menupath": "MARKDOWN/VScode/",
+      "icon":"icon-vscode",
       "menulists": [
         {
           "name": "VScode插件",
@@ -594,6 +608,7 @@
     {
       "menuname": "Markdown",
       "menupath": "MARKDOWN/Markdown/",
+      "icon": "icon-markdown",
       "menulists": [
         {
           "name": "常用Markdown语法",
@@ -608,6 +623,7 @@
     {
       "menuname": "其它记录",
       "menupath": "MARKDOWN/other/",
+      "icon": "icon-other",
       "menulists": [
         {
           "name": "常用特殊字符大全",
