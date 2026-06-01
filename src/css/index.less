@@ -65,11 +65,13 @@ body {
       top: 0;
       left: 0;
       right: 0;
-      background-image: radial-gradient(transparent 1px, #fff 1px);
-      background-size: 4px 4px;
-      backdrop-filter: saturate(180%) blur(20px);
-      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      background-image: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);
+      // background-image: radial-gradient(transparent 1px, #fff 1px);
+      // background-size: 4px 4px;
+      // backdrop-filter: saturate(180%) blur(20px);
+      // -webkit-backdrop-filter: saturate(180%) blur(20px);
       box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+      color: #ecf0f1;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -111,11 +113,11 @@ body {
             font-weight: 600;
             display: flex;
             align-items: center;
-            color: var(--text-color);
+            color: #ecf0f1;
             transition: color 0.2s ease;
 
             &:hover {
-              color: var(--text-color-hover);
+              color: #ffffff;
             }
 
             &.day {
@@ -162,15 +164,15 @@ body {
           height: 12px;
           line-height: 12px;
           font-size: 10px;
-          color: var(--text-color-gray);
+          color: rgba(236, 240, 241, 0.8);
           cursor: pointer;
           padding: 4px 8px;
           border-radius: 4px;
           transition: all 0.2s ease;
 
           &:hover {
-            color: var(--text-color-hover);
-            background-color: var(--bg-color-style-1-1);
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.08);
           }
         }
       }
@@ -264,48 +266,63 @@ body {
                 &.icon-dev {
                   background-image: url(../img/icon/menu/dev.png);
                 }
+
                 &.icon-web {
                   background-image: url(../img/icon/menu/web.png);
                 }
+
                 &.icon-js {
                   background-image: url(../img/icon/menu/JavaScript.png);
                 }
+
                 &.icon-ts {
                   background-image: url(../img/icon/menu/TypeScript.png);
                 }
+
                 &.icon-css {
                   background-image: url(../img/icon/menu/CSS.png);
                 }
+
                 &.icon-html {
                   background-image: url(../img/icon/menu/html.png);
                 }
+
                 &.icon-wechat {
                   background-image: url(../img/icon/menu/wechat.png);
                 }
+
                 &.icon-vue {
                   background-image: url(../img/icon/menu/VUE.png);
                 }
+
                 &.icon-mapbox {
                   background-image: url(../img/icon/menu/mapbox.png);
                 }
+
                 &.icon-sql {
                   background-image: url(../img/icon/menu/SQL.png);
                 }
+
                 &.icon-windows {
                   background-image: url(../img/icon/menu/Windows.png);
                 }
+
                 &.icon-linux {
                   background-image: url(../img/icon/menu/linux.png);
                 }
+
                 &.icon-macos {
                   background-image: url(../img/icon/menu/macOS.png);
                 }
+
                 &.icon-vscode {
                   background-image: url(../img/icon/menu/vscode.png);
                 }
+
                 &.icon-markdown {
                   background-image: url(../img/icon/menu/markdown.png);
                 }
+
                 &.icon-other {
                   background-image: url(../img/icon/menu/other.png);
                 }
@@ -674,15 +691,16 @@ body {
   }
 
   .weblistwrap {
-    width: 100%;
+    width: calc(100% + 12px);
     overflow: hidden;
     margin-top: 8px;
+    margin: 8px 0 0 -6px;
 
     li {
       float: left;
-      width: calc(100% / 3 - 4px);
+      width: calc(100% / 3 - 12px);
       height: 52px;
-      margin: 4px 2px !important;
+      margin: 6px 6px !important;
       box-sizing: border-box;
       position: relative;
 
