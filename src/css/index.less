@@ -78,6 +78,25 @@ body {
 
       .leftwrap {
         overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .logo {
+          height: 50px;
+          background: url(../img/logo.png) no-repeat left center;
+          background-size: 24px 24px;
+          padding-left: 36px;
+          margin-left: 12px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          font-weight: bolder;
+          color: #ecf0f1;
+          letter-spacing: 0.05em;
+          font-family: sans-serif, Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial;
+        }
 
         .leftmenutab {
           float: left;
@@ -864,6 +883,10 @@ body {
     .box-container {
       .head-box {
         .leftwrap {
+          .logo {
+            display: none;
+          }
+
           .leftmenutab {
             display: block;
           }

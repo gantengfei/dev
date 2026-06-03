@@ -425,6 +425,11 @@ function mousewheel(obj, upfun, downfun) {
   }
 }
 
+function openIndexPage() {
+  // if ($('body').hasClass('mobileView')) return;
+  location.href = 'https://gantengfei.github.io/dev/';
+}
+
 function handleRiliView() {
   window.open(`${WEB_PATH}/views/rili/`)
 }
