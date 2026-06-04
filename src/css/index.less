@@ -723,15 +723,15 @@ body {
       box-sizing: border-box;
       position: relative;
 
-      &.tag {
-        a {
-          background-color: #ECF8F3;
+      // &.tag {
+      //   a {
+      //     background-color: #ECF8F3;
 
-          &:hover {
-            background-color: #D9F1E7;
-          }
-        }
-      }
+      //     &:hover {
+      //       background-color: #D9F1E7;
+      //     }
+      //   }
+      // }
 
       a {
         display: block;
@@ -741,14 +741,18 @@ body {
         padding: 4px 8px;
         border-radius: 4px;
         position: relative;
-        background-color: #f2f2f2;
+        border: 1px solid #e1e5eb;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        transition: all .2s;
+        -webkit-transition: all .2s;
 
         &:hover {
-          background-color: #e5e5e5;
           text-decoration: none;
+          transform: translateY(-4px);
+          -webkit-transform: translateY(-4px);
+          box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.1);
 
           &>span {
-            color: var(--text-color-hover);
             text-decoration: underline;
           }
         }
@@ -769,6 +773,16 @@ body {
             background-size: auto 18px;
             opacity: 0.8;
           }
+
+          &.title {
+            font-weight: bold;
+
+            &.tag {
+              display: flex;
+              align-items: center;
+              color: var(--text-color-hover);
+            }
+          }
         }
 
         &>i {
@@ -787,7 +801,7 @@ body {
       }
 
       .icon_element {
-        background-image: url(../img/webicon/element-plus-logo.svg);
+        background-image: url(../img/webicon/element-plus-logo.png);
       }
 
       .icon_huatools {
@@ -795,7 +809,7 @@ body {
       }
 
       .icon_gitee {
-        background-image: url(../img/webicon/gitee.svg);
+        background-image: url(../img/webicon/gitee.png);
       }
 
       .icon_figma {
@@ -819,7 +833,7 @@ body {
       }
 
       .icon_mapbox {
-        background-image: url(../img/webicon/mapbox-logo.svg);
+        background-image: url(../img/webicon/mapbox-logo.png);
       }
 
       .icon_ngzorro {
