@@ -723,15 +723,19 @@ body {
       box-sizing: border-box;
       position: relative;
 
-      // &.tag {
-      //   a {
-      //     background-color: #ECF8F3;
+      &.tag {
+        a {
+          border-color: #3498db80;
 
-      //     &:hover {
-      //       background-color: #D9F1E7;
-      //     }
-      //   }
-      // }
+          &:hover {
+            border-color: #3498db;
+          }
+        }
+
+        .title {
+          color: var(--text-color-hover);
+        }
+      }
 
       a {
         display: block;
@@ -777,11 +781,7 @@ body {
           &.title {
             font-weight: bold;
 
-            &.tag {
-              display: flex;
-              align-items: center;
-              color: var(--text-color-hover);
-            }
+
           }
         }
 
@@ -887,6 +887,22 @@ body {
 
       .icon_tinypng {
         background-image: url(../img/webicon/tinypng-logo.png);
+      }
+
+      .icon_openai {
+        background-image: url(../img/webicon/openai-logo.png);
+      }
+
+      .icon_uisdc {
+        background-image: url(../img/webicon/uisdc-logo.png);
+      }
+
+      .icon_chinaz {
+        background-image: url(../img/webicon/chinaz-logo.png);
+      }
+
+      .icon_oschina {
+        background-image: url(../img/webicon/oschina-logo.png);
       }
     }
   }

@@ -20,6 +20,12 @@
           "href": "https://www.qianwen.com/",
           "logoIcon": "icon_qianwen",
           "brief": "千问 | 阿里通义千问"
+        },
+        {
+          "title": "OpenAI",
+          "href": "https://openai.com/zh-Hans-CN/",
+          "logoIcon": "icon_openai",
+          "brief": "OpenAI | 人工智能研究实验室"
         }
       ]
     },
@@ -29,7 +35,7 @@
         {
           "title": "优设导航",
           "href": "https://hao.uisdc.com/",
-          "logoIcon": "",
+          "logoIcon": "icon_uisdc",
           "brief": "设计导航"
         },
         {
@@ -68,19 +74,19 @@
             {
               "title": "Unicode编码转换",
               "href": "https://tool.chinaz.com/Tools/Unicode.aspx",
-              "logoIcon": "",
+              "logoIcon": "icon_chinaz",
               "brief": ""
             },
             {
               "title": "Base64图片在线转换",
               "href": "https://tool.chinaz.com/tools/imgtobase/",
-              "logoIcon": "",
+              "logoIcon": "icon_chinaz",
               "brief": ""
             },
             {
               "title": "代码对比/归并",
               "href": "https://tool.oschina.net/diff/",
-              "logoIcon": "",
+              "logoIcon": "icon_oschina",
               "brief": "OSCHINA.NET在线工具"
             },
             {
