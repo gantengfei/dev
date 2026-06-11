@@ -22,6 +22,12 @@
           "brief": "千问 | 阿里通义千问"
         },
         {
+          "title": "即梦",
+          "href": "https://jimeng.jianying.com/ai-tool/home",
+          "logoIcon": "icon_jimeng",
+          "brief": "即梦AI支持文字绘图、文字生成视频和图片生成视频"
+        },
+        {
           "title": "OpenAI",
           "href": "https://openai.com/zh-Hans-CN/",
           "logoIcon": "icon_openai",
