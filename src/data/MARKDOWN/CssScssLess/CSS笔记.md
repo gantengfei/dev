@@ -151,3 +151,13 @@ text-align-last: auto|left|right|center|justify|start|end|initial|inherit;
 | `initial` | 设置该属性为它的默认值。                                                                                             |
 | `inherit` | 从父元素继承该属性。                                                                                                 |
 
+
+# ➤ 文本域 `textarea`
+
+禁止手动拖拽调整元素大小
+
+``` css
+textarea {
+  resize: none;
+}
+```

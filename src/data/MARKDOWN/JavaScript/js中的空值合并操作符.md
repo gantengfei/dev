@@ -59,3 +59,18 @@ const user = {
 const displayName = user.profile?.name ?? 'Guest';
 console.log(displayName); // 'Guest'
 ```
+
+
+# null和undefined的区别
+在 JavaScript 中，`null` 和 `undefined` 的区别在于它们表示的数据类型。
+
+- `null` "**no object**" 是一个空对象引用，表示一个空对象。
+- `undefined` "**no value**" 是一个未定义的值，表示一个未定义的变量或属性。
+
+``` JavaScript
+typeof null; // "object"
+typeof undefined; // "undefined"
+
+null === undefined; // false
+null == undefined; // true
+```

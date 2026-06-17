@@ -111,3 +111,90 @@ location /geoserver/ {
   proxy_pass http://127.0.0.1:8887/geoserver/;
 }
 ```
+
+
+# ➤ Nginx安装
+
+Nginx安装包下载地址：<https://nginx.org/en/download.html>
+
+`nginx-1.9.9.tar.gz` 文件上传到 `/usr/local` 目录中。
+
+``` bash
+# 切换至/usr/local下
+cd /usr/local
+
+# 解压文件
+tar -zxvf nginx-1.9.9.tar.gz
+
+# 进入解压目录
+cd nginx-1.9.9
+
+# 配置编译参数
+./configure --prefix=/usr/local/nginx
+
+# 编译安装
+make
+
+# 安装
+make install
+```
+
+![输入图片说明](./src/img/images/a057eed5-2273-4186-8d94-f95adb31437b.png "")
+
+**检查安装成功**
+``` bash
+# 进入安装目录
+cd /usr/local/nginx
+
+# 检查
+./sbin/nginx -t
+```
+
+正常情况的信息输出：
+
+![输入图片说明](./src/img/images/f7a8a75a-d885-408d-8b14-d3deed5d8b62.png "")
+
+
+# ➤ Nginx开机自启动配置
+
+**查看配置**
+``` bash
+[root@localhost ~]$ cat /etc/rc.d/rc.local
+```
+
+**配置自启动**
+``` bash
+# 进入编辑
+vim /etc/rc.d/rc.local
+
+# 开启编辑状态 键盘 i 键
+
+# 添加内容
+/usr/local/nginx/sbin/nginx
+
+# 退出编辑状态 键盘 ESC 键
+
+# 保存并退出
+:wq!
+```
+
+![输入图片说明](./src/img/images/548f6f11-2850-4357-8532-495c3610c065.png "")
+
+> ## NOTICE
+> 如果启动不起来写 `sh` 挂定时 \
+> **注意：**文件格式 `UNIX`
+
+**启动脚本**
+``` bash @nginxStart.sh
+#!/bin/bash
+
+ID=`ps -ef | grep nginx  | grep -v "$0" | grep -v "grep" | awk '{print $2}' `
+if [[ $ID ]]
+then
+echo "Running....."
+else
+
+nginx
+
+fi
+```

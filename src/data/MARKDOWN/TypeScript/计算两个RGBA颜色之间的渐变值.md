@@ -7,17 +7,19 @@ gradientColors([255, 0, 0, 1], [0, 255, 0, 1], 10)
 
 ![输入图片说明](./src/img/images/e20e37ee_4993153.png "")
 
-> <span style="display: inline-block;width: 20px;">0</span>	<span style="background-color:rgba(255, 0, 0, 1);padding:2px 4px;color:#FFF;">rgba(255, 0, 0, 1)</span> \
-> <span style="display: inline-block;width: 20px;">0.1</span>	<span style="background-color:rgba(230, 26, 0, 1);padding:2px 4px;color:#FFF;">rgba(230, 26, 0, 1)</span> \
-> <span style="display: inline-block;width: 20px;">0.2</span>	<span style="background-color:rgba(204, 51, 0, 1);padding:2px 4px;color:#FFF;">rgba(204, 51, 0, 1)</span> \
-> <span style="display: inline-block;width: 20px;">0.3</span>	<span style="background-color:rgba(179, 77, 0, 1);padding:2px 4px;color:#FFF;">rgba(179, 77, 0, 1)</span> \
-> <span style="display: inline-block;width: 20px;">0.4</span>	<span style="background-color:rgba(153, 102, 0, 1);padding:2px 4px;color:#FFF;">rgba(153, 102, 0, 1)</span> \
-> <span style="display: inline-block;width: 20px;">0.5</span>	<span style="background-color:rgba(128, 128, 0, 1);padding:2px 4px;color:#FFF;">rgba(128, 128, 0, 1)</span> \
-> <span style="display: inline-block;width: 20px;">0.6</span>	<span style="background-color:rgba(102, 153, 0, 1);padding:2px 4px;color:#FFF;">rgba(102, 153, 0, 1)</span> \
-> <span style="display: inline-block;width: 20px;">0.7</span>	<span style="background-color:rgba(77, 179, 0, 1);padding:2px 4px;color:#FFF;">rgba(77, 179, 0, 1)</span> \
-> <span style="display: inline-block;width: 20px;">0.8</span>	<span style="background-color:rgba(51, 204, 0, 1);padding:2px 4px;color:#FFF;">rgba(51, 204, 0, 1)</span> \
-> <span style="display: inline-block;width: 20px;">0.9</span>	<span style="background-color:rgba(26, 230, 0, 1);padding:2px 4px;color:#FFF;">rgba(26, 230, 0, 1)</span> \
-> <span style="display: inline-block;width: 20px;">1</span>	<span style="background-color:rgba(0, 255, 0, 1);padding:2px 4px;color:#FFF;">rgba(0, 255, 0, 1)</span>
+> <ul style="width:100%;display:flex;align-items:center;">
+> <li style="margin:0;"><div style="font-weight:bold;">0</div><span style="background-color:rgba(255, 0, 0, 1);padding:2px 4px;color:#FFF;">(255, 0, 0, 1)</span></li>
+> <li style="margin:0;"><div style="font-weight:bold;">0.1</div><span style="background-color:rgba(230, 26, 0, 1);padding:2px 4px;color:#FFF;">(230, 26, 0, 1)</span></li>
+> <li style="margin:0;"><div style="font-weight:bold;">0.2</div><span style="background-color:rgba(204, 51, 0, 1);padding:2px 4px;color:#FFF;">(204, 51, 0, 1)</span></li>
+> <li style="margin:0;"><div style="font-weight:bold;">0.3</div><span style="background-color:rgba(179, 77, 0, 1);padding:2px 4px;color:#FFF;">(179, 77, 0, 1)</span></li>
+> <li style="margin:0;"><div style="font-weight:bold;">0.4</div><span style="background-color:rgba(153, 102, 0, 1);padding:2px 4px;color:#FFF;">(153, 102, 0, 1)</span></li>
+> <li style="margin:0;"><div style="font-weight:bold;">0.5</div><span style="background-color:rgba(128, 128, 0, 1);padding:2px 4px;color:#FFF;">(128, 128, 0, 1)</span></li>
+> <li style="margin:0;"><div style="font-weight:bold;">0.6</div><span style="background-color:rgba(102, 153, 0, 1);padding:2px 4px;color:#FFF;">(102, 153, 0, 1)</span></li>
+> <li style="margin:0;"><div style="font-weight:bold;">0.7</div><span style="background-color:rgba(77, 179, 0, 1);padding:2px 4px;color:#FFF;">(77, 179, 0, 1)</span></li>
+> <li style="margin:0;"><div style="font-weight:bold;">0.8</div><span style="background-color:rgba(51, 204, 0, 1);padding:2px 4px;color:#FFF;">(51, 204, 0, 1)</span></li>
+> <li style="margin:0;"><div style="font-weight:bold;">0.9</div><span style="background-color:rgba(26, 230, 0, 1);padding:2px 4px;color:#FFF;">(26, 230, 0, 1)</span></li>
+> <li style="margin:0;"><div style="font-weight:bold;">1</div><span style="background-color:rgba(0, 255, 0, 1);padding:2px 4px;color:#FFF;">(0, 255, 0, 1)</span></li>
+> </ul>
 
 ``` typescript
 // 计算两个RGBA颜色之间的渐变值

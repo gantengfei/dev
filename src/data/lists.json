@@ -460,12 +460,16 @@
       "icon": "icon-windows",
       "menulists": [
         {
-          "name": "cmd命令",
-          "filename": "cmd命令.md"
-        },
-        {
           "name": "npm命令",
           "filename": "npm命令.md"
+        },
+        {
+          "name": "Git命令",
+          "filename": "Git命令.md"
+        },
+        {
+          "name": "cmd命令",
+          "filename": "cmd命令.md"
         },
         {
           "name": "node命令",
@@ -514,6 +518,10 @@
         {
           "name": "Nginx常用命令配置",
           "filename": "Nginx常用命令配置.md"
+        },
+        {
+          "name": "NodeJs安装",
+          "filename": "NodeJs安装.md"
         },
         {
           "name": "使用echo命令美化Shell输出",
