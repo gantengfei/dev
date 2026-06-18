@@ -378,6 +378,10 @@
           "filename": "VUE中使用h()函数创建VNode.md"
         },
         {
+          "name": "VUE中使用SCSS开发深浅色主题切换",
+          "filename": "VUE中使用SCSS开发深浅色主题切换.md"
+        },
+        {
           "name": "issue",
           "submenulists": [
             {
