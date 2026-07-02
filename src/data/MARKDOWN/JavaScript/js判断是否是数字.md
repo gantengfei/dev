@@ -41,6 +41,23 @@ console.log(isNumeric("123abc"));  // false (严格，不能包含字母)
 console.log(isNumeric(""));        // false
 ```
 
+## 方案二应用：保留小数
+``` Typescript
+/**
+ * 保留小数
+ * @param num 数值
+ * @param n 保留位数
+ * @returns
+ */
+export function NumtoFixed(num: any, n: number) {
+  if (typeof num === 'string' && num.trim() === '') return '';
+  if (Number.isFinite(Number(num))) {
+    return Math.round(Number(num) * Math.pow(10, n)) / Math.pow(10, n);
+  }
+  return '';
+}
+```
+
 # 方案三：正则表达式
 
 适用场景：你需要严格限制格式，比如必须是“整数”、“不能有前导零”、“必须是小数”等。

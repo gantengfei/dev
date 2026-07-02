@@ -44,6 +44,7 @@ function isTime(time) {
 
 ## 北京时(BJT)
 
+PC端判断本机世界时还是北京时，当前时间是北京时，则返回true
 ``` JavaScript
 new Date().toTimeString() // 输出：'17:27:00 GMT+0800 (中国标准时间)'
 
@@ -55,8 +56,41 @@ new Date().toTimeString().includes('GMT+0800') // 输出：true
 
 ## 世界时(UTC)
 
+PC端判断本机世界时还是北京时，当前时间是世界时，则返回true
 ``` JavaScript
 new Date().toTimeString() // 输出：'01:00:10 GMT+0000 (协调世界时)'
+
+new Date().toTimeString().includes('GMT+0000') // 输出：true
 ```
 
 ![输入图片说明](./src/img/images/2026-02-10_01-01-51.png "")
+
+## JS 获取系统时间
+
+``` TypeScript
+/** 判断本机世界时还是北京时,统一换回北京时间 */
+export function systemtime2BJT() {
+  // 北京时间
+  if (new Date().toTimeString().includes('GMT+0800')) {
+    return new Date()
+  }
+  else {
+    return new Date(new Date().getTime() + 1000 * 60 * 60 * 8)
+  }
+}
+
+/** 北京时间转换世界时间 */
+export function BJTdate2UTCdate(date: any): Date {
+  return new Date(new Date(date).getTime() - (1000 * 60 * 60 * 8))
+}
+
+/** 获取系统世界时间 */
+export function getSystemTimeUTC() {
+  // 北京时
+  if (new Date().toTimeString().includes('GMT+0800')) {
+    return new Date(new Date().getTime() - 1000 * 60 * 60 * 8)
+  } else {
+    return new Date()
+  }
+}
+```

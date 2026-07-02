@@ -548,6 +548,10 @@
           "filename": "PM2操作命令.md"
         },
         {
+          "name": "定时任务配置自启动程序",
+          "filename": "定时任务配置自启动程序.md"
+        },
+        {
           "name": "CentOS7",
           "submenulists": [
             {

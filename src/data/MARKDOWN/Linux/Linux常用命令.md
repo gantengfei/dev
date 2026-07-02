@@ -27,6 +27,21 @@
 | tmpfs      | 16G  | 672K | 16G   | 1%    | /dev/shm   |
 
 
+# ➤ 查看系统配置信息
+
+``` bash
+# 显示CPU信息 从/proc/cpuinfo中获取
+[root@localhost ~]$ cat /proc/cpuinfo
+
+# 显示内存信息
+[root@localhost ~]$ free -g
+
+# 显示磁盘使用情况
+[root@localhost ~]$ df -h
+```
+
+![输入图片说明](./src/img/images/2026-06-25_08-57-34.png "")
+
 # ➤ 查看系统内存使用信息
 
 `free`命令显示内存的使用信息。默认按照k（b）的计数单位统计。
