@@ -209,36 +209,51 @@
           "filename": "CSS-Scss-Less笔记.md"
         },
         {
-          "name": "CSS笔记",
-          "filename": "CSS笔记.md"
+          "name": "CSS",
+          "submenulists": [
+            {
+              "name": "CSS笔记",
+              "filename": "CSS笔记.md"
+            },
+            {
+              "name": "属性控制英文单词换行",
+              "filename": "属性控制英文单词换行.md"
+            },
+            {
+              "name": "控制属性继承和重置的全局关键字",
+              "filename": "控制属性继承和重置的全局关键字.md"
+            },
+            {
+              "name": "修改scrollbar滚动条样式",
+              "filename": "修改scrollbar滚动条样式.md"
+            },
+            {
+              "name": "修改input表单样式",
+              "filename": "修改input表单样式.md"
+            }
+          ]
         },
         {
-          "name": "Scss笔记",
-          "filename": "Scss笔记.md"
-        },
-        {
-          "name": "Scss控制指令@if@each@for@while",
-          "filename": "Scss控制指令@if@each@for@while.md"
-        },
-        {
-          "name": "Scss中@mixin的使用",
-          "filename": "Scss中@mixin的使用.md"
+          "name": "Scss",
+          "submenulists": [
+            {
+              "name": "Scss笔记",
+              "filename": "Scss笔记.md"
+            },
+
+            {
+              "name": "Scss控制指令@if@each@for@while",
+              "filename": "Scss控制指令@if@each@for@while.md"
+            },
+            {
+              "name": "Scss中@mixin的使用",
+              "filename": "Scss中@mixin的使用.md"
+            }
+          ]
         },
         {
           "name": "Scss实现白夜主题切换",
           "filename": "Scss实现白夜主题切换.md"
-        },
-        {
-          "name": "scrollbar滚动条样式",
-          "filename": "scrollbar滚动条样式.md"
-        },
-        {
-          "name": "input表单样式",
-          "filename": "input表单样式.md"
-        },
-        {
-          "name": "CSS英文单词换行",
-          "filename": "CSS英文单词换行.md"
         }
       ]
     },
@@ -597,7 +612,7 @@
     {
       "menuname": "VScode",
       "menupath": "MARKDOWN/VScode/",
-      "icon":"icon-vscode",
+      "icon": "icon-vscode",
       "menulists": [
         {
           "name": "VScode插件",
