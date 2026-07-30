@@ -161,3 +161,19 @@ textarea {
   resize: none;
 }
 ```
+
+
+# ➤ 文字竖排 `writing-mode` 属性
+
+**CSS** 中最标准、最直接的文字竖排方式，能够很好地处理中文古籍或传统排版
+
+``` css
+.vertical-text {
+  writing-mode: vertical-rl; /* 文本垂直排列，从右向左流动（符合中文阅读习惯） */
+  text-orientation: upright; /* 确保每个汉字保持直立，不发生旋转 */
+}
+```
+
+- `vertical-rl`：垂直排列，从右向左换列（适合中文）。
+- `vertical-lr`：垂直排列，从左向右换列（适合日文或蒙古文等）。
+- `text-orientation: upright`：强制字符正立显示，防止在竖排时字符被侧向旋转。
