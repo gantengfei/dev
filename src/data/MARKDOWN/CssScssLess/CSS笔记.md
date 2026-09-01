@@ -177,3 +177,40 @@ textarea {
 - `vertical-rl`：垂直排列，从右向左换列（适合中文）。
 - `vertical-lr`：垂直排列，从左向右换列（适合日文或蒙古文等）。
 - `text-orientation: upright`：强制字符正立显示，防止在竖排时字符被侧向旋转。
+
+
+# ➤ `<table>` 表格表头斜线
+
+使用 **Base64 SVG** 作为背景图
+
+将 **SVG** 线条代码进行 **Base64** 编码后，直接写入 **CSS** 的 `background` 属性中。这种方式不需要额外请求文件，且线条是矢量图，在任何分辨率下都不会模糊
+
+``` css
+.slash-header {
+    /* 使用 base64 编码的 SVG 线条作为背景，no-repeat 防止重复，right center 控制位置 */
+    background: #fff url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCUiIHkyPSIxMDAlIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==') no-repeat right center / 100% 100%;
+}
+```
+
+(注：上述 **base64** 字符串解密后为：`<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="0" x2="100%" y2="100%" stroke="#333" stroke-width="1"/></svg>`。如果需要修改斜线颜色，可以更改 `stroke` 的值，然后重新进行 **Base64** 编码)
+
+在需要添加斜线的 `<td>` 上应用该 class，并使用 `span` 标签配合浮动（`float`）来分别定位左上角和右下角的文字：
+
+``` html
+<table style="border-collapse: collapse; width: 300px;">
+    <tr>
+        <!-- 斜线表头单元格 -->
+        <td class="slash-header" style="padding: 0; height: 60px; width: 100px; border: 1px solid #ccc;">
+            <!-- 右上角文字 -->
+            <span style="float: right; margin-top: 5px; margin-right: 5px;">日期</span>
+            <!-- 左下角文字 -->
+            <span style="float: left; margin-bottom: 5px; margin-left: 5px; clear: both;">要素</span>
+        </td>
+        <td style="border: 1px solid #ccc; text-align: center;">2023-10-15</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ccc;">温度</td>
+        <td style="border: 1px solid #ccc; text-align: center;">31℃</td>
+    </tr>
+</table>
+```

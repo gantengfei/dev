@@ -30,10 +30,6 @@
           "filename": "域名访问GitHub页面网站.md"
         },
         {
-          "name": "编程免费额度用量查询",
-          "filename": "编程免费额度用量查询.md"
-        },
-        {
           "name": "GoJS",
           "submenulists": [
             {
@@ -108,6 +104,10 @@
         {
           "name": "js判断是否是数字（123）",
           "filename": "js判断是否是数字.md"
+        },
+        {
+          "name": "js判断两个数组对比",
+          "filename": "js判断两个数组对比.md"
         },
         {
           "name": "js获取和操作iframe",
@@ -401,6 +401,10 @@
           "filename": "VUE中使用SCSS开发深浅色主题切换.md"
         },
         {
+          "name": "VUE中Mapbox初始完成后执行事件",
+          "filename": "VUE中Mapbox初始完成后执行事件.md"
+        },
+        {
           "name": "issue",
           "submenulists": [
             {
@@ -509,6 +513,10 @@
         {
           "name": "Ruby安装compass问题整理",
           "filename": "Ruby安装compass问题整理.md"
+        },
+        {
+          "name": "bat实现一键启动多服务",
+          "filename": "bat实现一键启动多服务.md"
         },
         {
           "name": "应用",
@@ -656,6 +664,25 @@
         {
           "name": "笔记常用语法格式",
           "filename": "笔记常用语法格式.md"
+        }
+      ]
+    },
+    {
+      "menuname": "AI",
+      "menupath": "MARKDOWN/AI/",
+      "icon": "icon-ai",
+      "menulists": [
+        {
+          "name": "编程免费额度用量查询",
+          "filename": "编程免费额度用量查询.md"
+        },
+        {
+          "name": "OpenAI(ChatGPT/Codex)",
+          "filename": "OpenAI.md"
+        },
+        {
+          "name": "Codex接入Deepseek模型",
+          "filename": "Codex接入Deepseek模型.md"
         }
       ]
     },
