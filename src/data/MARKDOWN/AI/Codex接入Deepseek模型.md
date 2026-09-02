@@ -1,6 +1,6 @@
 **Codex** 是 **OpenAI** 推出的 **AI** 编程助手
 
-# 使用 Deepseek 模型
+# ➤ 使用 Deepseek 模型
 
 - 1、[**Deepseek 开发平台**](https://platform.deepseek.com/) 创建 **API keys** 复制妥善保存
 - 2、**充值** 购买 **Token**
@@ -14,7 +14,7 @@
 irm https://cdn.deepseek.com/api-docs/codex-deepseek-setup-en.ps1 | iex
 ```
 
-# 使用 CC Switch 本地路由工具
+# ➤ 使用 CC Switch 本地路由工具
 
 因 **Codex 客户端** 默认优先尝试建立 **WebSocket** 连接，而 **DeepSeek** 的接口或当前的网络环境无法稳定支持该通道，导致客户端反复尝试后失败。
 

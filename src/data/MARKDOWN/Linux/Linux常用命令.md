@@ -38,9 +38,14 @@
 
 # 显示磁盘使用情况
 [root@localhost ~]$ df -h
+
+# 查看 Linux 发行版信息
+[root@localhost ~]$ cat /etc/os-release
 ```
 
 ![输入图片说明](./src/img/images/2026-06-25_08-57-34.png "")
+
+![输入图片说明](./src/img/images/2026-09-02_11-10-49.png "")
 
 # ➤ 查看系统内存使用信息
 

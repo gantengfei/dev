@@ -28,15 +28,25 @@
         {
           "name": "域名访问GitHub页面网站",
           "filename": "域名访问GitHub页面网站.md"
+        }
+      ]
+    },
+    {
+      "menuname": "AIGC",
+      "menupath": "MARKDOWN/AI/",
+      "icon": "icon-ai",
+      "menulists": [
+        {
+          "name": "编程免费额度用量查询",
+          "filename": "编程免费额度用量查询.md"
         },
         {
-          "name": "GoJS",
-          "submenulists": [
-            {
-              "name": "GoJS V3.1去水印",
-              "filename": "GoJS V3.1去水印.md"
-            }
-          ]
+          "name": "OpenAI(ChatGPT/Codex)",
+          "filename": "OpenAI.md"
+        },
+        {
+          "name": "Codex接入Deepseek模型",
+          "filename": "Codex接入Deepseek模型.md"
         }
       ]
     },
@@ -64,10 +74,6 @@
         {
           "name": "js使用Math进行数值取整",
           "filename": "js使用Math进行数值取整.md"
-        },
-        {
-          "name": "Layui.layDate",
-          "filename": "Layui.layDate.md"
         },
         {
           "name": "rem实现页面自适应",
@@ -329,14 +335,6 @@
           "filename": "VUE3中TypeScript类写法.md"
         },
         {
-          "name": "Axios使用",
-          "filename": "Axios使用.md"
-        },
-        {
-          "name": "Axios使用api-manage",
-          "filename": "Axios使用api-manage.md"
-        },
-        {
           "name": "VUE简单路由的使用",
           "filename": "VUE简单路由的使用.md"
         },
@@ -377,14 +375,6 @@
           "filename": "VUE中使用Pinia存储库.md"
         },
         {
-          "name": "Element组件ElLoading自定义svg图",
-          "filename": "Element组件ElLoading自定义svg图.md"
-        },
-        {
-          "name": "Element组件el-checkbox阻止点击事件触发",
-          "filename": "Element组件el-checkbox阻止点击事件触发.md"
-        },
-        {
           "name": "VUE3自动检测线上环境版本热更新",
           "filename": "VUE3自动检测线上环境版本热更新.md"
         },
@@ -422,6 +412,57 @@
             {
               "name": "issue：VUE中Mapbox加载数据问题",
               "filename": "issue：VUE中Mapbox加载数据问题.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "menuname": "开发组件库",
+      "menupath": "MARKDOWN/component/",
+      "icon": "icon-component",
+      "menulists": [
+        {
+          "name": "Layui组件",
+          "submenulists": [
+            {
+              "name": "Layui组件layDate",
+              "filename": "Layui组件layDate.md"
+            }
+          ]
+        },
+        {
+          "name": "Axios",
+          "submenulists": [
+            {
+              "name": "Axios使用",
+              "filename": "Axios使用.md"
+            },
+            {
+              "name": "Axios使用api-manage",
+              "filename": "Axios使用api-manage.md"
+            }
+          ]
+        },
+        {
+          "name": "ElementUI组件",
+          "submenulists": [
+            {
+              "name": "Element组件ElLoading自定义svg图",
+              "filename": "Element组件ElLoading自定义svg图.md"
+            },
+            {
+              "name": "Element组件el-checkbox阻止点击事件触发",
+              "filename": "Element组件el-checkbox阻止点击事件触发.md"
+            }
+          ]
+        },
+        {
+          "name": "GoJS",
+          "submenulists": [
+            {
+              "name": "GoJS-V3.1去水印",
+              "filename": "GoJS-V3.1去水印.md"
             }
           ]
         }
@@ -595,6 +636,15 @@
               "filename": "Ubuntu常用命令.md"
             }
           ]
+        },
+        {
+          "name": "Kylin(银河麒麟)",
+          "submenulists": [
+            {
+              "name": "麒麟系统常用命令",
+              "filename": "麒麟系统常用命令.md"
+            }
+          ]
         }
       ]
     },
@@ -664,25 +714,6 @@
         {
           "name": "笔记常用语法格式",
           "filename": "笔记常用语法格式.md"
-        }
-      ]
-    },
-    {
-      "menuname": "AI",
-      "menupath": "MARKDOWN/AI/",
-      "icon": "icon-ai",
-      "menulists": [
-        {
-          "name": "编程免费额度用量查询",
-          "filename": "编程免费额度用量查询.md"
-        },
-        {
-          "name": "OpenAI(ChatGPT/Codex)",
-          "filename": "OpenAI.md"
-        },
-        {
-          "name": "Codex接入Deepseek模型",
-          "filename": "Codex接入Deepseek模型.md"
         }
       ]
     },
