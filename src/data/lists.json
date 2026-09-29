@@ -643,6 +643,10 @@
             {
               "name": "麒麟系统常用命令",
               "filename": "麒麟系统常用命令.md"
+            },
+            {
+              "name": "rsync同步数据",
+              "filename": "rsync同步数据.md"
             }
           ]
         }

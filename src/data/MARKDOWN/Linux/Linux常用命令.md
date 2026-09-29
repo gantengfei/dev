@@ -12,8 +12,6 @@
 
 
 
-
-
 # ➤ 查看各分区使用情况
 
 `df`命令可以显示目前所有文件系统的可用空间及使用情形
@@ -25,6 +23,7 @@
 | Filesystem | Size | Used | Avail | Use%  | Mounted on |
 | devtmpfs   | 16G  | 0    | 16G   | 0%    | /dev       |
 | tmpfs      | 16G  | 672K | 16G   | 1%    | /dev/shm   |
+
 
 
 # ➤ 查看系统配置信息
@@ -72,6 +71,7 @@ du -h --max-depth=1
 `-h` (human-readable) 选项使输出更具可读性，以 KB、MB、GB 等单位显示大小。 \
 `--max-depth=1` 选项限制了显示的子目录层次深度，仅显示当前目录下的文件和子目录的大小。 \
 查看所有子目录的大小而不限制深度，可以使用：`du -h `
+
 
 
 # ➤ 文件
@@ -182,8 +182,6 @@ du -h --max-depth=1
 
 
 
-
-
 # ➤ 防火墙
 **查看防火墙状态**
 ``` bash
@@ -213,7 +211,6 @@ du -h --max-depth=1
 ``` bash
 [root@localhost ~]$ firewall-cmd --reload
 ```
-
 
 
 
@@ -253,7 +250,6 @@ du -h --max-depth=1
 
 
 
-
 # ➤ `vim`命令
 ## 普通模式
 1.**一般命令模式** \
@@ -270,7 +266,6 @@ du -h --max-depth=1
 2.**退出编辑器**
 - `:wq!` 保存当前文件并退出
 - `:q!` 不保存，强制退出
-
 
 
 
@@ -296,4 +291,30 @@ du -h --max-depth=1
 每隔 **2** 分钟，系统会自动调用 `bash` 来执行一次 `/home/apps/geoserver-2.16.1/geoserver.sh` 这个脚本。
 ``` bash
 */2 * * * * bash /home/apps/geoserver-2.16.1/geoserver.sh
+```
+
+
+
+# ➤ `tail -f` 实时查看 `.log` 日志文件
+
+``` bash
+tail -f /log/app.log              # 实时跟踪日志，新内容自动滚动显示
+tail -n 100 -f /log/app.log       # 先显示最后100行，再实时跟踪
+tail -F /log/app.log              # 推荐！日志轮转后自动切换新文件
+```
+
+`-f` vs `-F` 区别：`-f` 基于文件描述符跟踪，日志被 **logrotate** 切割后会失效；`-F` 会自动重试，生产环境强烈推荐。
+
+## 多日志同时查看
+
+``` bash
+tail -f /log/access.log /log/error.log             # 同时跟踪多个文件
+```
+
+## 实时过滤关键字
+
+``` bash
+tail -f /log/app.log | grep ERROR              # 只看 ERROR 行
+tail -f /log/app.log | grep --color=auto ERROR # 高亮显示
+tail -f /log/app.log | grep -E "ERROR|WARN"    # 多条件过滤
 ```
