@@ -47,6 +47,14 @@
         {
           "name": "Codex接入Deepseek模型",
           "filename": "Codex接入Deepseek模型.md"
+        },
+        {
+          "name": "GitHub Copilot接入Deepseek模型",
+          "filename": "GitHub Copilot接入Deepseek模型.md"
+        },
+        {
+          "name": "Qoder接入Deepseek模型",
+          "filename": "Qoder接入Deepseek模型.md"
         }
       ]
     },
